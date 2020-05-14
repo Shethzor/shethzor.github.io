@@ -11,8 +11,8 @@ for (var i = 0; i < search.length; i++){
 }
 
 var user;
-if (searchKey['user']){
-	user = searchKey['user'].toLowerCase();
+if (searchKey['id']){
+	user = searchKey['id'].toLowerCase();
 }
 
 switch(user){
