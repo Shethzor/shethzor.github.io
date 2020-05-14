@@ -1,6 +1,6 @@
 var teamList = {
-	"DreamVisuals" : {'logo' : '../img/logo/team/main/dreamvisuals.gif', 'website' : 'http://shethzor.tv?user=dreamvisuals'},
-	"Retro__Boi" : {'logo' : '../img/logo/team/main/retro__boi.png', 'website' : 'http://shethzor.tv?user=retro__boi'},
+	"DreamVisuals" : {'logo' : '../img/logo/team/main/dreamvisuals.gif', 'website' : 'http://shethzor.tv?id=dreamvisuals'},
+	"Retro__Boi" : {'logo' : '../img/logo/team/main/retro__boi.png', 'website' : 'http://shethzor.tv?id=retro__boi'},
 	"Shethzor" : {'logo' : '../img/logo/main/shethzor.gif', 'website' : 'http://shethzor.tv'}
 }
 
