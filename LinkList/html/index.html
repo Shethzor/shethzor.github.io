@@ -44,47 +44,49 @@
             </div>
         </header>
         
-        <div class="d-block">
+        <div id="display-LinksSocialMedia" class="d-none">
             <h2>Social Media</h2>
-            <div class="listLinks d-flex flex-wrap p-2 bd-highlight flex-row justify-content-center">
-                <div id="panel-twitch" class="panel">
-                    <div class="panel-image panel-twitch-image">
-                        <a id="twitch-channel-link" href="" target="_blank">
-                            <img src="../img/logo/platform/twitch.png" alt="Twitch"></img>
-                        </a>
-                    </div>
-                    <div class="d-flex flex-wrap bd-highlight flex-row justify-content-center align-items-center panel-content panel-twitch-content">
-                        <div class="align-middle">
-			                <div class="max-width-220">
-                                <p>STREAMING ON</p>
-                                <div id="stream-days" class="d-flex flex-wrap bd-highlight flex-row justify-content-center">
-                                    <p id="streaming-su" class="streaming-false">Su</p>
-                                    <p id="streaming-mo" class="streaming-true">Mo</p>
-                                    <p id="streaming-tu" class="streaming-false">Tu</p>
-                                    <p id="streaming-we" class="streaming-true">We</p>
-                                    <p id="streaming-th" class="streaming-false">Th</p>
-                                    <p id="streaming-fr" class="streaming-true">Fr</p>
-                                    <p id="streaming-sa" class="streaming-true">Sa</p>
+            <div id="panel" class="d-none">
+                <div class="listLinks d-flex flex-wrap p-2 bd-highlight flex-row justify-content-center">
+                    <div id="panel-twitch" class="d-none panel">
+                        <div class="panel-image panel-twitch-image">
+                            <a id="twitch-channel-link" href="" target="_blank">
+                                <img src="../img/logo/platform/twitch.png" alt="Twitch"></img>
+                            </a>
+                        </div>
+                        <div class="d-flex flex-wrap bd-highlight flex-row justify-content-center align-items-center panel-content panel-twitch-content">
+                            <div class="align-middle">
+			                    <div class="max-width-220">
+                                    <p>STREAMING ON</p>
+                                    <div id="stream-days" class="d-flex flex-wrap bd-highlight flex-row justify-content-center">
+                                        <p id="streaming-su" class="streaming-false">Su</p>
+                                        <p id="streaming-mo" class="streaming-true">Mo</p>
+                                        <p id="streaming-tu" class="streaming-false">Tu</p>
+                                        <p id="streaming-we" class="streaming-true">We</p>
+                                        <p id="streaming-th" class="streaming-false">Th</p>
+                                        <p id="streaming-fr" class="streaming-true">Fr</p>
+                                        <p id="streaming-sa" class="streaming-true">Sa</p>
+                                    </div>
+                                    <p id="streaming-time"></p>
                                 </div>
-                                <p id="streaming-time"></p>
                             </div>
                         </div>
-                    </div>
-	            </div>
-                <div id="panel-youtube" class="panel">
-                    <div class="panel-image panel-youtube-image">
-                        <a id="youtube-channel-link" href="" target="_blank">
-                            <img src="../img/logo/platform/youtube.png" alt="YouTube"></img>
-                        </a>
-                    </div>
-                    <div class="panel-content panel-youtube-content">
-                        <iframe id="latest-youtube-video" src="" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+	                </div>
+                    <div id="panel-youtube" class="d-none panel">
+                        <div class="panel-image panel-youtube-image">
+                            <a id="youtube-channel-link" href="" target="_blank">
+                                <img src="../img/logo/platform/youtube.png" alt="YouTube"></img>
+                            </a>
+                        </div>
+                        <div class="panel-content panel-youtube-content">
+                            <iframe id="latest-youtube-video" src="" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div id="display-LinksSocialMedia" class="d-none">
-            <div id="LinksSocialMedia" class="listLinks d-flex flex-wrap p-2 bd-highlight flex-row justify-content-center"></div>
+            <div>
+                <div id="LinksSocialMedia" class="listLinks d-flex flex-wrap p-2 bd-highlight flex-row justify-content-center"></div>
+            </div>
         </div>
 
         <div id="display-Team" class="d-none">

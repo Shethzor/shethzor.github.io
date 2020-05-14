@@ -40,15 +40,49 @@ switch(user){
 			'sa' : false,
 		}
 		streamTime = '19';
-		var twitchChannelLink = 'https://www.twitch.tv/dreamvisuals';
-		var youtubeChannelLink = 'https://www.youtube.com/channel/UCnxr9y4rqZzQ42JIoW4aycg';
 		var latestYouTubeVideoLink = 'https://www.youtube.com/embed/videoseries?list=UUnxr9y4rqZzQ42JIoW4aycg';
 		var dictLinks = {
+			'twitch' : {'active' : true, 'name' : 'Retro__Boi', 'icon' : '../img/logo/platform/twitch.png', 'link' : 'https://www.twitch.tv/dreamvisuals', 'list' : 'LinksSocialMedia'},
+			'youtube' : {'active' : true, 'name' : 'Retro__Boi', 'icon' : '../img/logo/platform/youtube.png', 'link' : 'https://www.youtube.com/channel/UCnxr9y4rqZzQ42JIoW4aycg', 'list' : 'LinksSocialMedia'},
 			'instagram' : {'active' : true, 'name' : 'DreamVisuals', 'icon' : '../img/logo/platform/instagram.png', 'link' : 'https://www.instagram.com/dream_visualizer/', 'list' : 'LinksSocialMedia'},
 			'soundcloud' : {'active' : true, 'name' : 'DreamVisuals', 'icon' : '../img/logo/platform/soundcloud.png', 'link' : 'https://soundcloud.com/dreamvisual', 'list' : 'LinksSocialMedia'},
 			'steam' : {'active' : true, 'name' : 'DreamVisuals', 'icon' : '../img/logo/platform/steam.png', 'link' : 'http://steamcommunity.com/id/DVedits', 'list' : 'LinksSocialMedia'},
 			'team_main_shethzor' : {'active' : true, 'name' : 'Shethzor', 'icon' : teamList['Shethzor']['logo'], 'link' : teamList['Shethzor']['website'], 'list' : 'LinksTeamMain'},
 			'streamlabs_donate' : {'active' : true, 'name' : 'DreamVisuals', 'icon' : '../img/logo/support/streamlabs.png', 'link' : 'https://streamlabs.com/dreamvisuals1/tip', 'list' : 'LinksSupportDonate'}, 
+		}
+	break;
+	case 'hitmarcer':
+		var title = "HitMarcer links";
+		var favicon = '../img/icon/team/main/hitmarcer.png';
+		var backgroundImageLink = '';
+		var backgroundBlur = 2;
+		var backgroundColor = '';
+		var fontLink = '';
+		var fontName = '';
+		var fontSize = 20;
+		var h3Size = 10;
+		var pSize = 15;
+		var copyrightSize = 15;
+		var banner = '../img/banner/team/main/hitmarcer.gif'
+		var bannerWidth = 13;
+		var streamDays = {
+			'su' : false,
+			'mo' : false,
+			'tu' : false,
+			'we' : false,
+			'th' : false,
+			'fr' : false,
+			'sa' : false,
+		}
+		streamTime = '19';
+		var latestYouTubeVideoLink = '';
+		var dictLinks = {
+			'twitch' : {'active' : true, 'name' : 'HitMarcer', 'icon' : '../img/logo/platform/twitch.png', 'link' : '', 'list' : 'LinksSocialMedia'},
+			'youtube' : {'active' : true, 'name' : 'HitMarcer', 'icon' : '../img/logo/platform/youtube.png', 'link' : '', 'list' : 'LinksSocialMedia'},
+			'instagram' : {'active' : true, 'name' : 'HitMarcer', 'icon' : '../img/logo/platform/instagram.png', 'link' : '', 'list' : 'LinksSocialMedia'},
+			'steam' : {'active' : true, 'name' : 'HitMarcer', 'icon' : '../img/logo/platform/steam.png', 'link' : '', 'list' : 'LinksSocialMedia'},
+			'team_main_shethzor' : {'active' : true, 'name' : 'Shethzor', 'icon' : teamList['Shethzor']['logo'], 'link' : teamList['Shethzor']['website'], 'list' : 'LinksTeamMain'},
+			'streamlabs_donate' : {'active' : true, 'name' : 'HitMarcer', 'icon' : '../img/logo/support/streamlabs.png', 'link' : '', 'list' : 'LinksSupportDonate'}, 
 		}
 	break;
 	case "retro__boi":
@@ -75,10 +109,10 @@ switch(user){
 			'sa' : true,
 		}
 		streamTime = '17';
-		var twitchChannelLink = 'https://www.twitch.tv/retro__boi';
-		var youtubeChannelLink = 'https://www.youtube.com/channel/UCwIqmX2N9gkCt4-zASxLA1A';
 		var latestYouTubeVideoLink = 'https://www.youtube.com/embed/videoseries?list=UUwIqmX2N9gkCt4-zASxLA1A';
 		var dictLinks = {
+			'twitch' : {'active' : true, 'name' : 'Retro__Boi', 'icon' : '../img/logo/platform/twitch.png', 'link' : 'https://www.twitch.tv/retro__boi', 'list' : 'LinksSocialMedia'},
+			'youtube' : {'active' : true, 'name' : 'Retro__Boi', 'icon' : '../img/logo/platform/youtube.png', 'link' : 'https://www.youtube.com/channel/UCwIqmX2N9gkCt4-zASxLA1A', 'list' : 'LinksSocialMedia'},
 			'instagram' : {'active' : true, 'name' : 'Retro__Boi', 'icon' : '../img/logo/platform/instagram.png', 'link' : 'https://www.instagram.com/sonik.sped/', 'list' : 'LinksSocialMedia'},
 			'twitter' : {'active' : true, 'name' : 'Retro__Boi', 'icon' : '../img/logo/platform/twitter.png', 'link' : 'https://www.twitter.com/eat_the_water', 'list' : 'LinksSocialMedia'},
 			'team_partner_shethzor' : {'active' : true, 'name' : 'Shethzor', 'icon' : teamList['Shethzor']['logo'], 'link' : teamList['Shethzor']['website'], 'list' : 'LinksTeamPartner'}, 
@@ -111,10 +145,10 @@ switch(user){
 			'sa' : true,
 		}
 		streamTime = '17';
-		var twitchChannelLink = 'https://www.twitch.tv/TheString#Enjoy_your_time_on_my_Twitch_channel';
-		var youtubeChannelLink = 'https://www.youtube.com/channel/UC0uJMyQjKUgLKthvf0E6JpA#Enjoy_your_time_on_my_YouTube_channel';
 		var latestYouTubeVideoLink = 'https://www.youtube.com/embed/videoseries?list=UU0uJMyQjKUgLKthvf0E6JpA';
 		var dictLinks = {
+			'twitch' : {'active' : true, 'name' : 'Shethzor', 'icon' : '../img/logo/platform/twitch.png', 'link' : 'https://www.twitch.tv/TheString#Enjoy_your_time_on_my_Twitch_channel', 'list' : 'LinksSocialMedia'},
+			'youtube' : {'active' : true, 'name' : 'Shethzor', 'icon' : '../img/logo/platform/youtube.png', 'link' : 'https://www.youtube.com/channel/UC0uJMyQjKUgLKthvf0E6JpA#Enjoy_your_time_on_my_YouTube_channel', 'list' : 'LinksSocialMedia'},
 			'discord' : {'active' : true, 'name' : 'Shethzor', 'icon' : '../img/logo/platform/discord.png', 'link' : 'https://www.Discord.gg/scdT6Sn#Don\'t_be_shy._We_are_waiting_for_you!', 'list' : 'LinksSocialMedia'},
 			'tellonym' : {'active' : true, 'name' : 'Shethzor', 'icon' : '../img/logo/platform/tellonym.png', 'link' : 'https://tellonym.me/Shethzor#Ask_me_anything', 'list' : 'LinksSocialMedia'},
 			'twitter' : {'active' : true, 'name' : 'Shethzor', 'icon' : '../img/logo/platform/twitter.png', 'link' : 'https://www.Twitter.com/Shethzor#Do_you_hear_that?_Sounds_like_some_tweets!', 'list' : 'LinksSocialMedia'},
@@ -132,43 +166,50 @@ switch(user){
 			'patreon_donate' : {'active' : true, 'name' : 'Shethzor', 'icon' : '../img/logo/support/patreon.png', 'link' : 'https://www.Patreon.com/shethzor#Are_you_about_to_support_me?_Thanks_a_lot_<3', 'list' : 'LinksSupportDonate'}, 
 		
 			//OFF
-			'tipeeestream_donate' : {'active' : false, 'name' : 'Shethzor', 'icon' : '../img/logo/support/tipeeestream.png', 'link' : 'https://www.tipeeestream.com/shethzor/donation#Are_you_about_to_donate?_Thanks_a_lot_<3', 'list' : 'LinksSupportDonate'}, 
-			'soundcloud' : {'active' : false, 'name' : 'DreamVisuals', 'icon' : '../img/logo/platform/soundcloud.png', 'link' : 'https://soundcloud.com/dreamvisual', 'list' : 'LinksSocialMedia'},
+			'spotify' : {'active' : false, 'name' : '', 'icon' : '../img/logo/platform/spotify.png', 'link' : '', 'list' : 'LinksOther'},
+			'tipeeestream_donate' : {'active' : false, 'name' : '', 'icon' : '../img/logo/support/tipeeestream.png', 'link' : '', 'list' : 'LinksSupportDonate'}, 
+			'soundcloud' : {'active' : false, 'name' : '', 'icon' : '../img/logo/platform/soundcloud.png', 'link' : '', 'list' : 'LinksSocialMedia'},
 		}
 	break;
 }
+
+for (var redirect in searchKey) {
+	if (dictLinks.hasOwnProperty(redirect) && dictLinks[redirect]['link'] != '') {
+		window.location.replace(dictLinks[redirect]['link'])
+	}
+}
+
 
 var combinationArray = new Array();
 
 document.addEventListener('keydown', loadTheme);
 
-document.getElementById('twitch-channel-link').href = twitchChannelLink;
-document.getElementById('youtube-channel-link').href = youtubeChannelLink;
-document.getElementById('latest-youtube-video').src = latestYouTubeVideoLink;
-
+// Hide Empty Areas
+var panel = ['twitch', 'youtube'];
 var isTeam = ['LinksTeamMain', 'LinksTeamPartner']
 for (var page in dictLinks){
 	var display = document.getElementById('display-' + dictLinks[page]['list'])
 	if (display) {
-		if (display.classList.contains('d-none')){
-			display.classList.remove('d-none');
-			display.classList.add('d-block');
-			switch(dictLinks[page]['list']){
-				case "LinksTeamMain":
-				case "LinksTeamPartner":
-					if (dictLinks[page]['active']){
-						display = document.getElementById('display-Team');
-					}
-				break;
-				case "LinksSupportAffiliate":
-				case "LinksSupportDonate":
-					if (dictLinks[page]['active']){
-						display = document.getElementById('display-Support');
-					}
-				break;
+		if (dictLinks[page]['active'] && dictLinks[page]['link'] != ''){
+			if (display.classList.contains('d-none')){
+				display.classList.remove('d-none');
+				display.classList.add('d-block');
+				switch(dictLinks[page]['list']){
+					case "LinksTeamMain":
+					case "LinksTeamPartner":
+							display = document.getElementById('display-Team');
+					break;
+					case "LinksSupportAffiliate":
+					case "LinksSupportDonate":
+						if (dictLinks[page]['active']){
+							display = document.getElementById('display-Support');
+						}
+					break;
+				}
+				console.log(dictLinks[page]['list'])
+				display.classList.remove('d-none');
+				display.classList.add('d-block');
 			}
-			display.classList.remove('d-none');
-			display.classList.add('d-block');
 		}
 	}
 
@@ -187,7 +228,22 @@ for (var page in dictLinks){
 				break;
 			}
 		}
-      	document.getElementById(dictLinks[page]['list']).innerHTML += wrapperStart + '<div id="' + page + '-button" class="button-icon-main"><a href="' + dictLinks[page]['link'] + '" ' + target + '><img src="' + dictLinks[page]['icon'] + '" alt="' + page + '"></img></a>' + wrapperEnd + displayName + '</div>';
+
+		if (dictLinks[page]['link']){
+			if (panel.includes(page)) {
+				document.getElementById('panel').classList.remove('d-none');
+				document.getElementById('panel').classList.add('d-block');
+
+				document.getElementById('panel-' + page).classList.remove('d-none');
+				document.getElementById('panel-' + page).classList.add('d-block');
+				document.getElementById(page + '-channel-link').href = dictLinks[page]['link'];
+				if (page = "youtube"){
+					document.getElementById('latest-youtube-video').src = latestYouTubeVideoLink;
+				}
+			}else{
+				document.getElementById(dictLinks[page]['list']).innerHTML += wrapperStart + '<div id="' + page + '-button" class="button-icon-main"><a href="' + dictLinks[page]['link'] + '" ' + target + '><img src="' + dictLinks[page]['icon'] + '" alt="' + page + '"></img></a>' + wrapperEnd + displayName + '</div>';
+			}
+	    }
 	}
 }
 
