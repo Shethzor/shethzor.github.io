@@ -127,10 +127,11 @@ switch(user){
 			'youtube_music' : {'active' : true, 'name' : 'Shethzor', 'icon' : '../img/logo/platform/youtubemusic.png', 'link' : 'https://music.YouTube.com/playlist?list=PLQXedffXBLVweDH3c_iILpeoT1p-YrRIn#This_music_is_so_good._Well_it\'s_mine', 'list' : 'LinksOther'},
 			'github' : {'active' : true, 'name' : 'Shethzor', 'icon' : '../img/logo/platform/github.png', 'link' : 'https://www.GitHub.com/Shethzor#There_is_some_code_in_here._Looks_kinda_boring', 'list' : 'LinksOther'},
 			'instant_gaming_affiliate' : {'active' : true, 'name' : 'Shethzor', 'icon' : '../img/logo/support/instantgaming.png', 'link' : 'https://www.Instant-Gaming.com//?igr=shethzor#Yeah,_support_me_by_buying_the_games_cheaper!', 'list' : 'LinksSupportAffiliate'},
-			'streamelements_donate' : {'active' : true, 'name' : 'Shethzor', 'icon' : '../img/logo/support/streamelements.png', 'link' : 'https://StreamElements.com/thestring/tip#Are_you_about_to_donate?_Thanks_a_lot_<3', 'list' : 'LinksSupportDonate'}, 
+			'tipeeestream_donate' : {'active' : true, 'name' : 'Shethzor', 'icon' : '../img/logo/support/tipeeestream.png', 'link' : 'https://www.tipeeestream.com/shethzor/donation#Are_you_about_to_donate?_Thanks_a_lot_<3', 'list' : 'LinksSupportDonate'}, 
 			'patreon_donate' : {'active' : true, 'name' : 'Shethzor', 'icon' : '../img/logo/support/patreon.png', 'link' : 'https://www.Patreon.com/shethzor#Are_you_about_to_support_me?_Thanks_a_lot_<3', 'list' : 'LinksSupportDonate'}, 
 		
 			//OFF
+			'streamelements_donate' : {'active' : false, 'name' : 'Shethzor', 'icon' : '../img/logo/support/streamelements.png', 'link' : 'https://StreamElements.com/thestring/tip#Are_you_about_to_donate?_Thanks_a_lot_<3', 'list' : 'LinksSupportDonate'}, 
 			'soundcloud' : {'active' : false, 'name' : 'DreamVisuals', 'icon' : '../img/logo/platform/soundcloud.png', 'link' : 'https://soundcloud.com/dreamvisual', 'list' : 'LinksSocialMedia'},
 		}
 	break;
