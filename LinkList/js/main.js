@@ -230,7 +230,16 @@ for (var page in dictLinks){
 		}
 
 		if (dictLinks[page]['link']){
-			if (panel.includes(page)) {
+			var isPanel = false;
+			for (var panelName in panel) {
+				console.log(panelName + " = " + page);
+				if (panel[panelName] == page) {
+					isPanel = true;
+					break;
+				}
+				isPanel = false;
+			}
+			if (isPanel) {
 				document.getElementById('panel').classList.remove('d-none');
 				document.getElementById('panel').classList.add('d-block');
 

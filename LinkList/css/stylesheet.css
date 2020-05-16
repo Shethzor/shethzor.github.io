@@ -91,10 +91,6 @@ p {
 .button-icon-main a:active {
     transform: scale(0.8);
 }
-    
-#twitch-button, #youtube-button{
-    display: none;
-}
 
 .max-width-220{
     max-width: 220px;
