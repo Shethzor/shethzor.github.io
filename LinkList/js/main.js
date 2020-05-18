@@ -249,7 +249,7 @@ switch(user){
 			'sa' : true,
 		}
 		streamTime = '17';
-		var latestYouTubeVideoLink = '';
+		var latestYouTubeVideoLink = 'https://www.youtube.com/embed/videoseries?list=UU0uJMyQjKUgLKthvf0E6JpA';
 		var dictLinks = {
 			'twitch' : {'active' : true, 'name' : 'Shethzor', 'icon' : '../img/logo/platform/twitch.png', 'link' : 'https://www.twitch.tv/TheString#Enjoy_your_time_on_my_Twitch_channel', 'list' : 'LinksSocialMedia'},
 			'youtube' : {'active' : true, 'name' : 'Shethzor', 'icon' : '../img/logo/platform/youtube.png', 'link' : 'https://www.youtube.com/channel/UC0uJMyQjKUgLKthvf0E6JpA#Enjoy_your_time_on_my_YouTube_channel', 'list' : 'LinksSocialMedia'},
