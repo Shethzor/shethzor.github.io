@@ -1,7 +1,60 @@
 var teamList = {
-	"DreamVisuals" : {'logo' : '../img/logo/team/main/dreamvisuals.gif', 'website' : 'http://shethzor.tv?id=dreamvisuals'},
-	"Retro__Boi" : {'logo' : '../img/logo/team/main/retro__boi.png', 'website' : 'http://shethzor.tv?id=retro__boi'},
-	"Shethzor" : {'logo' : '../img/logo/main/shethzor.gif', 'website' : 'http://shethzor.tv'}
+	'DreamVisuals' : {'logo' : '../img/logo/team/main/dreamvisuals.gif', 'website' : 'http://shethzor.tv?id=dreamvisuals'},
+	'Retro__Boi' : {'logo' : '../img/logo/team/main/retro__boi.png', 'website' : 'http://shethzor.tv?id=retro__boi'},
+	'Shethzor' : {'logo' : '../img/logo/main/shethzor.gif', 'website' : 'http://shethzor.tv?id=shethzor'}
+}
+
+var dictLanguage = {
+	'en' : {
+		'label' : {
+			'LinksSocialMedia' : 'Social Media',
+			'StreamingOn' : 'STREAMING ON',
+			'Team' : 'Team',
+			'LinksOther' : 'Other',
+			'Support' : 'Support',
+			'LinksSupportAffiliate' : 'Affiliate',
+			'LinksSupportDonate' : 'Donate',
+			'Copyright' : 'Made with 💜 by Shethzor © All Rights Reserved',
+		},
+		'day' : {
+			'su' : 'Su',
+			'mo' : 'Mo',
+			'tu' : 'Tu',
+			'we' : 'We',
+			'th' : 'Th',
+			'fr' : 'Fr',
+			'sa' : 'Sa',
+		},
+		'time' : {
+			'at' : 'AT',
+			'clock' : 'O\'Clock',
+		},
+	},
+	'de' : {
+		'label' : {
+			'LinksSocialMedia' : 'Soziale Medien',
+			'StreamingOn' : 'STREAMT AN',
+			'Team' : 'Team',
+			'LinksOther' : 'Anderes',
+			'Support' : 'Support',
+			'LinksSupportAffiliate' : 'Affiliate',
+			'LinksSupportDonate' : 'Spenden',
+			'Copyright' : 'Mit viel 💜 von Shethzor gemacht © Alle Rechte vorbehalten',
+		},
+		'day' : {
+			'su' : 'So',
+			'mo' : 'Mo',
+			'tu' : 'Di',
+			'we' : 'Mi',
+			'th' : 'Do',
+			'fr' : 'Fr',
+			'sa' : 'Sa',
+		},
+		'time' : {
+			'at' : 'UM',
+			'clock' : 'Uhr',
+		},
+	},
 }
 
 var search = window.location.search.substr(1).split('&');
@@ -13,6 +66,16 @@ for (var i = 0; i < search.length; i++){
 var user;
 if (searchKey['id']){
 	user = searchKey['id'].toLowerCase();
+}
+
+var language = 'en';
+for (var lang in searchKey) {
+	if (dictLanguage.hasOwnProperty(searchKey[lang]) && dictLanguage[searchKey[lang]] != null) {
+		language = searchKey[lang];
+		for (var label in dictLanguage[language]['label']){
+			document.getElementById("display-language-" + label).innerHTML = dictLanguage[language]['label'][label];
+		}
+	}
 }
 
 switch(user){
@@ -179,7 +242,6 @@ for (var redirect in searchKey) {
 	}
 }
 
-
 var combinationArray = new Array();
 
 document.addEventListener('keydown', loadTheme);
@@ -232,7 +294,6 @@ for (var page in dictLinks){
 		if (dictLinks[page]['link']){
 			var isPanel = false;
 			for (var panelName in panel) {
-				console.log(panelName + " = " + page);
 				if (panel[panelName] == page) {
 					isPanel = true;
 					break;
@@ -330,6 +391,7 @@ if (banner){
 
 //Twitch Stream Days
 for (var day in streamDays){
+	document.getElementById('streaming-' + day).innerHTML = dictLanguage[language]['day'][day];
 	document.getElementById('streaming-' + day).classList = 'streaming-' + streamDays[day];
 }
 
@@ -337,6 +399,6 @@ for (var day in streamDays){
 const event = new Date('August 19, 1975 ' + streamTime + ':00:00 GMT+00:00');
 var time = event.toLocaleTimeString(navigator.language, {hour: '2-digit', minute:'2-digit'});
 if (time.length == 5){
-	time += ' O\'CLOCK';
+	time += ' ' + dictLanguage[language]['time']['clock'];
 }
-document.getElementById('streaming-time').innerHTML = 'AT ' + time;
+document.getElementById('streaming-time').innerHTML = dictLanguage[language]['time']['at'] + ' ' + time;
