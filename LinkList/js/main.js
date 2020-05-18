@@ -268,7 +268,6 @@ for (var page in dictLinks){
 						}
 					break;
 				}
-				console.log(dictLinks[page]['list'])
 				display.classList.remove('d-none');
 				display.classList.add('d-block');
 			}
