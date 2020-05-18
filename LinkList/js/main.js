@@ -9,7 +9,9 @@ var dictLanguage = {
 		'label' : {
 			'LinksSocialMedia' : 'Social Media',
 			'StreamingOn' : 'STREAMING ON',
-			'Team' : 'Team',
+			'Team' : 'My Team',
+			'LinksTeamMain' : 'Main',
+			'LinksTeamPartner' : 'Partner',
 			'LinksOther' : 'Other',
 			'Support' : 'Support',
 			'LinksSupportAffiliate' : 'Affiliate',
@@ -34,7 +36,9 @@ var dictLanguage = {
 		'label' : {
 			'LinksSocialMedia' : 'Soziale Medien',
 			'StreamingOn' : 'STREAMT AN',
-			'Team' : 'Team',
+			'Team' : 'Mein Team',
+			'LinksTeamMain' : 'Main',
+			'LinksTeamPartner' : 'Partner',
 			'LinksOther' : 'Anderes',
 			'Support' : 'Support',
 			'LinksSupportAffiliate' : 'Affiliate',
@@ -70,10 +74,12 @@ if (searchKey['id']){
 
 var language = 'en';
 for (var lang in searchKey) {
-	if (dictLanguage.hasOwnProperty(searchKey[lang]) && dictLanguage[searchKey[lang]] != null) {
-		language = searchKey[lang];
-		for (var label in dictLanguage[language]['label']){
-			document.getElementById("display-language-" + label).innerHTML = dictLanguage[language]['label'][label];
+	if (searchKey['l']){
+		if (dictLanguage.hasOwnProperty(searchKey[lang]) && dictLanguage[searchKey[lang]] != null) {
+			language = searchKey[lang];
+			for (var label in dictLanguage[language]['label']){
+				document.getElementById("display-language-" + label).innerHTML = dictLanguage[language]['label'][label];
+			}
 		}
 	}
 }
@@ -112,6 +118,41 @@ switch(user){
 			'steam' : {'active' : true, 'name' : 'DreamVisuals', 'icon' : '../img/logo/platform/steam.png', 'link' : 'http://steamcommunity.com/id/DVedits', 'list' : 'LinksSocialMedia'},
 			'team_main_shethzor' : {'active' : true, 'name' : 'Shethzor', 'icon' : teamList['Shethzor']['logo'], 'link' : teamList['Shethzor']['website'], 'list' : 'LinksTeamMain'},
 			'streamlabs_donate' : {'active' : true, 'name' : 'DreamVisuals', 'icon' : '../img/logo/support/streamlabs.png', 'link' : 'https://streamlabs.com/dreamvisuals1/tip', 'list' : 'LinksSupportDonate'}, 
+		}
+	break;
+	case 'flariwyr':
+		var title = "Flariwyr's links";
+		var favicon = '../img/icon/main/shethzor.png';
+		var backgroundImageLink = 'https://i.imgur.com/AV595g2.gif';
+		var backgroundBlur = 2;
+		var backgroundColor = 'black';
+		var fontLink = 'https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap';
+		var fontName = '"Press Start 2P"';
+		var fontSize = 0;
+		var h3Size = 1;
+		var pSize = 13;
+		var copyrightSize = 10;
+		var banner = ''
+		var bannerWidth;
+		var streamDays = {
+			'su' : true,
+			'mo' : false,
+			'tu' : true,
+			'we' : false,
+			'th' : true,
+			'fr' : false,
+			'sa' : false,
+		}
+		streamTime = '17';
+		var latestYouTubeVideoLink = 'https://www.youtube.com/embed/videoseries?list=UU0uJMyQjKUgLKthvf0E6JpA';
+		var dictLinks = {
+			'twitch' : {'active' : true, 'name' : 'Flariwyr', 'icon' : '../img/logo/platform/twitch.png', 'link' : 'https://www.twitch.tv/flariwyr/', 'list' : 'LinksSocialMedia'},
+			'discord' : {'active' : true, 'name' : 'Flariwyr', 'icon' : '../img/logo/platform/discord.png', 'link' : 'https://discord.gg/erdQMN', 'list' : 'LinksSocialMedia'},
+			'instagram' : {'active' : true, 'name' : 'Flariwyr', 'icon' : '../img/logo/platform/instagram.png', 'link' : 'https://www.instagram.com/flariwyr/', 'list' : 'LinksSocialMedia'},
+			'steam' : {'active' : true, 'name' : 'Flariwyr', 'icon' : '../img/logo/platform/steam.png', 'link' : 'http://steamcommunity.com/id/Flariwyr', 'list' : 'LinksSocialMedia'},
+			'pornhub' : {'active' : true, 'name' : 'Flariwyr', 'icon' : '../img/logo/platform/pornhub.png', 'link' : 'https://www.pornhub.com/users/flariwyr', 'list' : 'LinksSocialMedia'},
+			'team_main_shethzor' : {'active' : true, 'name' : 'Shethzor', 'icon' : teamList['Shethzor']['logo'], 'link' : teamList['Shethzor']['website'], 'list' : 'LinksTeamMain'},
+			'streamlabs_donate' : {'active' : true, 'name' : 'Flariwyr', 'icon' : '../img/logo/support/streamlabs.png', 'link' : 'https://www.streamlabs.com/flariwyr/tip', 'list' : 'LinksSupportDonate'}, 
 		}
 	break;
 	case 'hitmarcer':
