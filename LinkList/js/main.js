@@ -5,6 +5,33 @@ var teamList = {
 }
 
 var dictLanguage = {
+	'de' : {
+		'label' : {
+			'LinksSocialMedia' : 'Soziale Medien',
+			'StreamingOn' : 'STREAMT AN',
+			'Team' : 'Mein Team',
+			'LinksTeamMain' : 'Main',
+			'LinksTeamPartner' : 'Partner',
+			'LinksOther' : 'Anderes',
+			'Support' : 'Support',
+			'LinksSupportAffiliate' : 'Affiliate',
+			'LinksSupportDonate' : 'Spenden',
+			'Copyright' : 'Mit viel 💜 von Shethzor gemacht © Alle Rechte vorbehalten',
+		},
+		'day' : {
+			'su' : 'So',
+			'mo' : 'Mo',
+			'tu' : 'Di',
+			'we' : 'Mi',
+			'th' : 'Do',
+			'fr' : 'Fr',
+			'sa' : 'Sa',
+		},
+		'time' : {
+			'at' : 'UM',
+			'clock' : 'Uhr',
+		},
+	},
 	'en' : {
 		'label' : {
 			'LinksSocialMedia' : 'Social Media',
@@ -32,31 +59,58 @@ var dictLanguage = {
 			'clock' : 'O\'Clock',
 		},
 	},
-	'de' : {
+	'es' : {
 		'label' : {
-			'LinksSocialMedia' : 'Soziale Medien',
-			'StreamingOn' : 'STREAMT AN',
-			'Team' : 'Mein Team',
-			'LinksTeamMain' : 'Main',
-			'LinksTeamPartner' : 'Partner',
-			'LinksOther' : 'Anderes',
-			'Support' : 'Support',
-			'LinksSupportAffiliate' : 'Affiliate',
-			'LinksSupportDonate' : 'Spenden',
-			'Copyright' : 'Mit viel 💜 von Shethzor gemacht © Alle Rechte vorbehalten',
+			'LinksSocialMedia' : 'Redes Sociales',
+			'StreamingOn' : 'STREAMING EN',
+			'Team' : 'Mi equipo',
+			'LinksTeamMain' : 'Principal',
+			'LinksTeamPartner' : 'Compañero',
+			'LinksOther' : 'Otro',
+			'Support' : 'Apoyo',
+			'LinksSupportAffiliate' : 'Afiliado',
+			'LinksSupportDonate' : 'Donar',
+			'Copyright' : 'Hecho con 💜 por Shethzor © Todos los derechos reservados',
 		},
 		'day' : {
-			'su' : 'So',
-			'mo' : 'Mo',
-			'tu' : 'Di',
+			'su' : 'Do',
+			'mo' : 'Lu',
+			'tu' : 'Ma',
 			'we' : 'Mi',
-			'th' : 'Do',
-			'fr' : 'Fr',
+			'th' : 'Ju',
+			'fr' : 'Vi',
 			'sa' : 'Sa',
 		},
 		'time' : {
-			'at' : 'UM',
-			'clock' : 'Uhr',
+			'at' : 'A las',
+			'clock' : '',
+		},
+	},
+	'jp' : {
+		'label' : {
+			'LinksSocialMedia' : 'ソーシャルメディア',
+			'StreamingOn' : '私のチーム',
+			'Team' : 'マイチーム',
+			'LinksTeamMain' : 'メイン',
+			'LinksTeamPartner' : 'パートナー',
+			'LinksOther' : 'その他',
+			'Support' : 'サポート',
+			'LinksSupportAffiliate' : 'アフィリエイト',
+			'LinksSupportDonate' : '寄付',
+			'Copyright' : 'Shethzor によって💜で作られました©すべての権利予約',
+		},
+		'day' : {
+			'su' : 'Ni',
+			'mo' : 'Ge',
+			'tu' : 'Ka',
+			'we' : 'Su',
+			'th' : 'Mo',
+			'fr' : 'Ki',
+			'sa' : 'Do',
+		},
+		'time' : {
+			'at' : '',
+			'clock' : 'Ji ni',
 		},
 	},
 }
@@ -91,6 +145,8 @@ switch(user){
 		var backgroundImageLink = 'https://cutewallpaper.org/21/hd-gif-wallpapers/Gifart-Lo-Fi-Wallpapers-Top-Free-Gifart-Lo-Fi-Backgrounds-.gif';
 		var backgroundBlur = 2;
 		var backgroundColor = 'purple';
+		var textColor = '';
+		var textShadow = '';
 		var fontLink = 'https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap';
 		var fontName = '"Source Code Pro"';
 		var fontSize = 20;
@@ -126,6 +182,8 @@ switch(user){
 		var backgroundImageLink = 'https://i.imgur.com/AV595g2.gif';
 		var backgroundBlur = 2;
 		var backgroundColor = 'black';
+		var textColor = '';
+		var textShadow = '';
 		var fontLink = 'https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap';
 		var fontName = '"Press Start 2P"';
 		var fontSize = 0;
@@ -161,6 +219,8 @@ switch(user){
 		var backgroundImageLink = 'https://img5.goodfon.com/wallpaper/nbig/2/7d/battlefield-1-igra-fon.jpg';
 		var backgroundBlur = 3;
 		var backgroundColor = 'blue';
+		var textColor = '';
+		var textShadow = '';
 		var fontLink = 'https://fonts.googleapis.com/css2?family=Audiowide&display=swap';
 		var fontName = '"Audiowide"';
 		var fontSize = 20;
@@ -195,6 +255,8 @@ switch(user){
 		var backgroundImageLink = '../img/background/team/main/retro__boi.gif';
 		var backgroundBlur = 0;
 		var backgroundColor = 'black';
+		var textColor = '';
+		var textShadow = '';
 		var fontLink = 'https://fonts.googleapis.com/css?family=Mali&display=swap';
 		var fontName = '"Mali"';
 		var fontSize = 20;
@@ -231,6 +293,8 @@ switch(user){
 		var backgroundImageLink = 'https://media1.tenor.com/images/a682025c7ab8f3b60b1e230fe89f1879/tenor.gif';
 		var backgroundBlur = 3;
 		var backgroundColor = 'black';
+		var textColor = '';
+		var textShadow = '';
 		var fontLink = 'https://fonts.googleapis.com/css2?family=Orbitron&display=swap';
 		var fontName = '"Orbitron"';
 		var fontSize = 15;
@@ -359,14 +423,14 @@ for (var page in dictLinks){
 
 function loadTheme(key){
 	
-	combinationArray.length = 10;
+	combinationArray.length = 15;
 	for(var i = 0; i < combinationArray.length; i++){
 		combinationArray[i] = combinationArray[(i+1)];
 	}
 	combinationArray[(combinationArray.length - 1)] = key.key;
 	
 	var check = true;
-	for (var i = 0; i < 10; i++){
+	for (var i = 0; i < 15; i++){
 		switch(getArrayText(combinationArray, i)){
 			case '<3': 
 				document.getElementById('Background').style.backgroundImage = 'url("../img/background/main/hearts.gif")';
@@ -379,7 +443,20 @@ function loadTheme(key){
 			case 'invisible': 
 				document.body.style.opacity = '0';
 				break;
-		}
+			case 'megalovania':
+				document.querySelectorAll('body')[0].innerHTML += '<iframe class="d-none" width="560" height="315" src="https://www.youtube.com/embed/wDgQdr8ZkTw?controls=0&loop=1&autoplay=1&disablekb=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
+			break;
+			case 'neon':
+				backgroundImageLink = ' ';
+				backgroundColor = 'black';
+				textColor = '#00ffff';
+				textShadow = '#00ffffff 0 0 8px';
+				loadStyles()
+			break;
+			case 'oh man':
+				document.querySelectorAll('body')[0].innerHTML += '<iframe class="d-none" width="560" height="315" src="https://www.youtube.com/embed/3gtQ6eMWPnM?controls=0&loop=1&autoplay=1&disablekb=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
+			break;
+			}
 	}
 }
 
@@ -391,42 +468,48 @@ function getArrayText(combinationArray, length){
 	return text;
 }
 
-if (backgroundImageLink){
-	document.getElementById('Background').style.backgroundImage = 'url("' + backgroundImageLink + '")';
-	document.getElementById('Background').style.filter = 'blur(' + backgroundBlur + 'px)';
-}
-document.getElementById('Background').style.backgroundColor = backgroundColor;
-document.getElementById('own-font').href = fontLink;
-document.getElementsByTagName('body')[0].style.fontFamily = fontName;
+loadStyles();
 
-for (var h2 in document.getElementsByTagName('h2')){
-	if (!isNaN(h2)){
-		document.getElementsByTagName('h2')[h2].style.fontSize = 'calc(1.5vh + 1.5vw + ' + fontSize + 'px)';
+function loadStyles() {
+	if (backgroundImageLink){
+		document.getElementById('Background').style.backgroundImage = 'url("' + backgroundImageLink + '")';
+		document.getElementById('Background').style.filter = 'blur(' + backgroundBlur + 'px)';
 	}
-}
-for (var h3 in document.getElementsByTagName('h3')){
-	if (!isNaN(h3)){
-		document.getElementsByTagName('h3')[h3].style.fontSize = 'calc(1vh + 1vw + ' + h3Size + 'px)';
-	}
-}
-for (var p in document.getElementsByTagName('p')){
-	if (!isNaN(p)){
-		document.getElementsByTagName('p')[p].style.fontSize = pSize + 'px';
-	}
-}
-document.getElementById('Copyright').style.fontSize = copyrightSize + 'px';
+	document.getElementById('Background').style.backgroundColor = backgroundColor;
+	document.querySelectorAll('body')[0].style.color = textColor;
+	document.querySelectorAll('body')[0].style.textShadow = textShadow;
+	document.getElementById('own-font').href = fontLink;
+	document.getElementsByTagName('body')[0].style.fontFamily = fontName;
 
-document.getElementById('favicon').href = favicon;
-document.getElementById('title').innerHTML = title;
-
-if (banner){
-	if (bannerWidth){
-		document.getElementById('TitleImage').style.maxWidth = bannerWidth + 'vw';
+	for (var h2 in document.getElementsByTagName('h2')){
+		if (!isNaN(h2)){
+			document.getElementsByTagName('h2')[h2].style.fontSize = 'calc(1.5vh + 1.5vw + ' + fontSize + 'px)';
+		}
 	}
-	document.getElementById('TitleImage').src = banner;
-	bannerEl = document.getElementById('display-TitleImage');
-	bannerEl.classList.remove('d-none');
-	bannerEl.classList.add('d-block');
+	for (var h3 in document.getElementsByTagName('h3')){
+		if (!isNaN(h3)){
+			document.getElementsByTagName('h3')[h3].style.fontSize = 'calc(1vh + 1vw + ' + h3Size + 'px)';
+		}
+	}
+	for (var p in document.getElementsByTagName('p')){
+		if (!isNaN(p)){
+			document.getElementsByTagName('p')[p].style.fontSize = pSize + 'px';
+		}
+	}
+	document.getElementById('Copyright').style.fontSize = copyrightSize + 'px';
+
+	document.getElementById('favicon').href = favicon;
+	document.getElementById('title').innerHTML = title;
+
+	if (banner){
+		if (bannerWidth){
+			document.getElementById('TitleImage').style.maxWidth = bannerWidth + 'vw';
+		}
+		document.getElementById('TitleImage').src = banner;
+		bannerEl = document.getElementById('display-TitleImage');
+		bannerEl.classList.remove('d-none');
+		bannerEl.classList.add('d-block');
+	}
 }
 
 //Twitch Stream Days
