@@ -453,7 +453,7 @@ function loadTheme(key){
 				textShadow = '#00ffffff 0 0 8px';
 				loadStyles()
 			break;
-			case 'oh man':
+			case 'aw man':
 				document.querySelectorAll('body')[0].innerHTML += '<iframe class="d-none" width="560" height="315" src="https://www.youtube.com/embed/3gtQ6eMWPnM?controls=0&loop=1&autoplay=1&disablekb=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
 			break;
 			}
@@ -497,6 +497,7 @@ function loadStyles() {
 		}
 	}
 	document.getElementById('Copyright').style.fontSize = copyrightSize + 'px';
+	document.getElementById('Copyright').querySelectorAll('a')[0].style.color = textColor;
 
 	document.getElementById('favicon').href = favicon;
 	document.getElementById('title').innerHTML = title;
