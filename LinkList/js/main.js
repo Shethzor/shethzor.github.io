@@ -342,6 +342,7 @@ switch(user){
 }
 
 for (var redirect in searchKey) {
+	redirect = redirect.toLowerCase();
 	if (dictLinks.hasOwnProperty(redirect) && dictLinks[redirect]['link'] != '') {
 		window.location.replace(dictLinks[redirect]['link'])
 	}
@@ -444,7 +445,7 @@ function loadTheme(key){
 				document.body.style.opacity = '0';
 				break;
 			case 'megalovania':
-				document.querySelectorAll('body')[0].innerHTML += '<iframe class="d-none" width="560" height="315" src="https://www.youtube.com/embed/wDgQdr8ZkTw?controls=0&loop=1&autoplay=1&disablekb=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
+				document.getElementById('easteregg').innerHTML = '<iframe class="d-none" width="560" height="315" src="https://www.youtube.com/embed/wDgQdr8ZkTw?controls=0&loop=1&autoplay=1&disablekb=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
 			break;
 			case 'neon':
 				backgroundImageLink = ' ';
@@ -454,7 +455,7 @@ function loadTheme(key){
 				loadStyles()
 			break;
 			case 'aw man':
-				document.querySelectorAll('body')[0].innerHTML += '<iframe class="d-none" width="560" height="315" src="https://www.youtube.com/embed/3gtQ6eMWPnM?controls=0&loop=1&autoplay=1&disablekb=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
+				document.getElementById('easteregg').innerHTML = '<iframe class="d-none" width="560" height="315" src="https://www.youtube.com/embed/3gtQ6eMWPnM?controls=0&loop=1&autoplay=1&disablekb=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
 			break;
 			}
 	}
