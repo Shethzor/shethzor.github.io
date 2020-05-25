@@ -205,7 +205,7 @@ switch(user){
 		var latestYouTubeVideoLink = 'https://www.youtube.com/embed/videoseries?list=UU0uJMyQjKUgLKthvf0E6JpA';
 		var dictLinks = {
 			'twitch' : {'active' : true, 'name' : 'Flariwyr', 'icon' : '../img/logo/platform/twitch.png', 'link' : 'https://www.twitch.tv/flariwyr/', 'list' : 'LinksSocialMedia'},
-			'discord' : {'active' : true, 'name' : 'Flariwyr', 'icon' : '../img/logo/platform/discord.png', 'link' : 'https://discord.gg/erdQMN', 'list' : 'LinksSocialMedia'},
+			'discord' : {'active' : true, 'name' : 'Flariwyr', 'icon' : '../img/logo/platform/discord.png', 'link' : 'https://discord.gg/Fj8bGZF', 'list' : 'LinksSocialMedia'},
 			'instagram' : {'active' : true, 'name' : 'Flariwyr', 'icon' : '../img/logo/platform/instagram.png', 'link' : 'https://www.instagram.com/flariwyr/', 'list' : 'LinksSocialMedia'},
 			'steam' : {'active' : true, 'name' : 'Flariwyr', 'icon' : '../img/logo/platform/steam.png', 'link' : 'http://steamcommunity.com/id/Flariwyr', 'list' : 'LinksSocialMedia'},
 			'pornhub' : {'active' : true, 'name' : 'Flariwyr', 'icon' : '../img/logo/platform/pornhub.png', 'link' : 'https://www.pornhub.com/users/flariwyr', 'list' : 'LinksSocialMedia'},
