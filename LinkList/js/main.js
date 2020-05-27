@@ -350,7 +350,7 @@ for (var redirect in searchKey) {
 
 var combinationArray = new Array();
 
-document.addEventListener('keydown', loadTheme);
+document.addEventListener('keydown', loadEgg);
 
 // Hide Empty Areas
 var panel = ['twitch', 'youtube'];
@@ -422,17 +422,19 @@ for (var page in dictLinks){
 	}
 }
 
-function loadTheme(key){
-	
-	combinationArray.length = 15;
+function loadEgg(key){
+	combinationArray.length = 20;
 	for(var i = 0; i < combinationArray.length; i++){
 		combinationArray[i] = combinationArray[(i+1)];
 	}
 	combinationArray[(combinationArray.length - 1)] = key.key;
 	
-	var check = true;
-	for (var i = 0; i < 15; i++){
+	var frameStart = '<iframe class="d-none" width="560" height="315" src="';
+	var frameEnd = '?controls=0&loop=1&autoplay=1&disablekb=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
+	
+	for (var i = 0; i < 20; i++){
 		switch(getArrayText(combinationArray, i)){
+			//Visual
 			case '<3': 
 				document.getElementById('Background').style.backgroundImage = 'url("../img/background/main/hearts.gif")';
 				document.body.style.fontFamily = '"Love Ya Like A Sister"';
@@ -444,9 +446,6 @@ function loadTheme(key){
 			case 'invisible': 
 				document.body.style.opacity = '0';
 				break;
-			case 'megalovania':
-				document.getElementById('easteregg').innerHTML = '<iframe class="d-none" width="560" height="315" src="https://www.youtube.com/embed/wDgQdr8ZkTw?controls=0&loop=1&autoplay=1&disablekb=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
-			break;
 			case 'neon':
 				backgroundImageLink = ' ';
 				backgroundColor = 'black';
@@ -454,11 +453,29 @@ function loadTheme(key){
 				textShadow = '#00ffffff 0 0 8px';
 				loadStyles()
 			break;
+
+			//Sounds
 			case 'aw man':
-				document.getElementById('easteregg').innerHTML = '<iframe class="d-none" width="560" height="315" src="https://www.youtube.com/embed/3gtQ6eMWPnM?controls=0&loop=1&autoplay=1&disablekb=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
+				soundEgg('https://www.youtube.com/embed/3gtQ6eMWPnM');
+			break;
+			case 'caramella girls':
+				soundEgg('https://www.youtube.com/embed/6-8E4Nirh9s');
+			break;
+			case 'heyyeyaaeyaaaeyaeyaa':
+				soundEgg('https://www.youtube.com/embed/ZZ5LpwO-An4');
+			break;
+			case 'lol limewire':
+				soundEgg('https://www.youtube.com/embed/SAp0xO-LwFs');
+			break;
+			case 'megalovania':
+				soundEgg('https://www.youtube.com/embed/wDgQdr8ZkTw');
 			break;
 			}
 	}
+}
+
+function soundEgg(link){
+	document.getElementById('easteregg').innerHTML = '<iframe class="d-none" width="560" height="315" src="' + link + '?controls=0&loop=1&autoplay=1&disablekb=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
 }
 
 function getArrayText(combinationArray, length){
@@ -482,6 +499,7 @@ function loadStyles() {
 	document.getElementById('own-font').href = fontLink;
 	document.getElementsByTagName('body')[0].style.fontFamily = fontName;
 
+	//Text
 	for (var h2 in document.getElementsByTagName('h2')){
 		if (!isNaN(h2)){
 			document.getElementsByTagName('h2')[h2].style.fontSize = 'calc(1.5vh + 1.5vw + ' + fontSize + 'px)';
@@ -497,12 +515,17 @@ function loadStyles() {
 			document.getElementsByTagName('p')[p].style.fontSize = pSize + 'px';
 		}
 	}
+
+	//Copiright
 	document.getElementById('Copyright').style.fontSize = copyrightSize + 'px';
 	document.getElementById('Copyright').querySelectorAll('a')[0].style.color = textColor;
 
+	//Tab
 	document.getElementById('favicon').href = favicon;
 	document.getElementById('title').innerHTML = title;
 
+
+	//Header
 	if (banner){
 		if (bannerWidth){
 			document.getElementById('TitleImage').style.maxWidth = bannerWidth + 'vw';
