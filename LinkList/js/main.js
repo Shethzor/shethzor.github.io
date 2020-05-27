@@ -1,5 +1,8 @@
 var teamList = {
 	'DreamVisuals' : {'logo' : '../img/logo/team/main/dreamvisuals.gif', 'website' : 'http://shethzor.tv?id=dreamvisuals'},
+	'flariwyr' : {'logo' : '', 'website' : 'http://shethzor.tv?id=flariwyr'},
+	'haoru' : {'logo' : '', 'website' : 'http://shethzor.tv?id=haoru'},
+	'hitmarcer' : {'logo' : '', 'website' : 'http://shethzor.tv?id=hitmarcer'},
 	'Retro__Boi' : {'logo' : '../img/logo/team/main/retro__boi.png', 'website' : 'http://shethzor.tv?id=retro__boi'},
 	'Shethzor' : {'logo' : '../img/logo/main/shethzor.gif', 'website' : 'http://shethzor.tv?id=shethzor'}
 }
@@ -167,18 +170,18 @@ switch(user){
 		streamTime = '19';
 		var latestYouTubeVideoLink = 'https://www.youtube.com/embed/videoseries?list=UUnxr9y4rqZzQ42JIoW4aycg';
 		var dictLinks = {
-			'twitch' : {'active' : true, 'name' : 'Retro__Boi', 'icon' : '../img/logo/platform/twitch.png', 'link' : 'https://www.twitch.tv/dreamvisuals', 'list' : 'LinksSocialMedia'},
-			'youtube' : {'active' : true, 'name' : 'Retro__Boi', 'icon' : '../img/logo/platform/youtube.png', 'link' : 'https://www.youtube.com/channel/UCnxr9y4rqZzQ42JIoW4aycg', 'list' : 'LinksSocialMedia'},
-			'instagram' : {'active' : true, 'name' : 'DreamVisuals', 'icon' : '../img/logo/platform/instagram.png', 'link' : 'https://www.instagram.com/dream_visualizer/', 'list' : 'LinksSocialMedia'},
-			'soundcloud' : {'active' : true, 'name' : 'DreamVisuals', 'icon' : '../img/logo/platform/soundcloud.png', 'link' : 'https://soundcloud.com/dreamvisual', 'list' : 'LinksSocialMedia'},
-			'steam' : {'active' : true, 'name' : 'DreamVisuals', 'icon' : '../img/logo/platform/steam.png', 'link' : 'http://steamcommunity.com/id/DVedits', 'list' : 'LinksSocialMedia'},
-			'team_main_shethzor' : {'active' : true, 'name' : 'Shethzor', 'icon' : teamList['Shethzor']['logo'], 'link' : teamList['Shethzor']['website'], 'list' : 'LinksTeamMain'},
-			'streamlabs_donate' : {'active' : true, 'name' : 'DreamVisuals', 'icon' : '../img/logo/support/streamlabs.png', 'link' : 'https://streamlabs.com/dreamvisuals1/tip', 'list' : 'LinksSupportDonate'}, 
+			'twitch' : {'active' : true, 'name' : 'Retro__Boi', 'logo' : '../img/logo/platform/twitch.png', 'link' : 'https://www.twitch.tv/dreamvisuals', 'list' : 'LinksSocialMedia'},
+			'youtube' : {'active' : true, 'name' : 'Retro__Boi', 'logo' : '../img/logo/platform/youtube.png', 'link' : 'https://www.youtube.com/channel/UCnxr9y4rqZzQ42JIoW4aycg', 'list' : 'LinksSocialMedia'},
+			'instagram' : {'active' : true, 'name' : 'DreamVisuals', 'logo' : '../img/logo/platform/instagram.png', 'link' : 'https://www.instagram.com/dream_visualizer/', 'list' : 'LinksSocialMedia'},
+			'soundcloud' : {'active' : true, 'name' : 'DreamVisuals', 'logo' : '../img/logo/platform/soundcloud.png', 'link' : 'https://soundcloud.com/dreamvisual', 'list' : 'LinksSocialMedia'},
+			'steam' : {'active' : true, 'name' : 'DreamVisuals', 'logo' : '../img/logo/platform/steam.png', 'link' : 'http://steamcommunity.com/id/DVedits', 'list' : 'LinksSocialMedia'},
+			'team_main_shethzor' : {'active' : true, 'name' : 'Shethzor', 'logo' : teamList['Shethzor']['logo'], 'link' : teamList['Shethzor']['website'], 'list' : 'LinksTeamMain'},
+			'streamlabs_donate' : {'active' : true, 'name' : 'DreamVisuals', 'logo' : '../img/logo/support/streamlabs.png', 'link' : 'https://streamlabs.com/dreamvisuals1/tip', 'list' : 'LinksSupportDonate'}, 
 		}
 	break;
 	case 'flariwyr':
 		var title = "Flariwyr's links";
-		var favicon = '../img/icon/main/shethzor.png';
+		var favicon = '';
 		var backgroundImageLink = 'https://i.imgur.com/AV595g2.gif';
 		var backgroundBlur = 2;
 		var backgroundColor = 'black';
@@ -204,13 +207,50 @@ switch(user){
 		streamTime = '17';
 		var latestYouTubeVideoLink = 'https://www.youtube.com/embed/videoseries?list=UU0uJMyQjKUgLKthvf0E6JpA';
 		var dictLinks = {
-			'twitch' : {'active' : true, 'name' : 'Flariwyr', 'icon' : '../img/logo/platform/twitch.png', 'link' : 'https://www.twitch.tv/flariwyr/', 'list' : 'LinksSocialMedia'},
-			'discord' : {'active' : true, 'name' : 'Flariwyr', 'icon' : '../img/logo/platform/discord.png', 'link' : 'https://discord.gg/Fj8bGZF', 'list' : 'LinksSocialMedia'},
-			'instagram' : {'active' : true, 'name' : 'Flariwyr', 'icon' : '../img/logo/platform/instagram.png', 'link' : 'https://www.instagram.com/flariwyr/', 'list' : 'LinksSocialMedia'},
-			'steam' : {'active' : true, 'name' : 'Flariwyr', 'icon' : '../img/logo/platform/steam.png', 'link' : 'http://steamcommunity.com/id/Flariwyr', 'list' : 'LinksSocialMedia'},
-			'pornhub' : {'active' : true, 'name' : 'Flariwyr', 'icon' : '../img/logo/platform/pornhub.png', 'link' : 'https://www.pornhub.com/users/flariwyr', 'list' : 'LinksSocialMedia'},
-			'team_main_shethzor' : {'active' : true, 'name' : 'Shethzor', 'icon' : teamList['Shethzor']['logo'], 'link' : teamList['Shethzor']['website'], 'list' : 'LinksTeamMain'},
-			'streamlabs_donate' : {'active' : true, 'name' : 'Flariwyr', 'icon' : '../img/logo/support/streamlabs.png', 'link' : 'https://www.streamlabs.com/flariwyr/tip', 'list' : 'LinksSupportDonate'}, 
+			'twitch' : {'active' : true, 'name' : 'Flariwyr', 'logo' : '../img/logo/platform/twitch.png', 'link' : 'https://www.twitch.tv/flariwyr/', 'list' : 'LinksSocialMedia'},
+			'discord' : {'active' : true, 'name' : 'Flariwyr', 'logo' : '../img/logo/platform/discord.png', 'link' : 'https://discord.gg/Fj8bGZF', 'list' : 'LinksSocialMedia'},
+			'instagram' : {'active' : true, 'name' : 'Flariwyr', 'logo' : '../img/logo/platform/instagram.png', 'link' : 'https://www.instagram.com/flariwyr/', 'list' : 'LinksSocialMedia'},
+			'steam' : {'active' : true, 'name' : 'Flariwyr', 'logo' : '../img/logo/platform/steam.png', 'link' : 'http://steamcommunity.com/id/Flariwyr', 'list' : 'LinksSocialMedia'},
+			'pornhub' : {'active' : true, 'name' : 'Flariwyr', 'logo' : '../img/logo/platform/pornhub.png', 'link' : 'https://www.pornhub.com/users/flariwyr', 'list' : 'LinksSocialMedia'},
+			'team_main_shethzor' : {'active' : true, 'name' : 'Shethzor', 'logo' : teamList['Shethzor']['logo'], 'link' : teamList['Shethzor']['website'], 'list' : 'LinksTeamMain'},
+			'team_partner_haoru' : {'active' : true, 'name' : 'Haoru', 'logo' : teamList['haoru']['logo'], 'link' : teamList['haoru']['website'], 'list' : 'LinksTeamPartner'},
+			'streamlabs_donate' : {'active' : true, 'name' : 'Flariwyr', 'logo' : '../img/logo/support/streamlabs.png', 'link' : 'https://www.streamlabs.com/flariwyr/tip', 'list' : 'LinksSupportDonate'}, 
+		}
+	break;
+	case 'haoru':
+		var title = "Haoru's links";
+		var favicon = '';
+		var backgroundImageLink = 'https://i.pinimg.com/originals/0b/0d/32/0b0d3257fa1d5dc5a46f0a591e1fef05.gif';
+		var backgroundBlur = 3;
+		var backgroundColor = 'black';
+		var textColor = '';
+		var textShadow = '';
+		var fontLink = 'https://fonts.googleapis.com/css2?family=Baloo+Chettan+2:wght@500&display=swap';
+		var fontName = '"Baloo Chettan 2"';
+		var fontSize = 25;
+		var h3Size = 20;
+		var pSize = 17;
+		var copyrightSize = 15;
+		var banner = ''
+		var bannerWidth;
+		var streamDays = {
+			'su' : true,
+			'mo' : false,
+			'tu' : true,
+			'we' : false,
+			'th' : false,
+			'fr' : true,
+			'sa' : true,
+		}
+		streamTime = '';
+		var latestYouTubeVideoLink = '';
+		var dictLinks = {
+			'twitch' : {'active' : true, 'name' : 'M4ggiH4nz0', 'logo' : '../img/logo/platform/twitch.png', 'link' : 'https://www.twitch.tv/M4ggiH4nz0', 'list' : 'LinksSocialMedia'},
+			'instagram' : {'active' : true, 'name' : 'haoru0010', 'logo' : '../img/logo/platform/instagram.png', 'link' : 'https://www.instagram.com/Haoru0010/', 'list' : 'LinksSocialMedia'},
+			'telegram' : {'active' : true, 'name' : '', 'logo' : '../img/logo/platform/telegram.png', 'link' : 'https://t.me/HaorusTwitchCommunity', 'list' : 'LinksSocialMedia'},
+			'steam' : {'active' : true, 'name' : 'Shiroushima', 'logo' : '../img/logo/platform/steam.png', 'link' : 'https://steamcommunity.com/id/Shiroushima', 'list' : 'LinksSocialMedia'},
+			'team_main_shethzor' : {'active' : true, 'name' : 'Shethzor', 'logo' : teamList['Shethzor']['logo'], 'link' : teamList['Shethzor']['website'], 'list' : 'LinksTeamMain'},
+			'team_partner_flariwyr' : {'active' : true, 'name' : 'Flariwyr', 'logo' : teamList['flariwyr']['logo'], 'link' : teamList['flariwyr']['website'], 'list' : 'LinksTeamPartner'},
 		}
 	break;
 	case 'hitmarcer':
@@ -241,12 +281,12 @@ switch(user){
 		streamTime = '19';
 		var latestYouTubeVideoLink = '';
 		var dictLinks = {
-			'twitch' : {'active' : true, 'name' : 'HitMarcer', 'icon' : '../img/logo/platform/twitch.png', 'link' : 'https://www.twitch.tv/HitMarcer', 'list' : 'LinksSocialMedia'},
-			'twitter' : {'active' : true, 'name' : 'HitMarcer', 'icon' : '../img/logo/platform/twitter.png', 'link' : 'https://www.twitter.com/HitMarcer', 'list' : 'LinksSocialMedia'},
-			'instagram' : {'active' : true, 'name' : 'HitMarcer', 'icon' : '../img/logo/platform/instagram.png', 'link' : 'https://www.instagram.com/hitmarcer/', 'list' : 'LinksSocialMedia'},
-			'steam' : {'active' : true, 'name' : 'HitMarcer', 'icon' : '../img/logo/platform/steam.png', 'link' : 'https://steamcommunity.com/id/hitmarcer', 'list' : 'LinksSocialMedia'},
-			'team_main_shethzor' : {'active' : true, 'name' : 'Shethzor', 'icon' : teamList['Shethzor']['logo'], 'link' : teamList['Shethzor']['website'], 'list' : 'LinksTeamMain'},
-			'streamelements_donate' : {'active' : true, 'name' : 'HitMarcer', 'icon' : '../img/logo/support/streamelements.png', 'link' : 'https://streamelements.com/hitmarcer/tip', 'list' : 'LinksSupportDonate'}, 
+			'twitch' : {'active' : true, 'name' : 'HitMarcer', 'logo' : '../img/logo/platform/twitch.png', 'link' : 'https://www.twitch.tv/HitMarcer', 'list' : 'LinksSocialMedia'},
+			'twitter' : {'active' : true, 'name' : 'HitMarcer', 'logo' : '../img/logo/platform/twitter.png', 'link' : 'https://www.twitter.com/HitMarcer', 'list' : 'LinksSocialMedia'},
+			'instagram' : {'active' : true, 'name' : 'HitMarcer', 'logo' : '../img/logo/platform/instagram.png', 'link' : 'https://www.instagram.com/hitmarcer/', 'list' : 'LinksSocialMedia'},
+			'steam' : {'active' : true, 'name' : 'HitMarcer', 'logo' : '../img/logo/platform/steam.png', 'link' : 'https://steamcommunity.com/id/hitmarcer', 'list' : 'LinksSocialMedia'},
+			'team_main_shethzor' : {'active' : true, 'name' : 'Shethzor', 'logo' : teamList['Shethzor']['logo'], 'link' : teamList['Shethzor']['website'], 'list' : 'LinksTeamMain'},
+			'streamelements_donate' : {'active' : true, 'name' : 'HitMarcer', 'logo' : '../img/logo/support/streamelements.png', 'link' : 'https://streamelements.com/hitmarcer/tip', 'list' : 'LinksSupportDonate'}, 
 		}
 	break;
 	case "retro__boi":
@@ -277,19 +317,19 @@ switch(user){
 		streamTime = '17';
 		var latestYouTubeVideoLink = 'https://www.youtube.com/embed/videoseries?list=UUwIqmX2N9gkCt4-zASxLA1A';
 		var dictLinks = {
-			'twitch' : {'active' : true, 'name' : 'Retro__Boi', 'icon' : '../img/logo/platform/twitch.png', 'link' : 'https://www.twitch.tv/retro__boi', 'list' : 'LinksSocialMedia'},
-			'youtube' : {'active' : true, 'name' : 'Retro__Boi', 'icon' : '../img/logo/platform/youtube.png', 'link' : 'https://www.youtube.com/channel/UCwIqmX2N9gkCt4-zASxLA1A', 'list' : 'LinksSocialMedia'},
-			'instagram' : {'active' : true, 'name' : 'Retro__Boi', 'icon' : '../img/logo/platform/instagram.png', 'link' : 'https://www.instagram.com/sonik.sped/', 'list' : 'LinksSocialMedia'},
-			'twitter' : {'active' : true, 'name' : 'Retro__Boi', 'icon' : '../img/logo/platform/twitter.png', 'link' : 'https://www.twitter.com/eat_the_water', 'list' : 'LinksSocialMedia'},
-			'team_partner_shethzor' : {'active' : true, 'name' : 'Shethzor', 'icon' : teamList['Shethzor']['logo'], 'link' : teamList['Shethzor']['website'], 'list' : 'LinksTeamPartner'}, 
-			'spotify' : {'active' : true, 'name' : 'Shethzor', 'icon' : '../img/logo/platform/spotify.png', 'link' : 'https://music.YouTube.com/playlist?list=PLQXedffXBLVweDH3c_iILpeoT1p-YrRIn#This_music_is_so_good._Well_it\'s_mine', 'list' : 'LinksOther'},
-			'streamelements_donate' : {'active' : false, 'name' : 'Shethzor', 'icon' : '../img/logo/support/streamelements.png', 'link' : 'https://StreamElements.com/thestring/tip#Are_you_about_to_donate?_Thanks_a_lot_<3', 'list' : 'LinksSupportDonate'}, 
+			'twitch' : {'active' : true, 'name' : 'Retro__Boi', 'logo' : '../img/logo/platform/twitch.png', 'link' : 'https://www.twitch.tv/retro__boi', 'list' : 'LinksSocialMedia'},
+			'youtube' : {'active' : true, 'name' : 'Retro__Boi', 'logo' : '../img/logo/platform/youtube.png', 'link' : 'https://www.youtube.com/channel/UCwIqmX2N9gkCt4-zASxLA1A', 'list' : 'LinksSocialMedia'},
+			'instagram' : {'active' : true, 'name' : 'Retro__Boi', 'logo' : '../img/logo/platform/instagram.png', 'link' : 'https://www.instagram.com/sonik.sped/', 'list' : 'LinksSocialMedia'},
+			'twitter' : {'active' : true, 'name' : 'Retro__Boi', 'logo' : '../img/logo/platform/twitter.png', 'link' : 'https://www.twitter.com/eat_the_water', 'list' : 'LinksSocialMedia'},
+			'team_partner_shethzor' : {'active' : true, 'name' : 'Shethzor', 'logo' : teamList['Shethzor']['logo'], 'link' : teamList['Shethzor']['website'], 'list' : 'LinksTeamPartner'}, 
+			'spotify' : {'active' : true, 'name' : 'Shethzor', 'logo' : '../img/logo/platform/spotify.png', 'link' : 'https://music.YouTube.com/playlist?list=PLQXedffXBLVweDH3c_iILpeoT1p-YrRIn#This_music_is_so_good._Well_it\'s_mine', 'list' : 'LinksOther'},
+			'streamelements_donate' : {'active' : false, 'name' : 'Shethzor', 'logo' : '../img/logo/support/streamelements.png', 'link' : 'https://StreamElements.com/thestring/tip#Are_you_about_to_donate?_Thanks_a_lot_<3', 'list' : 'LinksSupportDonate'}, 
 		}
 	break;
 	case 'shethzor':
 	default:
 		var title = "Shethzor's links";
-		var favicon = '../img/icon/main/shethzor.png';
+		var favicon = '';
 		var backgroundImageLink = 'https://media1.tenor.com/images/a682025c7ab8f3b60b1e230fe89f1879/tenor.gif';
 		var backgroundBlur = 3;
 		var backgroundColor = 'black';
@@ -315,28 +355,29 @@ switch(user){
 		streamTime = '17';
 		var latestYouTubeVideoLink = 'https://www.youtube.com/embed/videoseries?list=UU0uJMyQjKUgLKthvf0E6JpA';
 		var dictLinks = {
-			'twitch' : {'active' : true, 'name' : 'Shethzor', 'icon' : '../img/logo/platform/twitch.png', 'link' : 'https://www.twitch.tv/TheString#Enjoy_your_time_on_my_Twitch_channel', 'list' : 'LinksSocialMedia'},
-			'youtube' : {'active' : true, 'name' : 'Shethzor', 'icon' : '../img/logo/platform/youtube.png', 'link' : 'https://www.youtube.com/channel/UC0uJMyQjKUgLKthvf0E6JpA#Enjoy_your_time_on_my_YouTube_channel', 'list' : 'LinksSocialMedia'},
-			'discord' : {'active' : true, 'name' : 'Shethzor', 'icon' : '../img/logo/platform/discord.png', 'link' : 'https://www.Discord.gg/scdT6Sn#Don\'t_be_shy._We_are_waiting_for_you!', 'list' : 'LinksSocialMedia'},
-			'tellonym' : {'active' : true, 'name' : 'Shethzor', 'icon' : '../img/logo/platform/tellonym.png', 'link' : 'https://tellonym.me/Shethzor#Ask_me_anything', 'list' : 'LinksSocialMedia'},
-			'twitter' : {'active' : true, 'name' : 'Shethzor', 'icon' : '../img/logo/platform/twitter.png', 'link' : 'https://www.Twitter.com/Shethzor#Do_you_hear_that?_Sounds_like_some_tweets!', 'list' : 'LinksSocialMedia'},
-			'instagram' : {'active' : true, 'name' : 'Shethzor', 'icon' : '../img/logo/platform/instagram.png', 'link' : 'https://www.Instagram.com/Shethzor#Look_at_all_those_pictures_of_mine_:D', 'list' : 'LinksSocialMedia'},
-			'e-pal' : {'active' : true, 'name' : 'Shethzor', 'icon' : '../img/logo/platform/e-pal.png', 'link' : 'https://www.epal.gg/epal/118368#Yes,_I\'m_selling_my_body_lmao', 'list' : 'LinksSocialMedia'},
-			'facebook' : {'active' : true, 'name' : 'Shethzor', 'icon' : '../img/logo/platform/facebook.png', 'link' : 'https://www.facebook.com/shethzor.alfonzo#Feels_kinda_2013', 'list' : 'LinksSocialMedia'},
-			'steam' : {'active' : true, 'name' : 'Shethzor', 'icon' : '../img/logo/platform/steam.png', 'link' : 'https://steamcommunity.com/id/shethzor#Spin_the_valve', 'list' : 'LinksSocialMedia'},
-			'pornhub' : {'active' : true, 'name' : 'Shethzor', 'icon' : '../img/logo/platform/pornhub.png', 'link' : 'https://www.pornhub.com/users/shethzor#What_did_you_expect_to_see_on_this_profile?', 'list' : 'LinksSocialMedia'},
-			'team_main_dream_visuals' : {'active' : true, 'name' : 'DreamVisuals', 'icon' : teamList['DreamVisuals']['logo'], 'link' : teamList['DreamVisuals']['website'], 'list' : 'LinksTeamMain'},
-			'team_main_retro__boi' : {'active' : true, 'name' : 'Retro__Boi', 'icon' : teamList['Retro__Boi']['logo'], 'link' : teamList['Retro__Boi']['website'], 'list' : 'LinksTeamMain'},
-			'youtube_music' : {'active' : true, 'name' : 'Shethzor', 'icon' : '../img/logo/platform/youtubemusic.png', 'link' : 'https://music.YouTube.com/playlist?list=PLQXedffXBLVweDH3c_iILpeoT1p-YrRIn#This_music_is_so_good._Well_it\'s_mine', 'list' : 'LinksOther'},
-			'github' : {'active' : true, 'name' : 'Shethzor', 'icon' : '../img/logo/platform/github.png', 'link' : 'https://www.GitHub.com/Shethzor#There_is_some_code_in_here._Looks_kinda_boring', 'list' : 'LinksOther'},
-			'instant_gaming_affiliate' : {'active' : true, 'name' : 'Shethzor', 'icon' : '../img/logo/support/instantgaming.png', 'link' : 'https://www.Instant-Gaming.com//?igr=shethzor#Yeah,_support_me_by_buying_the_games_cheaper!', 'list' : 'LinksSupportAffiliate'},
-			'streamelements_donate' : {'active' : true, 'name' : 'Shethzor', 'icon' : '../img/logo/support/streamelements.png', 'link' : 'https://StreamElements.com/thestring/tip#Are_you_about_to_donate?_Thanks_a_lot_<3', 'list' : 'LinksSupportDonate'}, 
-			'patreon_donate' : {'active' : true, 'name' : 'Shethzor', 'icon' : '../img/logo/support/patreon.png', 'link' : 'https://www.Patreon.com/shethzor#Are_you_about_to_support_me?_Thanks_a_lot_<3', 'list' : 'LinksSupportDonate'}, 
+			'twitch' : {'active' : true, 'name' : 'Shethzor', 'logo' : '../img/logo/platform/twitch.png', 'link' : 'https://www.twitch.tv/TheString#Enjoy_your_time_on_my_Twitch_channel', 'list' : 'LinksSocialMedia'},
+			'youtube' : {'active' : true, 'name' : 'Shethzor', 'logo' : '../img/logo/platform/youtube.png', 'link' : 'https://www.youtube.com/channel/UC0uJMyQjKUgLKthvf0E6JpA#Enjoy_your_time_on_my_YouTube_channel', 'list' : 'LinksSocialMedia'},
+			'discord' : {'active' : true, 'name' : 'Shethzor', 'logo' : '../img/logo/platform/discord.png', 'link' : 'https://www.Discord.gg/scdT6Sn#Don\'t_be_shy._We_are_waiting_for_you!', 'list' : 'LinksSocialMedia'},
+			'tellonym' : {'active' : true, 'name' : 'Shethzor', 'logo' : '../img/logo/platform/tellonym.png', 'link' : 'https://tellonym.me/Shethzor#Ask_me_anything', 'list' : 'LinksSocialMedia'},
+			'twitter' : {'active' : true, 'name' : 'Shethzor', 'logo' : '../img/logo/platform/twitter.png', 'link' : 'https://www.Twitter.com/Shethzor#Do_you_hear_that?_Sounds_like_some_tweets!', 'list' : 'LinksSocialMedia'},
+			'instagram' : {'active' : true, 'name' : 'Shethzor', 'logo' : '../img/logo/platform/instagram.png', 'link' : 'https://www.Instagram.com/Shethzor#Look_at_all_those_pictures_of_mine_:D', 'list' : 'LinksSocialMedia'},
+			'e-pal' : {'active' : true, 'name' : 'Shethzor', 'logo' : '../img/logo/platform/e-pal.png', 'link' : 'https://www.epal.gg/epal/118368#Yes,_I\'m_selling_my_body_lmao', 'list' : 'LinksSocialMedia'},
+			'facebook' : {'active' : true, 'name' : 'Shethzor', 'logo' : '../img/logo/platform/facebook.png', 'link' : 'https://www.facebook.com/shethzor.alfonzo#Feels_kinda_2013', 'list' : 'LinksSocialMedia'},
+			'steam' : {'active' : true, 'name' : 'Shethzor', 'logo' : '../img/logo/platform/steam.png', 'link' : 'https://steamcommunity.com/id/shethzor#Spin_the_valve', 'list' : 'LinksSocialMedia'},
+			'pornhub' : {'active' : true, 'name' : 'Shethzor', 'logo' : '../img/logo/platform/pornhub.png', 'link' : 'https://www.pornhub.com/users/shethzor#What_did_you_expect_to_see_on_this_profile?', 'list' : 'LinksSocialMedia'},
+			'team_main_dream_visuals' : {'active' : true, 'name' : 'DreamVisuals', 'logo' : teamList['DreamVisuals']['logo'], 'link' : teamList['DreamVisuals']['website'], 'list' : 'LinksTeamMain'},
+			'team_main_retro__boi' : {'active' : true, 'name' : 'Retro__Boi', 'logo' : teamList['Retro__Boi']['logo'], 'link' : teamList['Retro__Boi']['website'], 'list' : 'LinksTeamMain'},
+			'youtube_music' : {'active' : true, 'name' : 'Shethzor', 'logo' : '../img/logo/platform/youtubemusic.png', 'link' : 'https://music.YouTube.com/playlist?list=PLQXedffXBLVweDH3c_iILpeoT1p-YrRIn#This_music_is_so_good._Well_it\'s_mine', 'list' : 'LinksOther'},
+			'github' : {'active' : true, 'name' : 'Shethzor', 'logo' : '../img/logo/platform/github.png', 'link' : 'https://www.GitHub.com/Shethzor#There_is_some_code_in_here._Looks_kinda_boring', 'list' : 'LinksOther'},
+			'instant_gaming_affiliate' : {'active' : true, 'name' : 'Shethzor', 'logo' : '../img/logo/support/instantgaming.png', 'link' : 'https://www.Instant-Gaming.com//?igr=shethzor#Yeah,_support_me_by_buying_the_games_cheaper!', 'list' : 'LinksSupportAffiliate'},
+			'streamelements_donate' : {'active' : true, 'name' : 'Shethzor', 'logo' : '../img/logo/support/streamelements.png', 'link' : 'https://StreamElements.com/thestring/tip#Are_you_about_to_donate?_Thanks_a_lot_<3', 'list' : 'LinksSupportDonate'}, 
+			'patreon_donate' : {'active' : true, 'name' : 'Shethzor', 'logo' : '../img/logo/support/patreon.png', 'link' : 'https://www.Patreon.com/shethzor#Are_you_about_to_support_me?_Thanks_a_lot_<3', 'list' : 'LinksSupportDonate'}, 
 		
 			//OFF
-			'spotify' : {'active' : false, 'name' : '', 'icon' : '../img/logo/platform/spotify.png', 'link' : '', 'list' : 'LinksOther'},
-			'tipeeestream_donate' : {'active' : false, 'name' : '', 'icon' : '../img/logo/support/tipeeestream.png', 'link' : '', 'list' : 'LinksSupportDonate'}, 
-			'soundcloud' : {'active' : false, 'name' : '', 'icon' : '../img/logo/platform/soundcloud.png', 'link' : '', 'list' : 'LinksSocialMedia'},
+			'telegram' : {'active' : false, 'name' : '', 'logo' : '../img/logo/platform/telegram.png', 'link' : '', 'list' : 'LinksSocialMedia'},
+			'spotify' : {'active' : false, 'name' : '', 'logo' : '../img/logo/platform/spotify.png', 'link' : '', 'list' : 'LinksOther'},
+			'tipeeestream_donate' : {'active' : false, 'name' : '', 'logo' : '../img/logo/support/tipeeestream.png', 'link' : '', 'list' : 'LinksSupportDonate'}, 
+			'soundcloud' : {'active' : false, 'name' : '', 'logo' : '../img/logo/platform/soundcloud.png', 'link' : '', 'list' : 'LinksSocialMedia'},
 		}
 	break;
 }
@@ -416,7 +457,10 @@ for (var page in dictLinks){
 					document.getElementById('latest-youtube-video').src = latestYouTubeVideoLink;
 				}
 			}else{
-				document.getElementById(dictLinks[page]['list']).innerHTML += wrapperStart + '<div id="' + page + '-button" class="button-icon-main"><a href="' + dictLinks[page]['link'] + '" ' + target + '><img src="' + dictLinks[page]['icon'] + '" alt="' + page + '"></img></a>' + wrapperEnd + displayName + '</div>';
+				if (isEmptyOrNull(dictLinks[page]['logo'])){
+					dictLinks[page]['logo'] = "../img/logo/default/shethzor-logo.png";
+				}
+				document.getElementById(dictLinks[page]['list']).innerHTML += wrapperStart + '<div id="' + page + '-button" class="button-icon-main"><a href="' + dictLinks[page]['link'] + '" ' + target + '><img src="' + dictLinks[page]['logo'] + '" alt="' + page + '"></img></a>' + wrapperEnd + displayName + '</div>';
 			}
 	    }
 	}
@@ -428,9 +472,6 @@ function loadEgg(key){
 		combinationArray[i] = combinationArray[(i+1)];
 	}
 	combinationArray[(combinationArray.length - 1)] = key.key;
-	
-	var frameStart = '<iframe class="d-none" width="560" height="315" src="';
-	var frameEnd = '?controls=0&loop=1&autoplay=1&disablekb=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
 	
 	for (var i = 0; i < 20; i++){
 		switch(getArrayText(combinationArray, i)){
@@ -521,7 +562,11 @@ function loadStyles() {
 	document.getElementById('Copyright').querySelectorAll('a')[0].style.color = textColor;
 
 	//Tab
-	document.getElementById('favicon').href = favicon;
+	if (isEmptyOrNull(favicon)){
+		document.getElementById('favicon').href = '../img/icon/main/shethzor.png';
+	}else{
+		document.getElementById('favicon').href = favicon;
+	}
 	document.getElementById('title').innerHTML = title;
 
 
@@ -544,9 +589,19 @@ for (var day in streamDays){
 }
 
 //Twitch Stream Time
-const event = new Date('August 19, 1975 ' + streamTime + ':00:00 GMT+00:00');
-var time = event.toLocaleTimeString(navigator.language, {hour: '2-digit', minute:'2-digit'});
-if (time.length == 5){
-	time += ' ' + dictLanguage[language]['time']['clock'];
+if (!isEmptyOrNull(streamTime)){
+	const event = new Date('August 19, 1975 ' + streamTime + ':00:00 GMT+00:00');
+	var time = event.toLocaleTimeString(navigator.language, {hour: '2-digit', minute:'2-digit'});
+	if (time.length == 5){
+		time += ' ' + dictLanguage[language]['time']['clock'];
+	}
+	document.getElementById('streaming-time').innerHTML = dictLanguage[language]['time']['at'] + ' ' + time;
 }
-document.getElementById('streaming-time').innerHTML = dictLanguage[language]['time']['at'] + ' ' + time;
+
+//Usefull
+function isEmptyOrNull(variable){
+	if (variable == '' || variable == null){
+		return true;
+	}
+	return false;
+}
