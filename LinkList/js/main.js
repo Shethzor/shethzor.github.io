@@ -1,9 +1,9 @@
 var teamList = {
-	'DreamVisuals' : {'logo' : '../img/logo/team/main/dreamvisuals.gif', 'website' : 'http://shethzor.tv?id=dreamvisuals'},
-	'flariwyr' : {'logo' : '', 'website' : 'http://shethzor.tv?id=flariwyr'},
+	'DreamVisuals' : {'logo' : '../img/logo/other/dreamvisuals.gif', 'website' : 'http://shethzor.tv?id=dreamvisuals'},
+	'flariwyr' : {'logo' : '../img/logo/other/flariwyr.png', 'website' : 'http://shethzor.tv?id=flariwyr'},
 	'haoru' : {'logo' : '', 'website' : 'http://shethzor.tv?id=haoru'},
 	'hitmarcer' : {'logo' : '', 'website' : 'http://shethzor.tv?id=hitmarcer'},
-	'Retro__Boi' : {'logo' : '../img/logo/team/main/retro__boi.png', 'website' : 'http://shethzor.tv?id=retro__boi'},
+	'Retro__Boi' : {'logo' : '../img/logo/other/retro__boi.png', 'website' : 'http://shethzor.tv?id=retro__boi'},
 	'Shethzor' : {'logo' : '../img/logo/main/shethzor.gif', 'website' : 'http://shethzor.tv?id=shethzor'}
 }
 
@@ -144,7 +144,7 @@ for (var lang in searchKey) {
 switch(user){
 	case 'dreamvisuals':
 		var title = "DreamVisuals links";
-		var favicon = '../img/icon/team/main/dreamvisuals.png';
+		var favicon = '../img/icon/other/dreamvisuals.png';
 		var backgroundImageLink = 'https://cutewallpaper.org/21/hd-gif-wallpapers/Gifart-Lo-Fi-Wallpapers-Top-Free-Gifart-Lo-Fi-Backgrounds-.gif';
 		var backgroundBlur = 2;
 		var backgroundColor = 'purple';
@@ -181,7 +181,7 @@ switch(user){
 	break;
 	case 'flariwyr':
 		var title = "Flariwyr's links";
-		var favicon = '';
+		var favicon = '../img/icon/other/flariwyr.png';
 		var backgroundImageLink = 'https://i.imgur.com/AV595g2.gif';
 		var backgroundBlur = 2;
 		var backgroundColor = 'black';
@@ -255,7 +255,7 @@ switch(user){
 	break;
 	case 'hitmarcer':
 		var title = "HitMarcer links";
-		var favicon = '../img/icon/team/main/hitmarcer.png';
+		var favicon = '../img/icon/other/hitmarcer.png';
 		var backgroundImageLink = 'https://img5.goodfon.com/wallpaper/nbig/2/7d/battlefield-1-igra-fon.jpg';
 		var backgroundBlur = 3;
 		var backgroundColor = 'blue';
@@ -291,7 +291,7 @@ switch(user){
 	break;
 	case "retro__boi":
 		var title = "Retro__Boi's links";
-		var favicon = '../img/icon/team/main/retro__boi.png';
+		var favicon = '../img/icon/other/retro__boi.png';
 		var backgroundImageLink = '../img/background/team/main/retro__boi.gif';
 		var backgroundBlur = 0;
 		var backgroundColor = 'black';
