@@ -1,7 +1,7 @@
 var teamList = {
 	'DreamVisuals' : {'logo' : '../img/logo/other/dreamvisuals.gif', 'website' : 'http://shethzor.tv?id=dreamvisuals'},
 	'flariwyr' : {'logo' : '../img/logo/other/flariwyr.png', 'website' : 'http://shethzor.tv?id=flariwyr'},
-	'haoru' : {'logo' : '', 'website' : 'http://shethzor.tv?id=haoru'},
+	'haoru' : {'logo' : '../img/logo/other/haoru.png', 'website' : 'http://shethzor.tv?id=haoru'},
 	'hitmarcer' : {'logo' : '', 'website' : 'http://shethzor.tv?id=hitmarcer'},
 	'Retro__Boi' : {'logo' : '../img/logo/other/retro__boi.png', 'website' : 'http://shethzor.tv?id=retro__boi'},
 	'Shethzor' : {'logo' : '../img/logo/main/shethzor.gif', 'website' : 'http://shethzor.tv?id=shethzor'}
@@ -209,7 +209,7 @@ switch(user){
 	break;
 	case 'haoru':
 		var title = "Haoru's links";
-		var favicon = '';
+		var favicon = '../img/icon/other/haoru.png';
 		var backgroundImageLink = 'https://i.pinimg.com/originals/0b/0d/32/0b0d3257fa1d5dc5a46f0a591e1fef05.gif';
 		var backgroundBlur = 3;
 		var backgroundColor = 'black';
