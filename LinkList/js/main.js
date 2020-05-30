@@ -323,7 +323,7 @@ switch(user){
 			'twitter' : {'active' : true, 'name' : 'Retro__Boi', 'logo' : '../img/logo/platform/twitter.png', 'link' : 'https://www.twitter.com/eat_the_water', 'list' : 'LinksSocialMedia'},
 			'team_partner_shethzor' : {'active' : true, 'name' : 'Shethzor', 'logo' : teamList['Shethzor']['logo'], 'link' : teamList['Shethzor']['website'], 'list' : 'LinksTeamPartner'}, 
 			'spotify' : {'active' : true, 'name' : 'Shethzor', 'logo' : '../img/logo/platform/spotify.png', 'link' : 'https://music.YouTube.com/playlist?list=PLQXedffXBLVweDH3c_iILpeoT1p-YrRIn#This_music_is_so_good._Well_it\'s_mine', 'list' : 'LinksOther'},
-			'streamelabs_donate' : {'active' : true, 'name' : 'Shethzor', 'logo' : '../img/logo/support/streamlabs.png', 'link' : 'https://streamlabs.com/retro__boi/tip', 'list' : 'LinksSupportDonate'}, 
+			'streamlabs_donate' : {'active' : true, 'name' : 'Shethzor', 'logo' : '../img/logo/support/streamlabs.png', 'link' : 'https://streamlabs.com/retro__boi/tip', 'list' : 'LinksSupportDonate'}, 
 		}
 	break;
 	case 'shethzor':
