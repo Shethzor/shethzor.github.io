@@ -205,7 +205,7 @@ switch(user){
 			'sa' : false,
 		}
 		streamTime = '17';
-		var latestYouTubeVideoLink = 'UU0uJMyQjKUgLKthvf0E6JpA';
+		var latestYouTubeVideoLink = '';
 		var dictLinks = {
 			'twitch' : {'active' : true, 'name' : 'Flariwyr', 'logo' : '../img/logo/platform/twitch.png', 'link' : 'https://www.twitch.tv/flariwyr/', 'list' : 'LinksSocialMedia'},
 			'discord' : {'active' : true, 'name' : 'Flariwyr', 'logo' : '../img/logo/platform/discord.png', 'link' : 'https://discord.gg/Fj8bGZF', 'list' : 'LinksSocialMedia'},
