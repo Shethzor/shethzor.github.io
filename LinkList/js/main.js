@@ -323,7 +323,7 @@ switch(user){
 			'twitter' : {'active' : true, 'name' : 'Retro__Boi', 'logo' : '../img/logo/platform/twitter.png', 'link' : 'https://www.twitter.com/eat_the_water', 'list' : 'LinksSocialMedia'},
 			'team_partner_shethzor' : {'active' : true, 'name' : 'Shethzor', 'logo' : teamList['Shethzor']['logo'], 'link' : teamList['Shethzor']['website'], 'list' : 'LinksTeamPartner'}, 
 			'spotify' : {'active' : true, 'name' : 'Shethzor', 'logo' : '../img/logo/platform/spotify.png', 'link' : 'https://music.YouTube.com/playlist?list=PLQXedffXBLVweDH3c_iILpeoT1p-YrRIn#This_music_is_so_good._Well_it\'s_mine', 'list' : 'LinksOther'},
-			'streamelements_donate' : {'active' : false, 'name' : 'Shethzor', 'logo' : '../img/logo/support/streamelements.png', 'link' : 'https://StreamElements.com/thestring/tip#Are_you_about_to_donate?_Thanks_a_lot_<3', 'list' : 'LinksSupportDonate'}, 
+			'streamelabs_donate' : {'active' : true, 'name' : 'Shethzor', 'logo' : '../img/logo/support/streamlabs.png', 'link' : 'https://streamlabs.com/retro__boi/tip', 'list' : 'LinksSupportDonate'}, 
 		}
 	break;
 	case 'shethzor':
@@ -377,7 +377,9 @@ switch(user){
 			'spotify' : {'active' : false, 'name' : '', 'logo' : '../img/logo/platform/spotify.png', 'link' : '', 'list' : 'LinksOther'},
 			'tipeeestream_donate' : {'active' : false, 'name' : '', 'logo' : '../img/logo/support/tipeeestream.png', 'link' : '', 'list' : 'LinksSupportDonate'}, 
 			'soundcloud' : {'active' : false, 'name' : '', 'logo' : '../img/logo/platform/soundcloud.png', 'link' : '', 'list' : 'LinksSocialMedia'},
+			'streamlabs_donate' : {'active' : false, 'name' : 'Shethzor', 'logo' : '../img/logo/support/streamlabs.png', 'link' : '', 'list' : 'LinksSupportDonate'}, 
 			'patreon_donate' : {'active' : false, 'name' : 'Shethzor', 'logo' : '../img/logo/support/patreon.png', 'link' : '', 'list' : 'LinksSupportDonate'}, 
+		
 		}
 	break;
 }
