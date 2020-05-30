@@ -118,27 +118,17 @@ var dictLanguage = {
 	},
 }
 
+//Get All Search Keys
 var search = window.location.search.substr(1).split('&');
 var searchKey = {};
 for (var i = 0; i < search.length; i++){
 	searchKey[search[i].split('=')[0]] = search[i].split('=')[1]
 }
 
+//User
 var user;
 if (searchKey['id']){
 	user = searchKey['id'].toLowerCase();
-}
-
-var language = 'en';
-for (var lang in searchKey) {
-	if (searchKey['l']){
-		if (dictLanguage.hasOwnProperty(searchKey[lang]) && dictLanguage[searchKey[lang]] != null) {
-			language = searchKey[lang];
-			for (var label in dictLanguage[language]['label']){
-				document.getElementById("display-language-" + label).innerHTML = dictLanguage[language]['label'][label];
-			}
-		}
-	}
 }
 
 switch(user){
@@ -168,7 +158,7 @@ switch(user){
 			'sa' : false,
 		}
 		streamTime = '19';
-		var latestYouTubeVideoLink = 'UUnxr9y4rqZzQ42JIoW4aycg';
+		var latestYouTubeVideoListCode = 'UUnxr9y4rqZzQ42JIoW4aycg';
 		var dictLinks = {
 			'twitch' : {'active' : true, 'name' : 'Retro__Boi', 'logo' : '../img/logo/platform/twitch.png', 'link' : 'https://www.twitch.tv/dreamvisuals', 'list' : 'LinksSocialMedia'},
 			'youtube' : {'active' : true, 'name' : 'Retro__Boi', 'logo' : '../img/logo/platform/youtube.png', 'link' : 'https://www.youtube.com/channel/UCnxr9y4rqZzQ42JIoW4aycg', 'list' : 'LinksSocialMedia'},
@@ -205,7 +195,7 @@ switch(user){
 			'sa' : false,
 		}
 		streamTime = '17';
-		var latestYouTubeVideoLink = '';
+		var latestYouTubeVideoListCode = '';
 		var dictLinks = {
 			'twitch' : {'active' : true, 'name' : 'Flariwyr', 'logo' : '../img/logo/platform/twitch.png', 'link' : 'https://www.twitch.tv/flariwyr/', 'list' : 'LinksSocialMedia'},
 			'discord' : {'active' : true, 'name' : 'Flariwyr', 'logo' : '../img/logo/platform/discord.png', 'link' : 'https://discord.gg/Fj8bGZF', 'list' : 'LinksSocialMedia'},
@@ -243,7 +233,7 @@ switch(user){
 			'sa' : true,
 		}
 		streamTime = '';
-		var latestYouTubeVideoLink = '';
+		var latestYouTubeVideoListCode = '';
 		var dictLinks = {
 			'twitch' : {'active' : true, 'name' : 'M4ggiH4nz0', 'logo' : '../img/logo/platform/twitch.png', 'link' : 'https://www.twitch.tv/M4ggiH4nz0', 'list' : 'LinksSocialMedia'},
 			'instagram' : {'active' : true, 'name' : 'haoru0010', 'logo' : '../img/logo/platform/instagram.png', 'link' : 'https://www.instagram.com/Haoru0010/', 'list' : 'LinksSocialMedia'},
@@ -279,7 +269,7 @@ switch(user){
 			'sa' : false,
 		}
 		streamTime = '19';
-		var latestYouTubeVideoLink = '';
+		var latestYouTubeVideoListCode = '';
 		var dictLinks = {
 			'twitch' : {'active' : true, 'name' : 'HitMarcer', 'logo' : '../img/logo/platform/twitch.png', 'link' : 'https://www.twitch.tv/HitMarcer', 'list' : 'LinksSocialMedia'},
 			'twitter' : {'active' : true, 'name' : 'HitMarcer', 'logo' : '../img/logo/platform/twitter.png', 'link' : 'https://www.twitter.com/HitMarcer', 'list' : 'LinksSocialMedia'},
@@ -315,7 +305,7 @@ switch(user){
 			'sa' : true,
 		}
 		streamTime = '17';
-		var latestYouTubeVideoLink = 'UUwIqmX2N9gkCt4-zASxLA1A';
+		var latestYouTubeVideoListCode = 'UUwIqmX2N9gkCt4-zASxLA1A';
 		var dictLinks = {
 			'twitch' : {'active' : true, 'name' : 'Retro__Boi', 'logo' : '../img/logo/platform/twitch.png', 'link' : 'https://www.twitch.tv/retro__boi', 'list' : 'LinksSocialMedia'},
 			'youtube' : {'active' : true, 'name' : 'Retro__Boi', 'logo' : '../img/logo/platform/youtube.png', 'link' : 'https://www.youtube.com/channel/UCwIqmX2N9gkCt4-zASxLA1A', 'list' : 'LinksSocialMedia'},
@@ -353,7 +343,7 @@ switch(user){
 			'sa' : true,
 		}
 		streamTime = '17';
-		var latestYouTubeVideoLink = 'UU0uJMyQjKUgLKthvf0E6JpA';
+		var latestYouTubeVideoListCode = 'UU0uJMyQjKUgLKthvf0E6JpA';
 		var dictLinks = {
 			'twitch' : {'active' : true, 'name' : 'Shethzor', 'logo' : '../img/logo/platform/twitch.png', 'link' : 'https://www.twitch.tv/TheString#Enjoy_your_time_on_my_Twitch_channel', 'list' : 'LinksSocialMedia'},
 			'youtube' : {'active' : true, 'name' : 'Shethzor', 'logo' : '../img/logo/platform/youtube.png', 'link' : 'https://www.youtube.com/channel/UC0uJMyQjKUgLKthvf0E6JpA#Enjoy_your_time_on_my_YouTube_channel', 'list' : 'LinksSocialMedia'},
@@ -389,7 +379,20 @@ for (var redirect in searchKey) {
 	if (dictLinks.hasOwnProperty(redirect) && dictLinks[redirect]['link'] != '' && dictLinks[redirect]['active']) {
 		window.location.replace(dictLinks[redirect]['link'])
 	}else if (redirect == 'youtube-latest'){
-		window.location.replace('https://www.youtube.com/watch?v=nXovNYnSuhE&list=' + latestYouTubeVideoLink);
+		window.location.replace('https://www.youtube.com/embed/videoseries?list=' + latestYouTubeVideoListCode);
+	}
+}
+
+//Language
+var language = 'en';
+for (var lang in searchKey) {
+	if (searchKey['l']){
+		if (dictLanguage.hasOwnProperty(searchKey[lang]) && dictLanguage[searchKey[lang]] != null) {
+			language = searchKey[lang];
+			for (var label in dictLanguage[language]['label']){
+				document.getElementById("display-language-" + label).innerHTML = dictLanguage[language]['label'][label];
+			}
+		}
 	}
 }
 
@@ -458,7 +461,7 @@ for (var page in dictLinks){
 				document.getElementById('panel-' + page).classList.add('d-block');
 				document.getElementById(page + '-channel-link').href = dictLinks[page]['link'];
 				if (page = "youtube"){
-					document.getElementById('latest-youtube-video').src = 'https://www.youtube.com/embed/videoseries?list=' + latestYouTubeVideoLink;
+					document.getElementById('latest-youtube-video').src = 'https://www.youtube.com/embed/videoseries?list=' + latestYouTubeVideoListCode;
 				}
 			}else{
 				if (isEmptyOrNull(dictLinks[page]['logo'])){
