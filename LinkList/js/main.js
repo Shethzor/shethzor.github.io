@@ -168,7 +168,7 @@ switch(user){
 			'sa' : false,
 		}
 		streamTime = '19';
-		var latestYouTubeVideoLink = 'https://www.youtube.com/embed/videoseries?list=UUnxr9y4rqZzQ42JIoW4aycg';
+		var latestYouTubeVideoLink = 'UUnxr9y4rqZzQ42JIoW4aycg';
 		var dictLinks = {
 			'twitch' : {'active' : true, 'name' : 'Retro__Boi', 'logo' : '../img/logo/platform/twitch.png', 'link' : 'https://www.twitch.tv/dreamvisuals', 'list' : 'LinksSocialMedia'},
 			'youtube' : {'active' : true, 'name' : 'Retro__Boi', 'logo' : '../img/logo/platform/youtube.png', 'link' : 'https://www.youtube.com/channel/UCnxr9y4rqZzQ42JIoW4aycg', 'list' : 'LinksSocialMedia'},
@@ -205,7 +205,7 @@ switch(user){
 			'sa' : false,
 		}
 		streamTime = '17';
-		var latestYouTubeVideoLink = 'https://www.youtube.com/embed/videoseries?list=UU0uJMyQjKUgLKthvf0E6JpA';
+		var latestYouTubeVideoLink = 'UU0uJMyQjKUgLKthvf0E6JpA';
 		var dictLinks = {
 			'twitch' : {'active' : true, 'name' : 'Flariwyr', 'logo' : '../img/logo/platform/twitch.png', 'link' : 'https://www.twitch.tv/flariwyr/', 'list' : 'LinksSocialMedia'},
 			'discord' : {'active' : true, 'name' : 'Flariwyr', 'logo' : '../img/logo/platform/discord.png', 'link' : 'https://discord.gg/Fj8bGZF', 'list' : 'LinksSocialMedia'},
@@ -315,7 +315,7 @@ switch(user){
 			'sa' : true,
 		}
 		streamTime = '17';
-		var latestYouTubeVideoLink = 'https://www.youtube.com/embed/videoseries?list=UUwIqmX2N9gkCt4-zASxLA1A';
+		var latestYouTubeVideoLink = 'UUwIqmX2N9gkCt4-zASxLA1A';
 		var dictLinks = {
 			'twitch' : {'active' : true, 'name' : 'Retro__Boi', 'logo' : '../img/logo/platform/twitch.png', 'link' : 'https://www.twitch.tv/retro__boi', 'list' : 'LinksSocialMedia'},
 			'youtube' : {'active' : true, 'name' : 'Retro__Boi', 'logo' : '../img/logo/platform/youtube.png', 'link' : 'https://www.youtube.com/channel/UCwIqmX2N9gkCt4-zASxLA1A', 'list' : 'LinksSocialMedia'},
@@ -353,7 +353,7 @@ switch(user){
 			'sa' : true,
 		}
 		streamTime = '17';
-		var latestYouTubeVideoLink = 'https://www.youtube.com/embed/videoseries?list=UU0uJMyQjKUgLKthvf0E6JpA';
+		var latestYouTubeVideoLink = 'UU0uJMyQjKUgLKthvf0E6JpA';
 		var dictLinks = {
 			'twitch' : {'active' : true, 'name' : 'Shethzor', 'logo' : '../img/logo/platform/twitch.png', 'link' : 'https://www.twitch.tv/TheString#Enjoy_your_time_on_my_Twitch_channel', 'list' : 'LinksSocialMedia'},
 			'youtube' : {'active' : true, 'name' : 'Shethzor', 'logo' : '../img/logo/platform/youtube.png', 'link' : 'https://www.youtube.com/channel/UC0uJMyQjKUgLKthvf0E6JpA#Enjoy_your_time_on_my_YouTube_channel', 'list' : 'LinksSocialMedia'},
@@ -386,8 +386,10 @@ switch(user){
 
 for (var redirect in searchKey) {
 	redirect = redirect.toLowerCase();
-	if (dictLinks.hasOwnProperty(redirect) && dictLinks[redirect]['link'] != '') {
+	if (dictLinks.hasOwnProperty(redirect) && dictLinks[redirect]['link'] != '' && dictLinks[redirect]['active']) {
 		window.location.replace(dictLinks[redirect]['link'])
+	}else if (redirect == 'youtube-latest'){
+		window.location.replace('https://www.youtube.com/watch?v=nXovNYnSuhE&list=' + latestYouTubeVideoLink);
 	}
 }
 
@@ -456,7 +458,7 @@ for (var page in dictLinks){
 				document.getElementById('panel-' + page).classList.add('d-block');
 				document.getElementById(page + '-channel-link').href = dictLinks[page]['link'];
 				if (page = "youtube"){
-					document.getElementById('latest-youtube-video').src = latestYouTubeVideoLink;
+					document.getElementById('latest-youtube-video').src = 'https://www.youtube.com/embed/videoseries?list=' + latestYouTubeVideoLink;
 				}
 			}else{
 				if (isEmptyOrNull(dictLinks[page]['logo'])){
