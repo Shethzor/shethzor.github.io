@@ -504,11 +504,14 @@ function loadEgg(key){
 
 			//Sounds
 			case 'aw man':
+			case 'creeper':
 				soundEgg('https://www.youtube.com/embed/3gtQ6eMWPnM');
 			break;
+			case 'caramelldansen':
 			case 'caramella girls':
 				soundEgg('https://www.youtube.com/embed/6-8E4Nirh9s');
 			break;
+			case 'he-man':
 			case 'heyyeyaaeyaaaeyaeyaa':
 				soundEgg('https://www.youtube.com/embed/ZZ5LpwO-An4');
 			break;
@@ -516,6 +519,7 @@ function loadEgg(key){
 				soundEgg('https://www.youtube.com/embed/SAp0xO-LwFs');
 			break;
 			case 'megalovania':
+			case 'sans':
 				soundEgg('https://www.youtube.com/embed/wDgQdr8ZkTw');
 			break;
 			}
