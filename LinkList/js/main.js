@@ -371,13 +371,13 @@ switch(user){
 			'github' : {'active' : true, 'name' : 'Shethzor', 'logo' : '../img/logo/platform/github.png', 'link' : 'https://www.GitHub.com/Shethzor#There_is_some_code_in_here._Looks_kinda_boring', 'list' : 'LinksOther'},
 			'instant_gaming_affiliate' : {'active' : true, 'name' : 'Shethzor', 'logo' : '../img/logo/support/instantgaming.png', 'link' : 'https://www.Instant-Gaming.com//?igr=shethzor#Yeah,_support_me_by_buying_the_games_cheaper!', 'list' : 'LinksSupportAffiliate'},
 			'streamelements_donate' : {'active' : true, 'name' : 'Shethzor', 'logo' : '../img/logo/support/streamelements.png', 'link' : 'https://StreamElements.com/thestring/tip#Are_you_about_to_donate?_Thanks_a_lot_<3', 'list' : 'LinksSupportDonate'}, 
-			'patreon_donate' : {'active' : true, 'name' : 'Shethzor', 'logo' : '../img/logo/support/patreon.png', 'link' : 'https://www.Patreon.com/shethzor#Are_you_about_to_support_me?_Thanks_a_lot_<3', 'list' : 'LinksSupportDonate'}, 
-		
+			
 			//OFF
 			'telegram' : {'active' : false, 'name' : '', 'logo' : '../img/logo/platform/telegram.png', 'link' : '', 'list' : 'LinksSocialMedia'},
 			'spotify' : {'active' : false, 'name' : '', 'logo' : '../img/logo/platform/spotify.png', 'link' : '', 'list' : 'LinksOther'},
 			'tipeeestream_donate' : {'active' : false, 'name' : '', 'logo' : '../img/logo/support/tipeeestream.png', 'link' : '', 'list' : 'LinksSupportDonate'}, 
 			'soundcloud' : {'active' : false, 'name' : '', 'logo' : '../img/logo/platform/soundcloud.png', 'link' : '', 'list' : 'LinksSocialMedia'},
+			'patreon_donate' : {'active' : false, 'name' : 'Shethzor', 'logo' : '../img/logo/support/patreon.png', 'link' : '', 'list' : 'LinksSupportDonate'}, 
 		}
 	break;
 }
