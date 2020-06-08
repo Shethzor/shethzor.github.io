@@ -4,6 +4,7 @@
 }
 
 body {
+    background-color: #000000;
     min-height: 100vh;
     color: rgba(251, 251, 251, 1);
     background-color: rgba(0, 0, 0, 1);
@@ -54,6 +55,10 @@ p {
     margin: 20px;
     border-radius: 10px;
     box-shadow: 0 0 10px black;
+}
+#MatureContentButton:hover {
+    cursor: pointer;
+    transform: scale(1.2);
 }
 
 #TitleImage {

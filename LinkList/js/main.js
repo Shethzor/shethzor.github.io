@@ -7,117 +7,6 @@ var teamList = {
 	'Shethzor' : {'logo' : '../img/logo/main/shethzor.gif', 'website' : 'http://shethzor.tv?id=shethzor'}
 }
 
-var dictLanguage = {
-	'de' : {
-		'label' : {
-			'LinksSocialMedia' : 'Soziale Medien',
-			'StreamingOn' : 'STREAMT AN',
-			'Team' : 'Mein Team',
-			'LinksTeamMain' : 'Main',
-			'LinksTeamPartner' : 'Partner',
-			'LinksOther' : 'Anderes',
-			'Support' : 'Support',
-			'LinksSupportAffiliate' : 'Affiliate',
-			'LinksSupportDonate' : 'Spenden',
-			'Copyright' : 'Mit viel 💜 von Shethzor gemacht © Alle Rechte vorbehalten',
-		},
-		'day' : {
-			'su' : 'So',
-			'mo' : 'Mo',
-			'tu' : 'Di',
-			'we' : 'Mi',
-			'th' : 'Do',
-			'fr' : 'Fr',
-			'sa' : 'Sa',
-		},
-		'time' : {
-			'at' : 'UM',
-			'clock' : 'Uhr',
-		},
-	},
-	'en' : {
-		'label' : {
-			'LinksSocialMedia' : 'Social Media',
-			'StreamingOn' : 'STREAMING ON',
-			'Team' : 'My Team',
-			'LinksTeamMain' : 'Main',
-			'LinksTeamPartner' : 'Partner',
-			'LinksOther' : 'Other',
-			'Support' : 'Support',
-			'LinksSupportAffiliate' : 'Affiliate',
-			'LinksSupportDonate' : 'Donate',
-			'Copyright' : 'Made with 💜 by Shethzor © All Rights Reserved',
-		},
-		'day' : {
-			'su' : 'Su',
-			'mo' : 'Mo',
-			'tu' : 'Tu',
-			'we' : 'We',
-			'th' : 'Th',
-			'fr' : 'Fr',
-			'sa' : 'Sa',
-		},
-		'time' : {
-			'at' : 'AT',
-			'clock' : 'O\'Clock',
-		},
-	},
-	'es' : {
-		'label' : {
-			'LinksSocialMedia' : 'Redes Sociales',
-			'StreamingOn' : 'STREAMING EN',
-			'Team' : 'Mi equipo',
-			'LinksTeamMain' : 'Principal',
-			'LinksTeamPartner' : 'Compañero',
-			'LinksOther' : 'Otro',
-			'Support' : 'Apoyo',
-			'LinksSupportAffiliate' : 'Afiliado',
-			'LinksSupportDonate' : 'Donar',
-			'Copyright' : 'Hecho con 💜 por Shethzor © Todos los derechos reservados',
-		},
-		'day' : {
-			'su' : 'Do',
-			'mo' : 'Lu',
-			'tu' : 'Ma',
-			'we' : 'Mi',
-			'th' : 'Ju',
-			'fr' : 'Vi',
-			'sa' : 'Sa',
-		},
-		'time' : {
-			'at' : 'A las',
-			'clock' : '',
-		},
-	},
-	'jp' : {
-		'label' : {
-			'LinksSocialMedia' : 'ソーシャルメディア',
-			'StreamingOn' : '私のチーム',
-			'Team' : 'マイチーム',
-			'LinksTeamMain' : 'メイン',
-			'LinksTeamPartner' : 'パートナー',
-			'LinksOther' : 'その他',
-			'Support' : 'サポート',
-			'LinksSupportAffiliate' : 'アフィリエイト',
-			'LinksSupportDonate' : '寄付',
-			'Copyright' : 'Shethzor によって💜で作られました©すべての権利予約',
-		},
-		'day' : {
-			'su' : 'Ni',
-			'mo' : 'Ge',
-			'tu' : 'Ka',
-			'we' : 'Su',
-			'th' : 'Mo',
-			'fr' : 'Ki',
-			'sa' : 'Do',
-		},
-		'time' : {
-			'at' : '',
-			'clock' : 'Ji ni',
-		},
-	},
-}
-
 //Get All Search Keys
 var search = window.location.search.substr(1).split('&');
 var searchKey = {};
@@ -337,16 +226,135 @@ switch(user){
 	break;
 }
 
+var isRedirect = false;
 for (var redirect in searchKey) {
 	redirect = redirect.toLowerCase();
 	if (dictLinks.hasOwnProperty(redirect) && dictLinks[redirect]['link'] != '' && dictLinks[redirect]['active']) {
 		window.location.replace(dictLinks[redirect]['link'])
+		isRedirect = true;
 	}else if (redirect == 'youtube-latest'){
 		window.location.replace('https://www.youtube.com/embed/videoseries?list=' + latestYouTubeVideoListCode);
+		isRedirect = true;
 	}
 }
 
+if (!isRedirect){
+	document.getElementById('Display').classList.remove('d-none');
+	document.getElementById('Display').classList.add('d-block');
+}
+
 //Language
+var dictLanguage = {
+	'de' : {
+		'label' : {
+			'LinksSocialMedia' : 'Soziale Medien',
+			'StreamingOn' : 'STREAMT AN',
+			'Team' : 'Mein Team',
+			'LinksTeamMain' : 'Main',
+			'LinksTeamPartner' : 'Partner',
+			'LinksOther' : 'Anderes',
+			'Support' : 'Support',
+			'LinksSupportAffiliate' : 'Affiliate',
+			'LinksSupportDonate' : 'Spenden',
+			'Copyright' : 'Mit viel 💜 von Shethzor gemacht © Alle Rechte vorbehalten',
+		},
+		'day' : {
+			'su' : 'So',
+			'mo' : 'Mo',
+			'tu' : 'Di',
+			'we' : 'Mi',
+			'th' : 'Do',
+			'fr' : 'Fr',
+			'sa' : 'Sa',
+		},
+		'time' : {
+			'at' : 'UM',
+			'clock' : 'Uhr',
+		},
+	},
+	'en' : {
+		'label' : {
+			'LinksSocialMedia' : 'Social Media',
+			'StreamingOn' : 'STREAMING ON',
+			'Team' : 'My Team',
+			'LinksTeamMain' : 'Main',
+			'LinksTeamPartner' : 'Partner',
+			'LinksOther' : 'Other',
+			'Support' : 'Support',
+			'LinksSupportAffiliate' : 'Affiliate',
+			'LinksSupportDonate' : 'Donate',
+			'Copyright' : 'Made with 💜 by Shethzor © All Rights Reserved',
+		},
+		'day' : {
+			'su' : 'Su',
+			'mo' : 'Mo',
+			'tu' : 'Tu',
+			'we' : 'We',
+			'th' : 'Th',
+			'fr' : 'Fr',
+			'sa' : 'Sa',
+		},
+		'time' : {
+			'at' : 'AT',
+			'clock' : 'O\'Clock',
+		},
+	},
+	'es' : {
+		'label' : {
+			'LinksSocialMedia' : 'Redes Sociales',
+			'StreamingOn' : 'STREAMING EN',
+			'Team' : 'Mi equipo',
+			'LinksTeamMain' : 'Principal',
+			'LinksTeamPartner' : 'Compañero',
+			'LinksOther' : 'Otro',
+			'Support' : 'Apoyo',
+			'LinksSupportAffiliate' : 'Afiliado',
+			'LinksSupportDonate' : 'Donar',
+			'Copyright' : 'Hecho con 💜 por Shethzor © Todos los derechos reservados',
+		},
+		'day' : {
+			'su' : 'Do',
+			'mo' : 'Lu',
+			'tu' : 'Ma',
+			'we' : 'Mi',
+			'th' : 'Ju',
+			'fr' : 'Vi',
+			'sa' : 'Sa',
+		},
+		'time' : {
+			'at' : 'A las',
+			'clock' : '',
+		},
+	},
+	'jp' : {
+		'label' : {
+			'LinksSocialMedia' : 'ソーシャルメディア',
+			'StreamingOn' : '私のチーム',
+			'Team' : 'マイチーム',
+			'LinksTeamMain' : 'メイン',
+			'LinksTeamPartner' : 'パートナー',
+			'LinksOther' : 'その他',
+			'Support' : 'サポート',
+			'LinksSupportAffiliate' : 'アフィリエイト',
+			'LinksSupportDonate' : '寄付',
+			'Copyright' : 'Shethzor によって💜で作られました©すべての権利予約',
+		},
+		'day' : {
+			'su' : 'Ni',
+			'mo' : 'Ge',
+			'tu' : 'Ka',
+			'we' : 'Su',
+			'th' : 'Mo',
+			'fr' : 'Ki',
+			'sa' : 'Do',
+		},
+		'time' : {
+			'at' : '',
+			'clock' : 'Ji ni',
+		},
+	},
+}
+
 var language = 'en';
 for (var lang in searchKey) {
 	if (searchKey['l']){
@@ -358,11 +366,6 @@ for (var lang in searchKey) {
 		}
 	}
 }
-
-var combinationArray = new Array();
-
-document.addEventListener('keydown', loadEgg);
-document.getElementById('MatureContentButton').addEventListener('click', MatureContentToggle)
 
 // Show 18+ Button
 var showMatureContentButton = false;
@@ -481,6 +484,11 @@ for (var page in dictLinks){
 	}
 }
 
+//Easter Eggs
+var combinationArray = new Array();
+document.addEventListener('keydown', loadEgg);
+document.getElementById('MatureContentButton').addEventListener('click', MatureContentToggle)
+
 function loadEgg(key){
 	combinationArray.length = 20;
 	for(var i = 0; i < combinationArray.length; i++){
@@ -546,8 +554,8 @@ function getArrayText(combinationArray, length){
 	return text;
 }
 
+//Load Style
 loadStyles();
-
 function loadStyles() {
 	if (backgroundImageLink){
 		document.getElementById('Background').style.backgroundImage = 'url("' + backgroundImageLink + '")';
