@@ -60,6 +60,9 @@ p {
     cursor: pointer;
     transform: scale(1.2);
 }
+#MatureContentButton:active {
+    transform: scale(0.8);
+}
 
 #TitleImage {
     width: 70vh;
