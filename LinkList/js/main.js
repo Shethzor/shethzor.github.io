@@ -203,7 +203,7 @@ switch(user){
 			'discord' : {'active' : true, 'name' : 'Flariwyr', 'logo' : '../img/logo/platform/discord.png', 'link' : 'https://discord.gg/Fj8bGZF', 'list' : 'LinksSocialMedia'},
 			'instagram' : {'active' : true, 'name' : 'Flariwyr', 'logo' : '../img/logo/platform/instagram.png', 'link' : 'https://www.instagram.com/flariwyr/', 'list' : 'LinksSocialMedia'},
 			'steam' : {'active' : true, 'name' : 'Flariwyr', 'logo' : '../img/logo/platform/steam.png', 'link' : 'http://steamcommunity.com/id/Flariwyr', 'list' : 'LinksSocialMedia'},
-			'pornhub' : {'active' : true, 'name' : 'Flariwyr', 'logo' : '../img/logo/platform/pornhub.png', 'link' : 'https://www.pornhub.com/users/flariwyr', 'list' : 'LinksSocialMedia'},
+			'pornhub' : {'active' : true,'matureContent' : true, 'name' : 'Flariwyr', 'logo' : '../img/logo/platform/pornhub.png', 'link' : 'https://www.pornhub.com/users/flariwyr', 'list' : 'LinksSocialMedia'},
 			'team_main_shethzor' : {'active' : true, 'name' : 'Shethzor', 'logo' : teamList['Shethzor']['logo'], 'link' : teamList['Shethzor']['website'], 'list' : 'LinksTeamMain'},
 			'streamlabs_donate' : {'active' : true, 'name' : 'Flariwyr', 'logo' : '../img/logo/support/streamlabs.png', 'link' : 'https://www.streamlabs.com/flariwyr/tip', 'list' : 'LinksSupportDonate'}, 
 		}
