@@ -146,7 +146,6 @@ switch(user){
 		var h3Size = 10;
 		var pSize = 15;
 		var copyrightSize = 15;
-		var showMatureContentButton = false;
 		var banner = '../img/banner/team/main/dreamvisuals.gif'
 		var bannerWidth = 13;
 		var streamDays = {
@@ -184,7 +183,6 @@ switch(user){
 		var h3Size = 1;
 		var pSize = 13;
 		var copyrightSize = 10;
-		var showMatureContentButton = true;
 		var banner = ''
 		var bannerWidth;
 		var streamDays = {
@@ -222,7 +220,6 @@ switch(user){
 		var h3Size = 10;
 		var pSize = 15;
 		var copyrightSize = 15;
-		var showMatureContentButton = false;
 		var banner = '';
 		var bannerWidth = 13;
 		var streamDays = {
@@ -259,7 +256,6 @@ switch(user){
 		var h3Size = (fontSize / 3);
 		var pSize = (fontSize / 1.5);
 		var copyrightSize = (fontSize / 1.5);
-		var showMatureContentButton = false;
 		var banner = ''
 		var bannerWidth;
 		var streamDays = {
@@ -298,7 +294,6 @@ switch(user){
 		var h3Size = 15;
 		var pSize = 15;
 		var copyrightSize = 15;
-		var showMatureContentButton = true;
 		var banner = '../img/banner/main/shethzor.gif'
 		var bannerWidth;
 		var streamDays = {
@@ -370,10 +365,7 @@ document.addEventListener('keydown', loadEgg);
 document.getElementById('MatureContentButton').addEventListener('click', MatureContentToggle)
 
 // Show 18+ Button
-if (showMatureContentButton){
-	document.getElementById('MatureContentButton').classList.remove('d-none');
-	document.getElementById('MatureContentButton').classList.add('d-block');
-}
+var showMatureContentButton = false;
 var showMatureContentToggle = false;
 function MatureContentToggle() {
 	if (!showMatureContentToggle){
@@ -474,6 +466,11 @@ for (var page in dictLinks){
 				}
 				var displayButton;
 				if (dictLinks[page]['matureContent']){
+					if (!showMatureContentButton){
+						document.getElementById('MatureContentButton').classList.remove('d-none');
+						document.getElementById('MatureContentButton').classList.add('d-block');
+						showMatureContentButton = true;
+					}
 					var displayButton = "d-none";
 				}else{
 					var displayButton = "d-block";
