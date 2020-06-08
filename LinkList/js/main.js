@@ -371,7 +371,8 @@ document.getElementById('MatureContentButton').addEventListener('click', MatureC
 
 // Show 18+ Button
 if (showMatureContentButton){
-	document.getElementById('MatureContentButton').classList.replace('d-none', 'd-block');
+	document.getElementById('MatureContentButton').classList.remove('d-none');
+	document.getElementById('MatureContentButton').classList.add('d-block');
 }
 var showMatureContentToggle = false;
 function MatureContentToggle() {
@@ -382,7 +383,8 @@ function MatureContentToggle() {
 
 		for (var page in dictLinks){
 			if (dictLinks[page]['matureContent']){
-				document.getElementById(page + "-button").classList.replace('d-none', 'd-block');
+				document.getElementById(page + "-button").classList.remove('d-none');
+				document.getElementById(page + "-button").classList.add('d-block');
 			}
 		}
 
@@ -394,7 +396,8 @@ function MatureContentToggle() {
 		
 		for (var page in dictLinks){
 			if (dictLinks[page]['matureContent']){
-				document.getElementById(page + "-button").classList.replace('d-block', 'd-none');
+				document.getElementById(page + "-button").classList.remove('d-block');
+				document.getElementById(page + "-button").classList.add('d-none');
 			}
 		}
 
