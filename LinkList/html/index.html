@@ -36,106 +36,118 @@
     
 	</head>
     <body>
+
         <div id="Background"></div>
 
-        <header>
-            <div id="display-TitleImage" class="d-none">
-                <div class="title"><img id="TitleImage" src="" class="colorHover"></div>
-            </div>
-        </header>
-        
-        <div id="display-LinksSocialMedia" class="d-none">
-            <h2 id="display-language-LinksSocialMedia">Social Media</h2>
-            <div id="panel" class="d-none">
-                <div class="listLinks d-flex flex-wrap p-2 bd-highlight flex-row justify-content-center">
-                    <div id="panel-twitch" class="d-none panel">
-                        <div class="panel-image panel-twitch-image">
-                            <a id="twitch-channel-link" href="" target="_blank">
-                                <img src="../img/logo/platform/twitch.png" alt="Twitch"></img>
-                            </a>
-                        </div>
-                        <div class="d-flex flex-wrap bd-highlight flex-row justify-content-center align-items-center panel-content panel-twitch-content">
-                            <div class="align-middle">
-			                    <div class="max-width-220">
-                                    <p id="display-language-StreamingOn">STREAMING ON</p>
-                                    <div id="stream-days" class="d-flex flex-wrap bd-highlight flex-row justify-content-center">
-                                        <p id="streaming-su" class="streaming-false">Su</p>
-                                        <p id="streaming-mo" class="streaming-true">Mo</p>
-                                        <p id="streaming-tu" class="streaming-false">Tu</p>
-                                        <p id="streaming-we" class="streaming-true">We</p>
-                                        <p id="streaming-th" class="streaming-false">Th</p>
-                                        <p id="streaming-fr" class="streaming-true">Fr</p>
-                                        <p id="streaming-sa" class="streaming-true">Sa</p>
+        <div class="container-fluid p-0">
+            <div class="row">
+                <div class="col-sm">
+                    <div id="MatureContentButton" class="d-none">18+ OFF</div>
+              </div>
+              <div class="col-sm">
+                <header>
+                    <div id="display-TitleImage" class="d-none">
+                        <div class="title"><img id="TitleImage" src="" class="colorHover"></div>
+                    </div>
+                </header>
+                
+                <div id="display-LinksSocialMedia" class="d-none">
+                    <h2 id="display-language-LinksSocialMedia">Social Media</h2>
+                    <div id="panel" class="d-none">
+                        <div class="listLinks d-flex flex-wrap p-2 bd-highlight flex-row justify-content-center">
+                            <div id="panel-twitch" class="d-none panel">
+                                <div class="panel-image panel-twitch-image">
+                                    <a id="twitch-channel-link" href="" target="_blank">
+                                        <img src="../img/logo/platform/twitch.png" alt="Twitch"></img>
+                                    </a>
+                                </div>
+                                <div class="d-flex flex-wrap bd-highlight flex-row justify-content-center align-items-center panel-content panel-twitch-content">
+                                    <div class="align-middle">
+                                        <div class="max-width-220">
+                                            <p id="display-language-StreamingOn">STREAMING ON</p>
+                                            <div id="stream-days" class="d-flex flex-wrap bd-highlight flex-row justify-content-center">
+                                                <p id="streaming-su" class="streaming-false">Su</p>
+                                                <p id="streaming-mo" class="streaming-true">Mo</p>
+                                                <p id="streaming-tu" class="streaming-false">Tu</p>
+                                                <p id="streaming-we" class="streaming-true">We</p>
+                                                <p id="streaming-th" class="streaming-false">Th</p>
+                                                <p id="streaming-fr" class="streaming-true">Fr</p>
+                                                <p id="streaming-sa" class="streaming-true">Sa</p>
+                                            </div>
+                                            <p id="streaming-time"></p>
+                                        </div>
                                     </div>
-                                    <p id="streaming-time"></p>
+                                </div>
+                            </div>
+                            <div id="panel-youtube" class="d-none panel">
+                                <div class="panel-image panel-youtube-image">
+                                    <a id="youtube-channel-link" href="" target="_blank">
+                                        <img src="../img/logo/platform/youtube.png" alt="YouTube"></img>
+                                    </a>
+                                </div>
+                                <div class="panel-content panel-youtube-content">
+                                    <iframe id="latest-youtube-video" src="" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                                 </div>
                             </div>
                         </div>
-	                </div>
-                    <div id="panel-youtube" class="d-none panel">
-                        <div class="panel-image panel-youtube-image">
-                            <a id="youtube-channel-link" href="" target="_blank">
-                                <img src="../img/logo/platform/youtube.png" alt="YouTube"></img>
-                            </a>
-                        </div>
-                        <div class="panel-content panel-youtube-content">
-                            <iframe id="latest-youtube-video" src="" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                        </div>
+                    </div>
+                    <div>
+                        <div id="LinksSocialMedia" class="listLinks d-flex flex-wrap p-2 bd-highlight flex-row justify-content-center"></div>
                     </div>
                 </div>
-            </div>
-            <div>
-                <div id="LinksSocialMedia" class="listLinks d-flex flex-wrap p-2 bd-highlight flex-row justify-content-center"></div>
-            </div>
-        </div>
-
-        <div id="display-Team" class="d-none">
-            <h2 id="display-language-Team">My Team</h2>
-            <div id="MyTeam" class="d-flex flex-wrap p-2 bd-highlight flex-row justify-content-center">
-                <div id="display-LinksTeamMain" class="d-none">
-                    <div id="team-main">
-                        <h3 id="display-language-LinksTeamMain">Main</h3>
-                        <div id="LinksTeamMain" class="listLinks support d-flex flex-wrap p-2 bd-highlight flex-row justify-content-center"></div>
-                    </div>
-                </div>
-                <div id="display-LinksTeamPartner" class="d-none">
-                    <div id="team-partner">
-                        <h3 id="display-language-LinksTeamPartner">Partner</h3>
-                        <div id="LinksTeamPartner" class="listLinks support d-flex flex-wrap p-2 bd-highlight flex-row justify-content-center"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
         
-        <div id="display-LinksOther" class="d-none">
-            <h2 id="display-language-LinksOther">Other</h2>
-            <div id="LinksOther" class="listLinks d-flex flex-wrap p-2 bd-highlight flex-row justify-content-center"></div>
-        </div>
-
-        <div id="display-Support" class="d-none">
-            <h2 id="display-language-Support">Support</h2>
-            <div id="Support" class="d-flex flex-wrap p-2 bd-highlight flex-row justify-content-center">
-                <div id="display-LinksSupportAffiliate" class="d-none">
-                    <div id="Affiliate">
-                        <h3 id="display-language-LinksSupportAffiliate">Affiliate</h3>
-                        <div id="LinksSupportAffiliate" class="listLinks support d-flex flex-wrap p-2 bd-highlight flex-row justify-content-center"></div>
+                <div id="display-Team" class="d-none">
+                    <h2 id="display-language-Team">My Team</h2>
+                    <div id="MyTeam" class="d-flex flex-wrap p-2 bd-highlight flex-row justify-content-center">
+                        <div id="display-LinksTeamMain" class="d-none">
+                            <div id="team-main">
+                                <h3 id="display-language-LinksTeamMain">Main</h3>
+                                <div id="LinksTeamMain" class="listLinks support d-flex flex-wrap p-2 bd-highlight flex-row justify-content-center"></div>
+                            </div>
+                        </div>
+                        <div id="display-LinksTeamPartner" class="d-none">
+                            <div id="team-partner">
+                                <h3 id="display-language-LinksTeamPartner">Partner</h3>
+                                <div id="LinksTeamPartner" class="listLinks support d-flex flex-wrap p-2 bd-highlight flex-row justify-content-center"></div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div id="display-LinksSupportDonate" class="d-none">
-                    <div id="Donate">
-                        <h3 id="display-language-LinksSupportDonate">Donate</h3>
-                        <div id="LinksSupportDonate" class="listLinks support d-flex flex-wrap p-2 bd-highlight flex-row justify-content-center"></div>
-                    </div>
+                
+                <div id="display-LinksOther" class="d-none">
+                    <h2 id="display-language-LinksOther">Other</h2>
+                    <div id="LinksOther" class="listLinks d-flex flex-wrap p-2 bd-highlight flex-row justify-content-center"></div>
                 </div>
-            </div>
-        </div>
         
-        <div id="Copyright" class="d-flex flex-row justify-content-center">
-            <a id="display-language-Copyright" href="https://shethzor.tv">Made with 💜 by Shethzor © All Rights Reserved</a>
-        </div>
-
-        <div id="easteregg" class="d-none">
-
+                <div id="display-Support" class="d-none">
+                    <h2 id="display-language-Support">Support</h2>
+                    <div id="Support" class="d-flex flex-wrap p-2 bd-highlight flex-row justify-content-center">
+                        <div id="display-LinksSupportAffiliate" class="d-none">
+                            <div id="Affiliate">
+                                <h3 id="display-language-LinksSupportAffiliate">Affiliate</h3>
+                                <div id="LinksSupportAffiliate" class="listLinks support d-flex flex-wrap p-2 bd-highlight flex-row justify-content-center"></div>
+                            </div>
+                        </div>
+                        <div id="display-LinksSupportDonate" class="d-none">
+                            <div id="Donate">
+                                <h3 id="display-language-LinksSupportDonate">Donate</h3>
+                                <div id="LinksSupportDonate" class="listLinks support d-flex flex-wrap p-2 bd-highlight flex-row justify-content-center"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div id="Copyright" class="d-flex flex-row justify-content-center">
+                    <a id="display-language-Copyright" href="https://shethzor.tv">Made with 💜 by Shethzor © All Rights Reserved</a>
+                </div>
+        
+                <div id="easteregg" class="d-none">
+        
+                </div>
+              </div>
+              <div class="col-sm">
+              </div>
+            </div>
         </div>
 
         <script src="../js/main.js"></script>
