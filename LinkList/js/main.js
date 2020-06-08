@@ -134,7 +134,7 @@ switch(user){
 	case "retro__boi":
 		var title = "Retro__Boi's links";
 		var favicon = '../img/icon/other/retro__boi.png';
-		var backgroundImageLink = '../img/background/team/main/retro__boi.gif';
+		var backgroundImageLink = '../img/background/other/retro__boi.gif';
 		var backgroundBlur = 0;
 		var backgroundColor = 'black';
 		var textColor = '';
