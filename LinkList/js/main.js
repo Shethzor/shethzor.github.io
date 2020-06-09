@@ -93,7 +93,7 @@ switch(user){
 			'pornhub' : {'active' : true,'matureContent' : true, 'name' : 'Flariwyr', 'logo' : '../img/logo/platform/pornhub.png', 'link' : 'https://www.pornhub.com/users/flariwyr', 'list' : 'LinksSocialMedia'},
 			'team_main_shethzor' : {'active' : true, 'name' : 'Shethzor', 'logo' : teamList['Shethzor']['logo'], 'link' : teamList['Shethzor']['website'], 'list' : 'LinksTeamMain'},
 			'twitch_subscribe' : {'active' : true, 'name' : 'Flariwyr', 'logo' : '../img/logo/support/twitch_subscribe.png', 'link' : 'https://www.twitch.tv/subs/flariwyr', 'list' : 'LinksSupportDonate'}, 
-			'streamlabs_donate' : {'active' : true, 'name' : 'Flariwyr', 'logo' : '../img/logo/support/streamlabs.png', 'link' : 'https://www.streamlabs.com/flariwyr/tip', 'list' : 'LinksSupportDonate'}, 
+			'streamelements_donate' : {'active' : true, 'name' : 'Flariwyr', 'logo' : '../img/logo/support/streamelements.png', 'link' : 'https://streamelements.com/flariwyr/tip', 'list' : 'LinksSupportDonate'}, 
 		}
 	break;
 	case 'hitmarcer':
