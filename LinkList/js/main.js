@@ -92,6 +92,7 @@ switch(user){
 			'steam' : {'active' : true, 'name' : 'Flariwyr', 'logo' : '../img/logo/platform/steam.png', 'link' : 'http://steamcommunity.com/id/Flariwyr', 'list' : 'LinksSocialMedia'},
 			'pornhub' : {'active' : true,'matureContent' : true, 'name' : 'Flariwyr', 'logo' : '../img/logo/platform/pornhub.png', 'link' : 'https://www.pornhub.com/users/flariwyr', 'list' : 'LinksSocialMedia'},
 			'team_main_shethzor' : {'active' : true, 'name' : 'Shethzor', 'logo' : teamList['Shethzor']['logo'], 'link' : teamList['Shethzor']['website'], 'list' : 'LinksTeamMain'},
+			'twitch_subscribe' : {'active' : true, 'name' : 'Flariwyr', 'logo' : '../img/logo/support/twitch_subscribe.png', 'link' : 'https://www.twitch.tv/subs/flariwyr', 'list' : 'LinksSupportDonate'}, 
 			'streamlabs_donate' : {'active' : true, 'name' : 'Flariwyr', 'logo' : '../img/logo/support/streamlabs.png', 'link' : 'https://www.streamlabs.com/flariwyr/tip', 'list' : 'LinksSupportDonate'}, 
 		}
 	break;
@@ -206,13 +207,14 @@ switch(user){
 			'e-pal' : {'active' : true, 'name' : 'Shethzor', 'logo' : '../img/logo/platform/e-pal.png', 'link' : 'https://www.epal.gg/epal/118368#Yes,_I\'m_selling_my_body_lmao', 'list' : 'LinksSocialMedia'},
 			'facebook' : {'active' : true, 'name' : 'Shethzor', 'logo' : '../img/logo/platform/facebook.png', 'link' : 'https://www.facebook.com/shethzor.alfonzo#Feels_kinda_2013', 'list' : 'LinksSocialMedia'},
 			'steam' : {'active' : true, 'name' : 'Shethzor', 'logo' : '../img/logo/platform/steam.png', 'link' : 'https://steamcommunity.com/id/shethzor#Spin_the_valve', 'list' : 'LinksSocialMedia'},
-			'pornhub' : {'active' : true,'matureContent' : true, 'name' : 'Shethzor', 'logo' : '../img/logo/platform/pornhub.png', 'link' : 'https://www.pornhub.com/users/shethzor#What_did_you_expect_to_see_on_this_profile?', 'list' : 'LinksSocialMedia'},
+			'pornhub' : {'active' : true,'matureContent' : true, 'name' : 'Shethzor', 'logo' : '../img/logo/platform/pornhub.png', 'link' : 'https://www.pornhub.com/users/Shethzor#What_did_you_expect_to_see_on_this_profile?', 'list' : 'LinksSocialMedia'},
 			'team_main_dream_visuals' : {'active' : true, 'name' : 'DreamVisuals', 'logo' : teamList['DreamVisuals']['logo'], 'link' : teamList['DreamVisuals']['website'], 'list' : 'LinksTeamMain'},
 			'team_main_retro__boi' : {'active' : true, 'name' : 'Retro__Boi', 'logo' : teamList['Retro__Boi']['logo'], 'link' : teamList['Retro__Boi']['website'], 'list' : 'LinksTeamMain'},
 			'youtube_music' : {'active' : true, 'name' : 'Shethzor', 'logo' : '../img/logo/platform/youtubemusic.png', 'link' : 'https://music.YouTube.com/playlist?list=PLQXedffXBLVweDH3c_iILpeoT1p-YrRIn#This_music_is_so_good._Well_it\'s_mine', 'list' : 'LinksOther'},
 			'github' : {'active' : true, 'name' : 'Shethzor', 'logo' : '../img/logo/platform/github.png', 'link' : 'https://www.GitHub.com/Shethzor#There_is_some_code_in_here._Looks_kinda_boring', 'list' : 'LinksOther'},
 			'instant_gaming_affiliate' : {'active' : true, 'name' : 'Shethzor', 'logo' : '../img/logo/support/instantgaming.png', 'link' : 'https://www.Instant-Gaming.com//?igr=shethzor#Yeah,_support_me_by_buying_the_games_cheaper!', 'list' : 'LinksSupportAffiliate'},
-			'streamelements_donate' : {'active' : true, 'name' : 'Shethzor', 'logo' : '../img/logo/support/streamelements.png', 'link' : 'https://StreamElements.com/thestring/tip#Are_you_about_to_donate?_Thanks_a_lot_<3', 'list' : 'LinksSupportDonate'}, 
+			'twitch_subscribe' : {'active' : true, 'name' : 'Shethzor', 'logo' : '../img/logo/support/twitch_subscribe.png', 'link' : 'https://www.twitch.tv/subs/TheString#Wow_never_thought_you_would_show_up_here!', 'list' : 'LinksSupportDonate'}, 
+			'streamelements_donate' : {'active' : true, 'name' : 'Shethzor', 'logo' : '../img/logo/support/streamelements.png', 'link' : 'https://StreamElements.com/TheString/tip#Are_you_about_to_donate?_Thanks_a_lot_<3', 'list' : 'LinksSupportDonate'}, 
 			
 			//OFF
 			'telegram' : {'active' : false, 'name' : '', 'logo' : '../img/logo/platform/telegram.png', 'link' : '', 'list' : 'LinksSocialMedia'},
