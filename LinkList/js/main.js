@@ -168,36 +168,6 @@ switch(user){
 			'spotify' : {'active' : true, 'link' : 'https://music.YouTube.com/playlist?list=PLQXedffXBLVweDH3c_iILpeoT1p-YrRIn#This_music_is_so_good._Well_it\'s_mine'},
 			'streamlabs_donate' : {'active' : true, 'link' : 'https://streamlabs.com/retro__boi/tip'}, 
 		}
-		case "test":
-			var title = "Retro__Boi's links";
-			var favicon = '../img/icon/other/retro__boi.png';
-			var backgroundImageLink = '../img/background/other/retro__boi.gif';
-			var backgroundBlur = 0;
-			var backgroundColor = 'black';
-			var textColor = '';
-			var textShadow = '';
-			var fontLink = 'https://fonts.googleapis.com/css?family=Mali&display=swap';
-			var fontName = '"Mali"';
-			var fontSize = 20;
-			var h3Size = (fontSize / 3);
-			var pSize = (fontSize / 1.5);
-			var copyrightSize = (fontSize / 1.5);
-			var banner = ''
-			var bannerWidth;
-			var streamDays = {
-				'su' : false,
-				'mo' : false,
-				'tu' : false,
-				'we' : false,
-				'th' : false,
-				'fr' : true,
-				'sa' : true,
-			}
-			streamTime = '17';
-			var latestYouTubeVideoListCode = 'UUwIqmX2N9gkCt4-zASxLA1A';
-			var dictLinks = {
-				'twitch' : {'active' : true, 'link' : 'https://www.twitch.tv/retro__boi'},
-			}
 	break;
 	case 'shethzor':
 	default:
