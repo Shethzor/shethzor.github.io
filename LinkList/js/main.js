@@ -247,12 +247,12 @@ switch(user){
 			'streamelements_donate' : {'active' : true, 'link' : 'https://StreamElements.com/TheString/tip#Are_you_about_to_donate?_Thanks_a_lot_<3'}, 
 			
 			//OFF
-			'telegram' : {'active' : false, 'name' : '', 'link' : ''},
-			'spotify' : {'active' : false, 'name' : '', 'link' : ''},
-			'tipeeestream_donate' : {'active' : false, 'name' : ''}, 
-			'soundcloud' : {'active' : false, 'name' : ''},
-			'streamlabs_donate' : {'active' : false,}, 
-			'patreon_donate' : {'active' : false}, 
+			'telegram' : {'active' : false, 'link' : ''},
+			'spotify' : {'active' : false, 'link' : ''},
+			'tipeeestream_donate' : {'active' : false, 'link' : ''}, 
+			'soundcloud' : {'active' : false, 'link' : ''},
+			'streamlabs_donate' : {'active' : false, 'link' : ''}, 
+			'patreon_donate' : {'active' : false, 'link' : ''}, 
 		
 		}
 	break;
@@ -276,101 +276,105 @@ if (!isRedirect){
 }
 
 for (var page in dictLinks) {
+	var logo = '';
 	switch(page){
 		case 'discord':
-			dictLinks[page]['logo'] = '../img/logo/platform/discord.png';
+			logo = '../img/logo/platform/discord.png';
 			dictLinks[page]['list'] = 'LinksSocialMedia';
 			break;
 		case 'e-pal':
-			dictLinks[page]['logo'] = '../img/logo/platform/e-pal.png';
+			logo = '../img/logo/platform/e-pal.png';
 			dictLinks[page]['list'] = 'LinksSocialMedia';
 			break;
 		case 'facebook':
-			dictLinks[page]['logo'] = '../img/logo/platform/facebook.png';
+			logo = '../img/logo/platform/facebook.png';
 			dictLinks[page]['list'] = 'LinksSocialMedia';
 			break;
 		case 'github':
-			dictLinks[page]['logo'] = '../img/logo/platform/github.png';
+			logo = '../img/logo/platform/github.png';
 			dictLinks[page]['list'] = 'LinksOther';
 			break;
 		case 'instagram':
-			dictLinks[page]['logo'] = '../img/logo/platform/instagram.png';
+			logo = '../img/logo/platform/instagram.png';
 			dictLinks[page]['list'] = 'LinksSocialMedia';
 			break;
 		case 'instant-gaming':
-			dictLinks[page]['logo'] = '../img/logo/support/instant-gaming.png';
+			logo = '../img/logo/support/instant-gaming.png';
 			dictLinks[page]['list'] = 'LinksSupportAffiliate';
 			break;
 		case 'patreon_donate':
-			dictLinks[page]['logo'] = '../img/logo/support/patreon.png';
+			logo = '../img/logo/support/patreon.png';
 			dictLinks[page]['list'] = 'LinksSupportDonate';
 			break;
 		case 'pornhub':
-			dictLinks[page]['logo'] = '../img/logo/platform/pornhub.png';
+			logo = '../img/logo/platform/pornhub.png';
 			dictLinks[page]['list'] = 'LinksSocialMedia';
 			dictLinks[page]['matureContent'] = true;
 			break;
 		case 'soundcloud':
-			dictLinks[page]['logo'] = '../img/logo/platform/soundcloud.png';
+			logo = '../img/logo/platform/soundcloud.png';
 			dictLinks[page]['list'] = 'LinksSocialMedia';
 			break;
 		case 'spotify':
-			dictLinks[page]['logo'] = '../img/logo/platform/spotify.png';
+			logo = '../img/logo/platform/spotify.png';
 			dictLinks[page]['list'] = 'LinksOther';
 			break;
 		case 'steam':
-			dictLinks[page]['logo'] = '../img/logo/platform/steam.png';
+			logo = '../img/logo/platform/steam.png';
 			dictLinks[page]['list'] = 'LinksSocialMedia';
 			break;
 		case 'streamelements_donate':
-			dictLinks[page]['logo'] = '../img/logo/support/streamelements.png';
+			logo = '../img/logo/support/streamelements.png';
 			dictLinks[page]['list'] = 'LinksSupportDonate';
 			break;
 		case 'streamlabs_donate':
-			dictLinks[page]['logo'] = '../img/logo/support/streamlabs.png';
+			logo = '../img/logo/support/streamlabs.png';
 			dictLinks[page]['list'] = 'LinksSupportDonate';
 			break;
 		case 'telegram':
-			dictLinks[page]['logo'] = '../img/logo/platform/telegram.png';
+			logo = '../img/logo/platform/telegram.png';
 			dictLinks[page]['list'] = 'LinksSocialMedia';
 			break;
 		case 'tellonym':
-			dictLinks[page]['logo'] = '../img/logo/platform/tellonym.png';
+			logo = '../img/logo/platform/tellonym.png';
 			dictLinks[page]['list'] = 'LinksSocialMedia';
 			break;
 		case 'tipeeestream_donate':
-			dictLinks[page]['logo'] = '../img/logo/support/tipeeestream.png';
+			logo = '../img/logo/support/tipeeestream.png';
 			dictLinks[page]['list'] = 'LinksSupportDonate';
 			break;
 		case 'twitch':
-			dictLinks[page]['logo'] = '../img/logo/platform/twitch.png';
+			logo = '../img/logo/platform/twitch.png';
 			dictLinks[page]['list'] = 'LinksSocialMedia';
 			break;
 		case 'twitch_subscribe':
-			dictLinks[page]['logo'] = '../img/logo/support/twitch_subscribe.png';
+			logo = '../img/logo/support/twitch_subscribe.png';
 			dictLinks[page]['list'] = 'LinksSupportDonate';
 			break;
 		case 'twitter':
-			dictLinks[page]['logo'] = '../img/logo/platform/twitter.png';
+			logo = '../img/logo/platform/twitter.png';
 			dictLinks[page]['list'] = 'LinksSocialMedia';
 			break;
 		case 'youtube':
-			dictLinks[page]['logo'] = '../img/logo/platform/youtube.png';
+			logo = '../img/logo/platform/youtube.png';
 			dictLinks[page]['list'] = 'LinksSocialMedia';
 			break;
 		case 'youtube_music':
-			dictLinks[page]['logo'] = '../img/logo/platform/youtube_music.png';
+			logo = '../img/logo/platform/youtube_music.png';
 			dictLinks[page]['list'] = 'LinksOther';
 			break;
 		default:
 			if (page.startsWith('team_main')){
-				dictLinks[page]['logo'] = idList[dictLinks[page]['name']]['logo']
+				logo = idList[dictLinks[page]['name']]['logo']
 				dictLinks[page]['list'] = 'LinksTeamMain'
 			}
 			if (page.startsWith('team_partner')){
-				dictLinks[page]['logo'] = idList[dictLinks[page]['name']]['logo']
+				logo = idList[dictLinks[page]['name']]['logo']
 				dictLinks[page]['list'] = 'LinksTeamPartner'
 			}
+	}
+	if (!dictLinks[page]['logo']){
+		dictLinks[page]['logo'] = logo;
 	}
 }
 
