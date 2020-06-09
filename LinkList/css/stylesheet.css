@@ -101,6 +101,7 @@ p {
 .button-icon-main img {
     width: calc(7vh + 7vw);
     max-width: 90px;
+    min-width: 80px;
     border-radius: 20px;
 }
 .button-icon-main a:hover {
