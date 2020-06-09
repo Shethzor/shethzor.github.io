@@ -212,7 +212,7 @@ switch(user){
 			'team_main_retro__boi' : {'active' : true, 'name' : 'Retro__Boi', 'logo' : teamList['Retro__Boi']['logo'], 'link' : teamList['Retro__Boi']['website'], 'list' : 'LinksTeamMain'},
 			'youtube_music' : {'active' : true, 'name' : 'Shethzor', 'logo' : '../img/logo/platform/youtubemusic.png', 'link' : 'https://music.YouTube.com/playlist?list=PLQXedffXBLVweDH3c_iILpeoT1p-YrRIn#This_music_is_so_good._Well_it\'s_mine', 'list' : 'LinksOther'},
 			'github' : {'active' : true, 'name' : 'Shethzor', 'logo' : '../img/logo/platform/github.png', 'link' : 'https://www.GitHub.com/Shethzor#There_is_some_code_in_here._Looks_kinda_boring', 'list' : 'LinksOther'},
-			'instant_gaming_affiliate' : {'active' : true, 'name' : 'Shethzor', 'logo' : '../img/logo/support/instantgaming.png', 'link' : 'https://www.Instant-Gaming.com//?igr=shethzor#Yeah,_support_me_by_buying_the_games_cheaper!', 'list' : 'LinksSupportAffiliate'},
+			'instant-gaming' : {'active' : true, 'name' : 'Shethzor', 'logo' : '../img/logo/support/instant-gaming.png', 'link' : 'https://www.Instant-Gaming.com//?igr=shethzor#Yeah,_support_me_by_buying_the_games_cheaper!', 'list' : 'LinksSupportAffiliate'},
 			'twitch_subscribe' : {'active' : true, 'name' : 'Shethzor', 'logo' : '../img/logo/support/twitch_subscribe.png', 'link' : 'https://www.twitch.tv/subs/TheString#Wow_never_thought_you_would_show_up_here!', 'list' : 'LinksSupportDonate'}, 
 			'streamelements_donate' : {'active' : true, 'name' : 'Shethzor', 'logo' : '../img/logo/support/streamelements.png', 'link' : 'https://StreamElements.com/TheString/tip#Are_you_about_to_donate?_Thanks_a_lot_<3', 'list' : 'LinksSupportDonate'}, 
 			
