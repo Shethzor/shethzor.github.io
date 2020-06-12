@@ -1,10 +1,9 @@
 var idList = {
-	'DreamVisuals' : {'logo' : '../img/logo/other/dreamvisuals.gif', 'website' : 'http://shethzor.tv?id=dreamvisuals'},
-	'flariwyr' : {'logo' : '../img/logo/other/flariwyr.png', 'website' : 'http://shethzor.tv?id=flariwyr'},
-	'haoru' : {'logo' : '../img/logo/other/haoru.png', 'website' : 'http://shethzor.tv?id=haoru'},
+	'DreamVisuals' : {'logo' : '../img/logo/profiles/dreamvisuals.gif', 'website' : 'http://shethzor.tv?id=dreamvisuals'},
+	'flariwyr' : {'logo' : '../img/logo/profiles/flariwyr.png', 'website' : 'http://shethzor.tv?id=flariwyr'},
 	'hitmarcer' : {'logo' : '', 'website' : 'http://shethzor.tv?id=hitmarcer'},
-	'Retro__Boi' : {'logo' : '../img/logo/other/retro__boi.png', 'website' : 'http://shethzor.tv?id=retro__boi'},
-	'Shethzor' : {'logo' : '../img/logo/main/shethzor.gif', 'website' : 'http://shethzor.tv?id=shethzor'}
+	'Retro__Boi' : {'logo' : '../img/logo/profiles/retro__boi.png', 'website' : 'http://shethzor.tv?id=retro__boi'},
+	'Shethzor' : {'logo' : '../img/logo/profiles/shethzor.gif', 'website' : 'http://shethzor.tv?id=shethzor'}
 }
 
 //Get All Search Keys
@@ -23,7 +22,7 @@ if (searchKey['id']){
 switch(user){
 	case 'dreamvisuals':
 		var title = "DreamVisuals links";
-		var favicon = '../img/icon/other/dreamvisuals.png';
+		var favicon = '../img/icon/dreamvisuals.png';
 		var backgroundImageLink = 'https://cutewallpaper.org/21/hd-gif-wallpapers/Gifart-Lo-Fi-Wallpapers-Top-Free-Gifart-Lo-Fi-Backgrounds-.gif';
 		var backgroundBlur = 2;
 		var backgroundColor = 'purple';
@@ -35,7 +34,7 @@ switch(user){
 		var h3Size = 10;
 		var pSize = 15;
 		var copyrightSize = 15;
-		var banner = '../img/banner/team/main/dreamvisuals.gif'
+		var banner = '../img/banner/dreamvisuals.gif'
 		var bannerWidth = 13;
 		var streamDays = {
 			'su' : false,
@@ -60,7 +59,7 @@ switch(user){
 	break;
 	case 'flariwyr':
 		var title = "Flariwyr's links";
-		var favicon = '../img/icon/other/flariwyr.png';
+		var favicon = '../img/icon/flariwyr.png';
 		var backgroundImageLink = 'https://i.imgur.com/AV595g2.gif';
 		var backgroundBlur = 2;
 		var backgroundColor = 'black';
@@ -98,7 +97,7 @@ switch(user){
 	break;
 	case 'hitmarcer':
 		var title = "HitMarcer links";
-		var favicon = '../img/icon/other/hitmarcer.png';
+		var favicon = '../img/icon/hitmarcer.png';
 		var backgroundImageLink = 'https://img5.goodfon.com/wallpaper/nbig/2/7d/battlefield-1-igra-fon.jpg';
 		var backgroundBlur = 3;
 		var backgroundColor = 'blue';
@@ -134,8 +133,8 @@ switch(user){
 	break;
 	case "retro__boi":
 		var title = "Retro__Boi's links";
-		var favicon = '../img/icon/other/retro__boi.png';
-		var backgroundImageLink = '../img/background/other/retro__boi.gif';
+		var favicon = '../img/icon/retro__boi.png';
+		var backgroundImageLink = '../img/background/retro__boi.gif';
 		var backgroundBlur = 0;
 		var backgroundColor = 'black';
 		var textColor = '';
@@ -146,8 +145,8 @@ switch(user){
 		var h3Size = (fontSize / 3);
 		var pSize = (fontSize / 1.5);
 		var copyrightSize = (fontSize / 1.5);
-		var banner = ''
-		var bannerWidth;
+		var banner = '../img/banner/retro__boi.png'
+		var bannerWidth = 12;
 		var streamDays = {
 			'su' : false,
 			'mo' : false,
@@ -184,7 +183,7 @@ switch(user){
 		var h3Size = 15;
 		var pSize = 15;
 		var copyrightSize = 15;
-		var banner = '../img/banner/main/shethzor.gif'
+		var banner = '../img/banner/shethzor.gif'
 		var bannerWidth;
 		var streamDays = {
 			'su' : false,
@@ -335,12 +334,12 @@ for (var page in dictLinks) {
 			break;
 		default:
 			if (page.startsWith('team_main')){
-				logo = idList[dictLinks[page]['name']]['logo']
-				dictLinks[page]['list'] = 'LinksTeamMain'
+				logo = idList[dictLinks[page]['name']]['logo'];
+				dictLinks[page]['list'] = 'LinksTeamMain';
 			}
 			if (page.startsWith('team_partner')){
-				logo = idList[dictLinks[page]['name']]['logo']
-				dictLinks[page]['list'] = 'LinksTeamPartner'
+				logo = idList[dictLinks[page]['name']]['logo'];
+				dictLinks[page]['list'] = 'LinksTeamPartner';
 			}
 	}
 	if (!dictLinks[page]['logo']){
@@ -605,11 +604,11 @@ function loadEgg(key){
 		switch(getArrayText(combinationArray, i)){
 			//Visual
 			case '<3': 
-				document.getElementById('Background').style.backgroundImage = 'url("../img/background/main/hearts.gif")';
+				document.getElementById('Background').style.backgroundImage = 'url("../img/background/hearts.gif")';
 				document.body.style.fontFamily = '"Love Ya Like A Sister"';
 				break;
 			case '666': 
-				document.getElementById('Background').style.backgroundImage = 'url("../img/background/main/devil.gif")';
+				document.getElementById('Background').style.backgroundImage = 'url("../img/background/devil.gif")';
 				document.body.style.fontFamily = 'Rock Salt';
 				break;
 			case 'invisible': 
@@ -695,7 +694,7 @@ function loadStyles() {
 
 	//Tab
 	if (isEmptyOrNull(favicon)){
-		document.getElementById('favicon').href = '../img/icon/main/shethzor.png';
+		document.getElementById('favicon').href = '../img/icon/shethzor.png';
 	}else{
 		document.getElementById('favicon').href = favicon;
 	}
