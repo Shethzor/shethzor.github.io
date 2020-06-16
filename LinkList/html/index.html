@@ -13,9 +13,9 @@
 			user = searchKey['id'].toLowerCase();
 		}
 		if (user == 'test'){
-			document.getElementById('head').innerHTML = 'Main';
-			document.getElementById('head').innerHTML = 'Main';
-			document.getElementById('head').innerHTML = 'Main';
+			document.getElementById('head').innerHTML = '<meta id="MetaTitle" name="title" content="Main">';
+			document.getElementById('head').innerHTML = '<meta id="OgMetaTitle" property="og:title" content="Main">';
+			document.getElementById('head').innerHTML = '<meta id="TwitterMetaTitle" property="twitter:title" content="Main">';
 		}
 	</script>	
 
@@ -23,12 +23,10 @@
         <meta name="keywords" content="shethzor, thestring, twitch, streamer, stream, vr, oculus, index, valve index, games, videogames, gameplay, youtuber, youtube, videos, video, full body, full body tracking, pc gamer, pc games, desktop games, game keys, game keay, key, gaming key, videogame key, support, donate, donation, github, programming, scripting, paypal, spotify, reddit, instagram, twitter, discord, affiliate, links">    
 
 	<title id="title">Shethzor's links</title>
-	<meta id="MetaTitle" name="title" content="Link List Test">
 	<meta name="description" content="Need some links? Get them here!">
 	<meta name="image" content="../img/icon/main/shethzor.png">
 
 	<meta property="og:type" content="website">
-	<meta id="OgMetaTitle" property="og:title" content="Link List Test">
 	<meta property="og:description" content="Need some links? Get them here!">
 	<meta property="og:image" content="../img/icon/main/shethzor.png">
 	<meta property="og:image:type" content="image/webp">
@@ -38,7 +36,6 @@
 
 	<meta property="twitter:card" content="summary_large_image">
 	<meta property="twitter:url" content="http://shethzor.tv">
-	<meta id="TwitterMetaTitle" property="twitter:title" content="Link List Test">
 	<meta property="twitter:description" content="Need some links? Get them here!">
 	<meta property="twitter:image" content="../img/icon/main/shethzor.png">
 
