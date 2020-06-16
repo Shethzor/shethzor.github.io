@@ -100,7 +100,7 @@ switch(user){
 	case 'hitmarcer':
 		var title = "HitMarcer links";
 		var description = "";
-		var favicon = 'img/icon/hitmarcer.png';
+		var favicon = '';
 		var backgroundImageLink = 'https://img5.goodfon.com/wallpaper/nbig/2/7d/battlefield-1-igra-fon.jpg';
 		var backgroundBlur = 3;
 		var backgroundColor = 'blue';
@@ -233,25 +233,28 @@ switch(user){
 }
 
 if (isEmptyOrNull(favicon)){
-	document.getElementById('favicon').href = 'img/icon/shethzor.png';
+	favicon = 'img/icon/shethzor.png';
 }
 
-var head = document.querySelectorAll('head').innerHTML;
+var head = document.querySelectorAll('head')[0];
+//Tab
+head.innerHTML += '<title id="title">' + title + '</title>';
+head.innerHTML += '<link id="favicon" rel="icon" type="image/png" href="' + favicon + '"></link>';
+
 //Titles
-head += '<meta name="title" content="' + title + '">';
-head += '<meta property="og:title" content="' + title + '">';
-head += '<meta property="twitter:title" content="' + title + '">';
+head.innerHTML += '<meta name="title" content="' + title + '">';
+head.innerHTML += '<meta property="og:title" content="' + title + '">';
+head.innerHTML += '<meta property="twitter:title" content="' + title + '">';
 
 //Descriptions
-head += '<meta name="description" content="' + description + '">';
-head += '<meta property="og:description" content="' + description + '">';
-head += '<meta property="twitter:description" content="' + description + '">';
+head.innerHTML += '<meta name="description" content="' + description + '">';
+head.innerHTML += '<meta property="og:description" content="' + description + '">';
+head.innerHTML += '<meta property="twitter:description" content="' + description + '">';
 
 //Images
-head += '<meta name="image" content="' + favicon + '">';
-head += '<meta property="og:image" content="' + favicon + '">';
-head += '<meta property="twitter:image" content="' + favicon + '">';
-head += '<link id="favicon" rel="icon" type="image/png" href="' + favicon + '"></link>';
+head.innerHTML += '<meta name="image" content="' + favicon + '">';
+head.innerHTML += '<meta property="og:image" content="' + favicon + '">';
+head.innerHTML += '<meta property="twitter:image" content="' + favicon + '">';
 
 var isRedirect = false;
 for (var redirect in searchKey) {
@@ -717,11 +720,6 @@ function loadStyles() {
 	//Copiright
 	document.getElementById('Copyright').style.fontSize = copyrightSize + 'px';
 	document.getElementById('Copyright').querySelectorAll('a')[0].style.color = textColor;
-
-	//Tab
-	document.getElementById('favicon').href = favicon;
-	document.getElementById('title').innerHTML = title;
-
 
 	//Header
 	if (banner){
