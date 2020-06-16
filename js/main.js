@@ -238,7 +238,7 @@ if (isEmptyOrNull(favicon)){
 
 var head = document.querySelectorAll('head')[0];
 
-if (!isEmptyOrNull(title)){
+/*if (!isEmptyOrNull(title)){
 	//Titles
 	head.innerHTML += '<meta name="title" content="' + title + '">';
 	head.innerHTML += '<meta property="og:title" content="' + title + '">';
@@ -268,7 +268,7 @@ if (!isEmptyOrNull(title)){
 	head.innerHTML += '<meta name="image" content="img/icon/shethzor.png">';
 	head.innerHTML += '<meta property="og:image" content="img/icon/shethzor.png">';
 	head.innerHTML += '<meta property="twitter:image" content="img/icon/shethzor.png">';
-}
+}*/
 
 var isRedirect = false;
 for (var redirect in searchKey) {
