@@ -749,7 +749,7 @@ function loadStyles() {
 
 	//Tab
 	document.querySelectorAll('title')[0].innerHTML = title;
-	document.getElementById('favicon').setAttribute('html', favicon);
+	document.getElementById('favicon').href = favicon;
 
 	//Copiright
 	document.getElementById('Copyright').style.fontSize = copyrightSize + 'px';
