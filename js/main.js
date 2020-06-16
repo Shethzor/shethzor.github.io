@@ -236,40 +236,6 @@ if (isEmptyOrNull(favicon)){
 	favicon = 'img/icon/shethzor.png';
 }
 
-var head = document.querySelectorAll('head')[0];
-
-/*if (!isEmptyOrNull(title)){
-	//Titles
-	head.innerHTML += '<meta name="title" content="' + title + '">';
-	head.innerHTML += '<meta property="og:title" content="' + title + '">';
-	head.innerHTML += '<meta property="twitter:title" content="' + title + '">';
-
-	//Descriptions
-	head.innerHTML += '<meta name="description" content="' + description + '">';
-	head.innerHTML += '<meta property="og:description" content="' + description + '">';
-	head.innerHTML += '<meta property="twitter:description" content="' + description + '">';
-
-	//Images
-	head.innerHTML += '<meta name="image" content="' + favicon + '">';
-	head.innerHTML += '<meta property="og:image" content="' + favicon + '">';
-	head.innerHTML += '<meta property="twitter:image" content="' + favicon + '">';
-}else{
-	//Titles
-	head.innerHTML += '<meta name="title" content="Link List">';
-	head.innerHTML += '<meta property="og:title" content="Link List">';
-	head.innerHTML += '<meta property="twitter:title" content="Link List">';
-	
-	//Descriptions
-	head.innerHTML += '<meta name="description" content="Need links? Get them here!">';
-	head.innerHTML += '<meta property="og:description" content="Need links? Get them here!">';
-	head.innerHTML += '<meta property="twitter:description" content="Need links? Get them here!">';
-
-	//Images
-	head.innerHTML += '<meta name="image" content="img/icon/shethzor.png">';
-	head.innerHTML += '<meta property="og:image" content="img/icon/shethzor.png">';
-	head.innerHTML += '<meta property="twitter:image" content="img/icon/shethzor.png">';
-}*/
-
 var isRedirect = false;
 for (var redirect in searchKey) {
 	redirect = redirect.toLowerCase();

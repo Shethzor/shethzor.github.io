@@ -5,35 +5,20 @@
         <meta http-equiv="expires" content="0">
         <script src="js/main.js"></script>
 
-        <script>
-            var search = window.location.search.substr(1).split('&');
-            var searchKey = {};
-            for (var i = 0; i < search.length; i++){
-	            searchKey[search[i].split('=')[0]] = search[i].split('=')[1]
-            }
-
-            var user;
-            if (searchKey['id']){
-            	user = searchKey['id'].toLowerCase();
-            }
-
-            var head = document.querySelectorAll('head')[0];
-
-	        head.innerHTML += '<meta name="title" content="' + user + '">';
-	        head.innerHTML += '<meta property="og:title" content="' + user + '">';
-	        head.innerHTML += '<meta property="twitter:title" content="' + user + '">';
-
-            head.innerHTML += '<meta name="image" content="' + favicon + '">';
-            head.innerHTML += '<meta property="og:image" content="' + favicon + '">';
-            head.innerHTML += '<meta property="twitter:image" content="' + favicon + '">';
-        </script>
-
         <title></title>
         <link id="favicon" rel="icon" type="image/png" href=""></link>
-	
-	    <meta name="description" content="Need links? Get them here!">
-	    <meta property="og:description" content="Need links? Get them here!">
-	    <meta property="twitter:description" content="Need links? Get them here!">
+
+        <meta name="title" content="Zor's Link Hub">
+        <meta property="og:title" content="Zor's Link Hub">
+        <meta property="twitter:title" content="Zor's Link Hub">
+        
+        <meta name="description" content="Need links? Get them here!">
+        <meta property="og:description" content="Need links? Get them here!">
+        <meta property="twitter:description" content="Need links? Get them here!">
+    
+        <meta name="image" content="img/icon/shethzor.png">
+        <meta property="og:image" content="img/icon/shethzor.png">
+        <meta property="twitter:image" content="img/icon/shethzor.png">
 
 
         <meta charset="utf-8">
@@ -42,10 +27,8 @@
 	    <meta property="og:image:type" content="image/png">
 	    <meta property="og:image:width" content="300">
 	    <meta property="og:image:height" content="300">
-	    <meta property="og:url" content="http://shethzor.tv">
 
 	    <meta property="twitter:card" content="summary_large_image">
-	    <meta property="twitter:url" content="https://shethzor.tv">
 
 	    <meta name="viewport" content="width=device-width, initial-scale=1">
 
