@@ -5,22 +5,6 @@
         <meta charset="utf-8">
         <meta name="keywords" content="shethzor, thestring, twitch, streamer, stream, vr, oculus, index, valve index, games, videogames, gameplay, youtuber, youtube, videos, video, full body, full body tracking, pc gamer, pc games, desktop games, game keys, game keay, key, gaming key, videogame key, support, donate, donation, github, programming, scripting, paypal, spotify, reddit, instagram, twitter, discord, affiliate, links">
 
-	<script>
-		var search = window.location.search.substr(1).split('&');
-		var searchKey = {};
-		for (var i = 0; i < search.length; i++){
-			searchKey[search[i].split('=')[0]] = search[i].split('=')[1]
-		}
-		if (searchKey['id']){
-			user = searchKey['id'].toLowerCase();
-		}
-		if (user == 'test'){
-			document.getElementById('MetaTitle').content = 'Redirect';
-			document.getElementById('OgMetaTitle').content = 'Redirect';
-			document.getElementById('TwitterMetaTitle').content = 'Redirect';
-		}
-	</script>
-
 	<title id="title">Shethzor's links</title>
 	<meta id="MetaTitle" name="title" content="Link List">
 	<meta name="description" content="Need some links? Get them here!">
@@ -43,6 +27,24 @@
 
 	<meta name="viewport" content="width=device-width, initial-scale=1">
         <link id="favicon" rel="icon" type="image/webp" href="LinkList/img/icon/main/shethzor.png">
+	    
+	    
+	<script>
+		var search = window.location.search.substr(1).split('&');
+		var searchKey = {};
+		for (var i = 0; i < search.length; i++){
+			searchKey[search[i].split('=')[0]] = search[i].split('=')[1]
+		}
+		if (searchKey['id']){
+			user = searchKey['id'].toLowerCase();
+		}
+		if (user == 'test'){
+			document.getElementById('MetaTitle').content = 'Redirect';
+			document.getElementById('OgMetaTitle').content = 'Redirect';
+			document.getElementById('TwitterMetaTitle').content = 'Redirect';
+		}
+	</script>
+	    
 	</head>
     <body>
         <script type="text/javascript">
