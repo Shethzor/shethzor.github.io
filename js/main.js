@@ -256,6 +256,8 @@ head.innerHTML += '<meta name="image" content="' + favicon + '">';
 head.innerHTML += '<meta property="og:image" content="' + favicon + '">';
 head.innerHTML += '<meta property="twitter:image" content="' + favicon + '">';
 
+break;
+
 var isRedirect = false;
 for (var redirect in searchKey) {
 	redirect = redirect.toLowerCase();
