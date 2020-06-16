@@ -1,3 +1,5 @@
+console.log(document.readyState)
+
 var idList = {
 	'DreamVisuals' : {'logo' : 'img/logo/profiles/dreamvisuals.gif', 'website' : 'http://shethzor.tv?id=dreamvisuals'},
 	'flariwyr' : {'logo' : 'img/logo/profiles/flariwyr.png', 'website' : 'http://shethzor.tv?id=flariwyr'},
@@ -236,27 +238,6 @@ if (isEmptyOrNull(favicon)){
 	favicon = 'img/icon/shethzor.png';
 }
 
-var head = document.querySelectorAll('head')[0];
-//Tab
-head.innerHTML += '<title id="title">' + title + '</title>';
-head.innerHTML += '<link id="favicon" rel="icon" type="image/png" href="' + favicon + '"></link>';
-
-//Titles
-head.innerHTML += '<meta name="title" content="' + title + '">';
-head.innerHTML += '<meta property="og:title" content="' + title + '">';
-head.innerHTML += '<meta property="twitter:title" content="' + title + '">';
-
-//Descriptions
-head.innerHTML += '<meta name="description" content="' + description + '">';
-head.innerHTML += '<meta property="og:description" content="' + description + '">';
-head.innerHTML += '<meta property="twitter:description" content="' + description + '">';
-
-//Images
-head.innerHTML += '<meta name="image" content="' + favicon + '">';
-head.innerHTML += '<meta property="og:image" content="' + favicon + '">';
-head.innerHTML += '<meta property="twitter:image" content="' + favicon + '">';
-
-
 var isRedirect = false;
 for (var redirect in searchKey) {
 	redirect = redirect.toLowerCase();
@@ -381,27 +362,6 @@ var dictLanguage = {
 	},
 }
 
-var language
-document.onreadystatechange = () => {
-	if (document.readyState === 'complete'){
-		language = getLanguage()
-		setLanguage();
-		loadButtonAreas();
-		displayPage();
-		setStreamDays()
-		setStreamTime()
-		loadStyles();
-		document.getElementById('MatureContentButton').addEventListener('click', MatureContentToggle)
-	}
-};
-
-function displayPage(){
-	if (!isRedirect){
-		document.getElementById('Display').classList.remove('d-none');
-		document.getElementById('Display').classList.add('d-block');
-	}
-}
-
 for (var page in dictLinks) {
 	var logo = '';
 	switch(page){
@@ -504,22 +464,37 @@ for (var page in dictLinks) {
 		dictLinks[page]['logo'] = logo;
 	}
 }
+var language = 'en';
+document.onreadystatechange = () => {
+	if (document.readyState === 'complete'){
+		displayPage();
+		setLanguage();
+		loadButtonAreas();
+		setStreamDays();
+		setStreamTime();
+		loadStyles();
+		document.getElementById('MatureContentButton').addEventListener('click', MatureContentToggle)
+	}
+};
 
-function getLanguage(){
-	var language = 'en';
+function displayPage(){
+	if (!isRedirect){
+		document.getElementById('Display').classList.remove('d-none');
+		document.getElementById('Display').classList.add('d-block');
+	}
+}
+
+//Set Language
+function setLanguage(){
 	for (var lang in searchKey) {
 		if (searchKey['l']){
 			if (dictLanguage.hasOwnProperty(searchKey[lang]) && dictLanguage[searchKey[lang]] != null) {
 				language = searchKey[lang];
+				for (var label in dictLanguage[language]['label']){
+					document.getElementById("display-language-" + label).innerHTML = dictLanguage[language]['label'][label];
+				}
 			}
 		}
-	}
-	return language;
-}
-
-function setLanguage(){
-	for (var label in dictLanguage[language]['label']){
-		document.getElementById("display-language-" + label).innerHTML = dictLanguage[language]['label'][label];
 	}
 }
 
@@ -556,7 +531,7 @@ function MatureContentToggle() {
 	}
 }
 
-// Hide Empty Areas
+//Load Button Areas
 function loadButtonAreas() {
 	var panel = ['twitch', 'youtube'];
 	var isTeam = ['LinksTeamMain', 'LinksTeamPartner']
@@ -699,6 +674,7 @@ function loadEgg(key){
 	}
 }
 
+//Easter Egg Sound
 function soundEgg(link){
 	document.getElementById('easteregg').innerHTML = '<iframe class="d-none" width="560" height="315" src="' + link + '?controls=0&loop=1&autoplay=1&disablekb=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
 }
