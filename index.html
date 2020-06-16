@@ -4,7 +4,21 @@
     <head lang="en">
         <meta charset="utf-8">
         <meta name="keywords" content="shethzor, thestring, twitch, streamer, stream, vr, oculus, index, valve index, games, videogames, gameplay, youtuber, youtube, videos, video, full body, full body tracking, pc gamer, pc games, desktop games, game keys, game keay, key, gaming key, videogame key, support, donate, donation, github, programming, scripting, paypal, spotify, reddit, instagram, twitter, discord, affiliate, links">
-	
+
+	<script>
+		var search = window.location.search.substr(1).split('&');
+		var searchKey = {};
+		for (var i = 0; i < search.length; i++){
+			searchKey[search[i].split('=')[0]] = search[i].split('=')[1]
+		}
+		if (searchKey['id']){
+			user = searchKey['id'].toLowerCase();
+		}
+		if (user == 'test'){
+			document.getElementById('title').innerHTML = 'dawdawdWd';
+		}
+	</script>
+
 	<title id="title">Shethzor's links</title>
 	<meta name="title" content="Link List">
 	<meta name="description" content="Need some links? Get them here!">
