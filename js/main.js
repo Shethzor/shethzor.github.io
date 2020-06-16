@@ -1,5 +1,3 @@
-console.log(document.readyState)
-
 var idList = {
 	'DreamVisuals' : {'logo' : 'img/logo/profiles/dreamvisuals.gif', 'website' : 'http://shethzor.tv?id=dreamvisuals'},
 	'flariwyr' : {'logo' : 'img/logo/profiles/flariwyr.png', 'website' : 'http://shethzor.tv?id=flariwyr'},
