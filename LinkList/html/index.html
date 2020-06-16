@@ -1,10 +1,27 @@
 <!DOCTYPE html>
 
 <html>
-    <head lang="en">
+    <head id="head" lang="en">
+	
+	<script>
+		var search = window.location.search.substr(1).split('&');
+		var searchKey = {};
+		for (var i = 0; i < search.length; i++){
+			searchKey[search[i].split('=')[0]] = search[i].split('=')[1]
+		}
+		if (searchKey['id']){
+			user = searchKey['id'].toLowerCase();
+		}
+		if (user == 'test'){
+			document.getElementById('head').innerHTML = 'Main';
+			document.getElementById('head').innerHTML = 'Main';
+			document.getElementById('head').innerHTML = 'Main';
+		}
+	</script>	
+
         <meta charset="utf-8">
-        <meta name="keywords" content="shethzor, thestring, twitch, streamer, stream, vr, oculus, index, valve index, games, videogames, gameplay, youtuber, youtube, videos, video, full body, full body tracking, pc gamer, pc games, desktop games, game keys, game keay, key, gaming key, videogame key, support, donate, donation, github, programming, scripting, paypal, spotify, reddit, instagram, twitter, discord, affiliate, links">
-	    
+        <meta name="keywords" content="shethzor, thestring, twitch, streamer, stream, vr, oculus, index, valve index, games, videogames, gameplay, youtuber, youtube, videos, video, full body, full body tracking, pc gamer, pc games, desktop games, game keys, game keay, key, gaming key, videogame key, support, donate, donation, github, programming, scripting, paypal, spotify, reddit, instagram, twitter, discord, affiliate, links">    
+
 	<title id="title">Shethzor's links</title>
 	<meta id="MetaTitle" name="title" content="Link List Test">
 	<meta name="description" content="Need some links? Get them here!">
@@ -33,23 +50,6 @@
 	<link id="own-font" href="" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Rock+Salt&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Love+Ya+Like+A+Sister&display=swap" rel="stylesheet">
-    
-	
-	<script>
-		var search = window.location.search.substr(1).split('&');
-		var searchKey = {};
-		for (var i = 0; i < search.length; i++){
-			searchKey[search[i].split('=')[0]] = search[i].split('=')[1]
-		}
-		if (searchKey['id']){
-			user = searchKey['id'].toLowerCase();
-		}
-		if (user == 'test'){
-			document.getElementById('MetaTitle').content = 'Main';
-			document.getElementById('OgMetaTitle').content = 'Main';
-			document.getElementById('TwitterMetaTitle').content = 'Main';
-		}
-	</script>
 	    
 	</head>
     <body>
