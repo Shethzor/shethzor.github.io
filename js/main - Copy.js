@@ -269,6 +269,114 @@ for (var redirect in searchKey) {
 	}
 }
 
+if (!isRedirect){
+	document.getElementById('Display').classList.remove('d-none');
+	document.getElementById('Display').classList.add('d-block');
+}
+
+for (var page in dictLinks) {
+	var logo = '';
+	switch(page){
+		case 'discord':
+			logo = 'img/logo/platform/discord.png';
+			dictLinks[page]['list'] = 'LinksSocialMedia';
+			break;
+		case 'e-pal':
+			logo = 'img/logo/platform/e-pal.png';
+			dictLinks[page]['list'] = 'LinksSocialMedia';
+			break;
+		case 'facebook':
+			logo = 'img/logo/platform/facebook.png';
+			dictLinks[page]['list'] = 'LinksSocialMedia';
+			break;
+		case 'github':
+			logo = 'img/logo/platform/github.png';
+			dictLinks[page]['list'] = 'LinksOther';
+			break;
+		case 'instagram':
+			logo = 'img/logo/platform/instagram.png';
+			dictLinks[page]['list'] = 'LinksSocialMedia';
+			break;
+		case 'instant-gaming':
+			logo = 'img/logo/support/instant-gaming.png';
+			dictLinks[page]['list'] = 'LinksSupportAffiliate';
+			break;
+		case 'patreon_donate':
+			logo = 'img/logo/support/patreon.png';
+			dictLinks[page]['list'] = 'LinksSupportDonate';
+			break;
+		case 'pornhub':
+			logo = 'img/logo/platform/pornhub.png';
+			dictLinks[page]['list'] = 'LinksSocialMedia';
+			dictLinks[page]['matureContent'] = true;
+			break;
+		case 'soundcloud':
+			logo = 'img/logo/platform/soundcloud.png';
+			dictLinks[page]['list'] = 'LinksSocialMedia';
+			break;
+		case 'spotify':
+			logo = 'img/logo/platform/spotify.png';
+			dictLinks[page]['list'] = 'LinksOther';
+			break;
+		case 'steam':
+			logo = 'img/logo/platform/steam.png';
+			dictLinks[page]['list'] = 'LinksSocialMedia';
+			break;
+		case 'streamelements_donate':
+			logo = 'img/logo/support/streamelements.png';
+			dictLinks[page]['list'] = 'LinksSupportDonate';
+			break;
+		case 'streamlabs_donate':
+			logo = 'img/logo/support/streamlabs.png';
+			dictLinks[page]['list'] = 'LinksSupportDonate';
+			break;
+		case 'telegram':
+			logo = 'img/logo/platform/telegram.png';
+			dictLinks[page]['list'] = 'LinksSocialMedia';
+			break;
+		case 'tellonym':
+			logo = 'img/logo/platform/tellonym.png';
+			dictLinks[page]['list'] = 'LinksSocialMedia';
+			break;
+		case 'tipeeestream_donate':
+			logo = 'img/logo/support/tipeeestream.png';
+			dictLinks[page]['list'] = 'LinksSupportDonate';
+			break;
+		case 'twitch':
+			logo = 'img/logo/platform/twitch.png';
+			dictLinks[page]['list'] = 'LinksSocialMedia';
+			break;
+		case 'twitch_subscribe':
+			logo = 'img/logo/support/twitch_subscribe.png';
+			dictLinks[page]['list'] = 'LinksSupportDonate';
+			break;
+		case 'twitter':
+			logo = 'img/logo/platform/twitter.png';
+			dictLinks[page]['list'] = 'LinksSocialMedia';
+			break;
+		case 'youtube':
+			logo = 'img/logo/platform/youtube.png';
+			dictLinks[page]['list'] = 'LinksSocialMedia';
+			break;
+		case 'youtube_music':
+			logo = 'img/logo/platform/youtube_music.png';
+			dictLinks[page]['list'] = 'LinksOther';
+			break;
+		default:
+			if (page.startsWith('team_main')){
+				logo = idList[dictLinks[page]['name']]['logo'];
+				dictLinks[page]['list'] = 'LinksTeamMain';
+			}
+			if (page.startsWith('team_partner')){
+				logo = idList[dictLinks[page]['name']]['logo'];
+				dictLinks[page]['list'] = 'LinksTeamPartner';
+			}
+	}
+	if (!dictLinks[page]['logo']){
+		dictLinks[page]['logo'] = logo;
+	}
+}
+
 //Language
 var dictLanguage = {
 	'de' : {
@@ -381,145 +489,15 @@ var dictLanguage = {
 	},
 }
 
-var language
-document.onreadystatechange = () => {
-	if (document.readyState === 'complete'){
-		language = getLanguage()
-		setLanguage();
-		loadButtonAreas();
-		displayPage();
-		setStreamDays()
-		setStreamTime()
-		loadStyles();
-		document.getElementById('MatureContentButton').addEventListener('click', MatureContentToggle)
-	}
-};
-
-function displayPage(){
-	if (!isRedirect){
-		document.getElementById('Display').classList.remove('d-none');
-		document.getElementById('Display').classList.add('d-block');
-	}
-}
-
-for (var page in dictLinks) {
-	var logo = '';
-	switch(page){
-		case 'discord':
-			logo = 'img/logo/platform/discord.png';
-			dictLinks[page]['list'] = 'LinksSocialMedia';
-			break;
-		case 'e-pal':
-			logo = 'img/logo/platform/e-pal.png';
-			dictLinks[page]['list'] = 'LinksSocialMedia';
-			break;
-		case 'facebook':
-			logo = 'img/logo/platform/facebook.png';
-			dictLinks[page]['list'] = 'LinksSocialMedia';
-			break;
-		case 'github':
-			logo = 'img/logo/platform/github.png';
-			dictLinks[page]['list'] = 'LinksOther';
-			break;
-		case 'instagram':
-			logo = 'img/logo/platform/instagram.png';
-			dictLinks[page]['list'] = 'LinksSocialMedia';
-			break;
-		case 'instant-gaming':
-			logo = 'img/logo/support/instant-gaming.png';
-			dictLinks[page]['list'] = 'LinksSupportAffiliate';
-			break;
-		case 'patreon_donate':
-			logo = 'img/logo/support/patreon.png';
-			dictLinks[page]['list'] = 'LinksSupportDonate';
-			break;
-		case 'pornhub':
-			logo = 'img/logo/platform/pornhub.png';
-			dictLinks[page]['list'] = 'LinksSocialMedia';
-			dictLinks[page]['matureContent'] = true;
-			break;
-		case 'soundcloud':
-			logo = 'img/logo/platform/soundcloud.png';
-			dictLinks[page]['list'] = 'LinksSocialMedia';
-			break;
-		case 'spotify':
-			logo = 'img/logo/platform/spotify.png';
-			dictLinks[page]['list'] = 'LinksOther';
-			break;
-		case 'steam':
-			logo = 'img/logo/platform/steam.png';
-			dictLinks[page]['list'] = 'LinksSocialMedia';
-			break;
-		case 'streamelements_donate':
-			logo = 'img/logo/support/streamelements.png';
-			dictLinks[page]['list'] = 'LinksSupportDonate';
-			break;
-		case 'streamlabs_donate':
-			logo = 'img/logo/support/streamlabs.png';
-			dictLinks[page]['list'] = 'LinksSupportDonate';
-			break;
-		case 'telegram':
-			logo = 'img/logo/platform/telegram.png';
-			dictLinks[page]['list'] = 'LinksSocialMedia';
-			break;
-		case 'tellonym':
-			logo = 'img/logo/platform/tellonym.png';
-			dictLinks[page]['list'] = 'LinksSocialMedia';
-			break;
-		case 'tipeeestream_donate':
-			logo = 'img/logo/support/tipeeestream.png';
-			dictLinks[page]['list'] = 'LinksSupportDonate';
-			break;
-		case 'twitch':
-			logo = 'img/logo/platform/twitch.png';
-			dictLinks[page]['list'] = 'LinksSocialMedia';
-			break;
-		case 'twitch_subscribe':
-			logo = 'img/logo/support/twitch_subscribe.png';
-			dictLinks[page]['list'] = 'LinksSupportDonate';
-			break;
-		case 'twitter':
-			logo = 'img/logo/platform/twitter.png';
-			dictLinks[page]['list'] = 'LinksSocialMedia';
-			break;
-		case 'youtube':
-			logo = 'img/logo/platform/youtube.png';
-			dictLinks[page]['list'] = 'LinksSocialMedia';
-			break;
-		case 'youtube_music':
-			logo = 'img/logo/platform/youtube_music.png';
-			dictLinks[page]['list'] = 'LinksOther';
-			break;
-		default:
-			if (page.startsWith('team_main')){
-				logo = idList[dictLinks[page]['name']]['logo'];
-				dictLinks[page]['list'] = 'LinksTeamMain';
-			}
-			if (page.startsWith('team_partner')){
-				logo = idList[dictLinks[page]['name']]['logo'];
-				dictLinks[page]['list'] = 'LinksTeamPartner';
-			}
-	}
-	if (!dictLinks[page]['logo']){
-		dictLinks[page]['logo'] = logo;
-	}
-}
-
-function getLanguage(){
-	var language = 'en';
-	for (var lang in searchKey) {
-		if (searchKey['l']){
-			if (dictLanguage.hasOwnProperty(searchKey[lang]) && dictLanguage[searchKey[lang]] != null) {
-				language = searchKey[lang];
+var language = 'en';
+for (var lang in searchKey) {
+	if (searchKey['l']){
+		if (dictLanguage.hasOwnProperty(searchKey[lang]) && dictLanguage[searchKey[lang]] != null) {
+			language = searchKey[lang];
+			for (var label in dictLanguage[language]['label']){
+				document.getElementById("display-language-" + label).innerHTML = dictLanguage[language]['label'][label];
 			}
 		}
-	}
-	return language;
-}
-
-function setLanguage(){
-	for (var label in dictLanguage[language]['label']){
-		document.getElementById("display-language-" + label).innerHTML = dictLanguage[language]['label'][label];
 	}
 }
 
@@ -557,94 +535,93 @@ function MatureContentToggle() {
 }
 
 // Hide Empty Areas
-function loadButtonAreas() {
-	var panel = ['twitch', 'youtube'];
-	var isTeam = ['LinksTeamMain', 'LinksTeamPartner']
-	for (var page in dictLinks){
-		var display = document.getElementById('display-' + dictLinks[page]['list'])
-		if (display) {
-			if (dictLinks[page]['active'] && dictLinks[page]['link'] != ''){
-				if (display.classList.contains('d-none')){
-					display.classList.remove('d-none');
-					display.classList.add('d-block');
-					switch(dictLinks[page]['list']){
-						case "LinksTeamMain":
-						case "LinksTeamPartner":
-								display = document.getElementById('display-Team');
-						break;
-						case "LinksSupportAffiliate":
-						case "LinksSupportDonate":
-							if (dictLinks[page]['active']){
-								display = document.getElementById('display-Support');
-							}
-						break;
-					}
-					display.classList.remove('d-none');
-					display.classList.add('d-block');
-				}
-			}
-		}
-
-	    if (dictLinks[page]['active']){
-			for(var value in isTeam){
-				var target = '';
-				var displayName = '';
-				var wrapperStart = '';
-				var wrapperEnd = '';
-				if(!(isTeam[value] == dictLinks[page]['list'])){
-					target = 'target="_blank"';
-				} else {
-					displayName = '<p class="text-center displayName">' + dictLinks[page]['name'] + '</p>';
-					wrapperStart = '<div>';
-					wrapperEnd = '</div>';
+var panel = ['twitch', 'youtube'];
+var isTeam = ['LinksTeamMain', 'LinksTeamPartner']
+for (var page in dictLinks){
+	var display = document.getElementById('display-' + dictLinks[page]['list'])
+	if (display) {
+		if (dictLinks[page]['active'] && dictLinks[page]['link'] != ''){
+			if (display.classList.contains('d-none')){
+				display.classList.remove('d-none');
+				display.classList.add('d-block');
+				switch(dictLinks[page]['list']){
+					case "LinksTeamMain":
+					case "LinksTeamPartner":
+							display = document.getElementById('display-Team');
+					break;
+					case "LinksSupportAffiliate":
+					case "LinksSupportDonate":
+						if (dictLinks[page]['active']){
+							display = document.getElementById('display-Support');
+						}
 					break;
 				}
+				display.classList.remove('d-none');
+				display.classList.add('d-block');
 			}
-
-			if (dictLinks[page]['link']){
-				var isPanel = false;
-				for (var panelName in panel) {
-					if (panel[panelName] == page) {
-						isPanel = true;
-						break;
-					}
-					isPanel = false;
-				}
-				if (isPanel) {
-					document.getElementById('panel').classList.remove('d-none');
-					document.getElementById('panel').classList.add('d-block');
-
-					document.getElementById('panel-' + page).classList.remove('d-none');
-					document.getElementById('panel-' + page).classList.add('d-block');
-					document.getElementById(page + '-channel-link').href = dictLinks[page]['link'];
-					if (page = "youtube"){
-						document.getElementById('latest-youtube-video').src = 'https://www.youtube.com/embed/videoseries?list=' + latestYouTubeVideoListCode;
-					}
-				}else{
-					if (isEmptyOrNull(dictLinks[page]['logo'])){
-						dictLinks[page]['logo'] = "img/logo/default/shethzor-logo.png";
-					}
-					var displayButton;
-					if (dictLinks[page]['matureContent']){
-						if (!showMatureContentButton){
-							document.getElementById('MatureContentButton').classList.remove('d-none');
-							document.getElementById('MatureContentButton').classList.add('d-block');
-							showMatureContentButton = true;
-						}
-						var displayButton = "d-none";
-					}else{
-						var displayButton = "d-block";
-					}
-					document.getElementById(dictLinks[page]['list']).innerHTML += wrapperStart + '<div id="' + page + '-button" class="button-icon-main ' + displayButton + '"><a href="' + dictLinks[page]['link'] + '" ' + target + '><img src="' + dictLinks[page]['logo'] + '" alt="' + page + '"></img></a>' + wrapperEnd + displayName + '</div>';
-				}
-		    }
 		}
+	}
+
+    if (dictLinks[page]['active']){
+		for(var value in isTeam){
+			var target = '';
+			var displayName = '';
+			var wrapperStart = '';
+			var wrapperEnd = '';
+			if(!(isTeam[value] == dictLinks[page]['list'])){
+				target = 'target="_blank"';
+			} else {
+				displayName = '<p class="text-center displayName">' + dictLinks[page]['name'] + '</p>';
+				wrapperStart = '<div>';
+				wrapperEnd = '</div>';
+				break;
+			}
+		}
+
+		if (dictLinks[page]['link']){
+			var isPanel = false;
+			for (var panelName in panel) {
+				if (panel[panelName] == page) {
+					isPanel = true;
+					break;
+				}
+				isPanel = false;
+			}
+			if (isPanel) {
+				document.getElementById('panel').classList.remove('d-none');
+				document.getElementById('panel').classList.add('d-block');
+
+				document.getElementById('panel-' + page).classList.remove('d-none');
+				document.getElementById('panel-' + page).classList.add('d-block');
+				document.getElementById(page + '-channel-link').href = dictLinks[page]['link'];
+				if (page = "youtube"){
+					document.getElementById('latest-youtube-video').src = 'https://www.youtube.com/embed/videoseries?list=' + latestYouTubeVideoListCode;
+				}
+			}else{
+				if (isEmptyOrNull(dictLinks[page]['logo'])){
+					dictLinks[page]['logo'] = "img/logo/default/shethzor-logo.png";
+				}
+				var displayButton;
+				if (dictLinks[page]['matureContent']){
+					if (!showMatureContentButton){
+						document.getElementById('MatureContentButton').classList.remove('d-none');
+						document.getElementById('MatureContentButton').classList.add('d-block');
+						showMatureContentButton = true;
+					}
+					var displayButton = "d-none";
+				}else{
+					var displayButton = "d-block";
+				}
+				document.getElementById(dictLinks[page]['list']).innerHTML += wrapperStart + '<div id="' + page + '-button" class="button-icon-main ' + displayButton + '"><a href="' + dictLinks[page]['link'] + '" ' + target + '><img src="' + dictLinks[page]['logo'] + '" alt="' + page + '"></img></a>' + wrapperEnd + displayName + '</div>';
+			}
+	    }
 	}
 }
 
 //Easter Eggs
 var combinationArray = new Array();
 document.addEventListener('keydown', loadEgg);
+document.getElementById('MatureContentButton').addEventListener('click', MatureContentToggle)
 
 function loadEgg(key){
 	combinationArray.length = 20;
@@ -712,6 +689,7 @@ function getArrayText(combinationArray, length){
 }
 
 //Load Style
+loadStyles();
 function loadStyles() {
 	if (backgroundImageLink){
 		document.getElementById('Background').style.backgroundImage = 'url("' + backgroundImageLink + '")';
@@ -757,23 +735,19 @@ function loadStyles() {
 }
 
 //Twitch Stream Days
-function setStreamDays(){
-	for (var day in streamDays){
-		document.getElementById('streaming-' + day).innerHTML = dictLanguage[language]['day'][day];
-		document.getElementById('streaming-' + day).classList = 'streaming-' + streamDays[day];
-	}
+for (var day in streamDays){
+	document.getElementById('streaming-' + day).innerHTML = dictLanguage[language]['day'][day];
+	document.getElementById('streaming-' + day).classList = 'streaming-' + streamDays[day];
 }
 
 //Twitch Stream Time
-function setStreamTime(){
-	if (!isEmptyOrNull(streamTime)){
-		const event = new Date('August 19, 1975 ' + streamTime + ':00:00 GMT+00:00');
-		var time = event.toLocaleTimeString(navigator.language, {hour: '2-digit', minute:'2-digit'});
-		if (time.length == 5){
-			time += ' ' + dictLanguage[language]['time']['clock'];
-		}
-		document.getElementById('streaming-time').innerHTML = dictLanguage[language]['time']['at'] + ' ' + time;
+if (!isEmptyOrNull(streamTime)){
+	const event = new Date('August 19, 1975 ' + streamTime + ':00:00 GMT+00:00');
+	var time = event.toLocaleTimeString(navigator.language, {hour: '2-digit', minute:'2-digit'});
+	if (time.length == 5){
+		time += ' ' + dictLanguage[language]['time']['clock'];
 	}
+	document.getElementById('streaming-time').innerHTML = dictLanguage[language]['time']['at'] + ' ' + time;
 }
 
 //Usefull
