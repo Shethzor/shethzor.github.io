@@ -1,0 +1,226 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: #000000;
+    min-height: 100vh;
+    color: rgba(251, 251, 251, 1);
+    background-color: rgba(0, 0, 0, 1);
+    user-select: none;
+    position: relative;
+}
+
+h2 {
+    padding: calc(1.5vh + 1.5vw) 0 0 0;
+    text-align: center;
+    font-size: calc(1.5vh + 1.5vw);
+}
+
+h3 {
+    margin: 0 20px 0 20px;
+    text-align: center;
+    font-size: calc(1vh + 1vw);
+}
+
+a {
+    cursor: pointer;
+}
+
+p {
+    padding: 0;
+    margin: 0;
+}
+
+#Background {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: -1;
+	opacity: 0.5;
+	background-attachment: fixed;
+}
+
+#MatureContentButton {
+    transition: ease-in-out 0.2s;
+    background-color: red;
+    width: calc(5vw + 30px);
+    text-align: center;
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px black;
+}
+#MatureContentButton:hover {
+    cursor: pointer;
+    transform: scale(1.2);
+}
+#MatureContentButton:active {
+    transform: scale(0.8);
+}
+
+#TitleImage {
+    width: 70vh;
+    min-width: 150px;
+}
+
+#Copyright {
+    font-size: calc(0.1vh + 0.1vw + 5px);
+}
+
+#Copyright a {
+    color: rgba(251, 251, 251, 1);
+    transition: 0.5s ease-in-out;
+}
+#Copyright a:hover{
+    text-decoration: none;
+    font-size: larger;
+}
+
+.listLinks {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 800px;
+}
+.support {
+    max-width: 400px;
+}
+.button-icon-main {
+    margin: 20px;
+}
+.button-icon-main a {
+    display: block;
+    box-shadow: 0 0 10px black;
+    transition: 0.2s ease-in-out;
+    border-radius: 20px;
+}
+.button-icon-main img {
+    width: calc(7vh + 7vw);
+    max-width: 90px;
+    min-width: 80px;
+    border-radius: 20px;
+}
+.button-icon-main a:hover {
+    transform: scale(1.2);
+}
+.button-icon-main a:active {
+    transform: scale(0.8);
+}
+
+.max-width-220{
+    max-width: 220px;
+}
+
+.panel {    
+    width: calc(14vh + 14vw + 40px);
+    max-width: 220px;
+    max-height: 220px;
+    box-shadow: 0 0 10px black;
+    transition: 0.2s ease-in-out;
+    border-radius: 20px;
+    margin: 20px;
+    font-size: 11px;
+}
+.panel:hover{
+    transform: scale(1.1);
+}
+.panel a{
+    display: inline-block;
+    width: calc(14vh + 14vw + 40px);
+    max-width: 220px;
+}
+.panel img{
+    display: block;
+    width: calc(14vh + 14vw + 40px);
+    max-width: 90px;
+    height: calc(14vh + 14vw + 40px);
+    max-height: 90px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.panel-image{
+    border-radius: 20px 20px 0 0;
+}
+.panel-twitch-image{
+    background-color: #6441a5;
+}
+.panel-content {
+    text-align: center;
+    border-radius: 0 0 20px 20px;
+}
+.panel-twitch-content{
+    background-color: #0e0e10;
+    height: calc(14vh + 14vw + 40px);
+    max-height: 130px;
+}
+.panel-twitch-content #stream-days p{
+    margin: 8px 8px;
+}
+.panel-youtube-image{
+    background-color: #cc191e;
+}
+.panel-youtube-content{
+    background-color: #0e0e10;
+    height: calc(14vh + 14vw + 40px);
+    max-height: 130px;
+}
+.panel-youtube-content iframe{
+    background-color: #0e0e10;
+    height: calc(14vh + 14vw + 40px);
+    max-height: 130px;
+    border-radius: 0 0 20px 20px;
+    width: calc(14vh + 14vw + 40px);
+    max-width: 220px;
+}
+
+.title {
+    text-align: center;
+    padding-top: calc(0.5vh + 0.5vw);
+    font-size: calc(2.5vh + 2.5vw);
+}
+
+.row {
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.streaming-false {
+    color: #888888;
+}
+.streaming-true {
+    color: #88ff88;
+}
+
+/* Tablet */
+@media (min-width: 600px) and (max-width: 768px){
+	#TitleImage {
+		width: 70vw;
+	}
+	.listLinks {
+		width: 70vw;
+    }
+    .support{
+        width: 40vw;
+    }
+
+}
+
+/* Mobile */
+@media (min-width: 1px) and (max-width: 767px){
+	#TitleImage {
+		width: 70vw;
+	}
+	.listLinks {
+		width: 70vw;
+    }
+    .support{
+        width: 70vw;
+    }
+}
