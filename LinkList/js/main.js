@@ -1,9 +1,9 @@
 var idList = {
-	'DreamVisuals' : {'logo' : '../img/logo/profiles/dreamvisuals.gif', 'website' : 'http://shethzor.tv?id=dreamvisuals'},
-	'flariwyr' : {'logo' : '../img/logo/profiles/flariwyr.png', 'website' : 'http://shethzor.tv?id=flariwyr'},
+	'DreamVisuals' : {'logo' : 'img/logo/profiles/dreamvisuals.gif', 'website' : 'http://shethzor.tv?id=dreamvisuals'},
+	'flariwyr' : {'logo' : 'img/logo/profiles/flariwyr.png', 'website' : 'http://shethzor.tv?id=flariwyr'},
 	'hitmarcer' : {'logo' : '', 'website' : 'http://shethzor.tv?id=hitmarcer'},
-	'Retro__Boi' : {'logo' : '../img/logo/profiles/retro__boi.png', 'website' : 'http://shethzor.tv?id=retro__boi'},
-	'Shethzor' : {'logo' : '../img/logo/profiles/shethzor.gif', 'website' : 'http://shethzor.tv?id=shethzor'}
+	'Retro__Boi' : {'logo' : 'img/logo/profiles/retro__boi.png', 'website' : 'http://shethzor.tv?id=retro__boi'},
+	'Shethzor' : {'logo' : 'img/logo/profiles/shethzor.gif', 'website' : 'http://shethzor.tv?id=shethzor'}
 }
 
 //Get All Search Keys
@@ -22,7 +22,8 @@ if (searchKey['id']){
 switch(user){
 	case 'dreamvisuals':
 		var title = "DreamVisuals links";
-		var favicon = '../img/icon/dreamvisuals.png';
+		var description = "";
+		var favicon = 'img/icon/dreamvisuals.png';
 		var backgroundImageLink = 'https://cutewallpaper.org/21/hd-gif-wallpapers/Gifart-Lo-Fi-Wallpapers-Top-Free-Gifart-Lo-Fi-Backgrounds-.gif';
 		var backgroundBlur = 2;
 		var backgroundColor = 'purple';
@@ -34,7 +35,7 @@ switch(user){
 		var h3Size = 10;
 		var pSize = 15;
 		var copyrightSize = 15;
-		var banner = '../img/banner/dreamvisuals.gif'
+		var banner = 'img/banner/dreamvisuals.gif'
 		var bannerWidth = 13;
 		var streamDays = {
 			'su' : false,
@@ -59,7 +60,8 @@ switch(user){
 	break;
 	case 'flariwyr':
 		var title = "Flariwyr's links";
-		var favicon = '../img/icon/flariwyr.png';
+		var description = "";
+		var favicon = 'img/icon/flariwyr.png';
 		var backgroundImageLink = 'https://i.imgur.com/AV595g2.gif';
 		var backgroundBlur = 2;
 		var backgroundColor = 'black';
@@ -97,7 +99,8 @@ switch(user){
 	break;
 	case 'hitmarcer':
 		var title = "HitMarcer links";
-		var favicon = '../img/icon/hitmarcer.png';
+		var description = "";
+		var favicon = 'img/icon/hitmarcer.png';
 		var backgroundImageLink = 'https://img5.goodfon.com/wallpaper/nbig/2/7d/battlefield-1-igra-fon.jpg';
 		var backgroundBlur = 3;
 		var backgroundColor = 'blue';
@@ -133,8 +136,9 @@ switch(user){
 	break;
 	case "retro__boi":
 		var title = "Retro__Boi's links";
-		var favicon = '../img/icon/retro__boi.png';
-		var backgroundImageLink = '../img/background/retro__boi.gif';
+		var description = "";
+		var favicon = 'img/icon/retro__boi.png';
+		var backgroundImageLink = 'img/background/retro__boi.gif';
 		var backgroundBlur = 0;
 		var backgroundColor = 'black';
 		var textColor = '';
@@ -145,7 +149,7 @@ switch(user){
 		var h3Size = (fontSize / 3);
 		var pSize = (fontSize / 1.5);
 		var copyrightSize = (fontSize / 1.5);
-		var banner = '../img/banner/retro__boi.png'
+		var banner = 'img/banner/retro__boi.png'
 		var bannerWidth = 12;
 		var streamDays = {
 			'su' : false,
@@ -171,6 +175,7 @@ switch(user){
 	case 'shethzor':
 	default:
 		var title = "Shethzor's links";
+		var description = "Get all my links here!";
 		var favicon = '';
 		var backgroundImageLink = 'https://media1.tenor.com/images/a682025c7ab8f3b60b1e230fe89f1879/tenor.gif';
 		var backgroundBlur = 3;
@@ -183,7 +188,7 @@ switch(user){
 		var h3Size = 15;
 		var pSize = 15;
 		var copyrightSize = 15;
-		var banner = '../img/banner/shethzor.gif'
+		var banner = 'img/banner/shethzor.gif'
 		var bannerWidth;
 		var streamDays = {
 			'su' : false,
@@ -227,6 +232,14 @@ switch(user){
 	break;
 }
 
+var head = document.querySelectorAll('head').innerHTML;
+head += '<meta name="title" content="' + title + '">';
+head += '<meta property="og:title" content="' + title + '">';
+head += '<meta property="twitter:title" content="' + title + '">';
+head += '<meta name="description" content="' + description + '">';
+head += '<meta property="og:description" content="' + description + '">';
+head += '<meta property="twitter:description" content="' + description + '">';
+
 var isRedirect = false;
 for (var redirect in searchKey) {
 	redirect = redirect.toLowerCase();
@@ -248,88 +261,88 @@ for (var page in dictLinks) {
 	var logo = '';
 	switch(page){
 		case 'discord':
-			logo = '../img/logo/platform/discord.png';
+			logo = 'img/logo/platform/discord.png';
 			dictLinks[page]['list'] = 'LinksSocialMedia';
 			break;
 		case 'e-pal':
-			logo = '../img/logo/platform/e-pal.png';
+			logo = 'img/logo/platform/e-pal.png';
 			dictLinks[page]['list'] = 'LinksSocialMedia';
 			break;
 		case 'facebook':
-			logo = '../img/logo/platform/facebook.png';
+			logo = 'img/logo/platform/facebook.png';
 			dictLinks[page]['list'] = 'LinksSocialMedia';
 			break;
 		case 'github':
-			logo = '../img/logo/platform/github.png';
+			logo = 'img/logo/platform/github.png';
 			dictLinks[page]['list'] = 'LinksOther';
 			break;
 		case 'instagram':
-			logo = '../img/logo/platform/instagram.png';
+			logo = 'img/logo/platform/instagram.png';
 			dictLinks[page]['list'] = 'LinksSocialMedia';
 			break;
 		case 'instant-gaming':
-			logo = '../img/logo/support/instant-gaming.png';
+			logo = 'img/logo/support/instant-gaming.png';
 			dictLinks[page]['list'] = 'LinksSupportAffiliate';
 			break;
 		case 'patreon_donate':
-			logo = '../img/logo/support/patreon.png';
+			logo = 'img/logo/support/patreon.png';
 			dictLinks[page]['list'] = 'LinksSupportDonate';
 			break;
 		case 'pornhub':
-			logo = '../img/logo/platform/pornhub.png';
+			logo = 'img/logo/platform/pornhub.png';
 			dictLinks[page]['list'] = 'LinksSocialMedia';
 			dictLinks[page]['matureContent'] = true;
 			break;
 		case 'soundcloud':
-			logo = '../img/logo/platform/soundcloud.png';
+			logo = 'img/logo/platform/soundcloud.png';
 			dictLinks[page]['list'] = 'LinksSocialMedia';
 			break;
 		case 'spotify':
-			logo = '../img/logo/platform/spotify.png';
+			logo = 'img/logo/platform/spotify.png';
 			dictLinks[page]['list'] = 'LinksOther';
 			break;
 		case 'steam':
-			logo = '../img/logo/platform/steam.png';
+			logo = 'img/logo/platform/steam.png';
 			dictLinks[page]['list'] = 'LinksSocialMedia';
 			break;
 		case 'streamelements_donate':
-			logo = '../img/logo/support/streamelements.png';
+			logo = 'img/logo/support/streamelements.png';
 			dictLinks[page]['list'] = 'LinksSupportDonate';
 			break;
 		case 'streamlabs_donate':
-			logo = '../img/logo/support/streamlabs.png';
+			logo = 'img/logo/support/streamlabs.png';
 			dictLinks[page]['list'] = 'LinksSupportDonate';
 			break;
 		case 'telegram':
-			logo = '../img/logo/platform/telegram.png';
+			logo = 'img/logo/platform/telegram.png';
 			dictLinks[page]['list'] = 'LinksSocialMedia';
 			break;
 		case 'tellonym':
-			logo = '../img/logo/platform/tellonym.png';
+			logo = 'img/logo/platform/tellonym.png';
 			dictLinks[page]['list'] = 'LinksSocialMedia';
 			break;
 		case 'tipeeestream_donate':
-			logo = '../img/logo/support/tipeeestream.png';
+			logo = 'img/logo/support/tipeeestream.png';
 			dictLinks[page]['list'] = 'LinksSupportDonate';
 			break;
 		case 'twitch':
-			logo = '../img/logo/platform/twitch.png';
+			logo = 'img/logo/platform/twitch.png';
 			dictLinks[page]['list'] = 'LinksSocialMedia';
 			break;
 		case 'twitch_subscribe':
-			logo = '../img/logo/support/twitch_subscribe.png';
+			logo = 'img/logo/support/twitch_subscribe.png';
 			dictLinks[page]['list'] = 'LinksSupportDonate';
 			break;
 		case 'twitter':
-			logo = '../img/logo/platform/twitter.png';
+			logo = 'img/logo/platform/twitter.png';
 			dictLinks[page]['list'] = 'LinksSocialMedia';
 			break;
 		case 'youtube':
-			logo = '../img/logo/platform/youtube.png';
+			logo = 'img/logo/platform/youtube.png';
 			dictLinks[page]['list'] = 'LinksSocialMedia';
 			break;
 		case 'youtube_music':
-			logo = '../img/logo/platform/youtube_music.png';
+			logo = 'img/logo/platform/youtube_music.png';
 			dictLinks[page]['list'] = 'LinksOther';
 			break;
 		default:
@@ -569,7 +582,7 @@ for (var page in dictLinks){
 				}
 			}else{
 				if (isEmptyOrNull(dictLinks[page]['logo'])){
-					dictLinks[page]['logo'] = "../img/logo/default/shethzor-logo.png";
+					dictLinks[page]['logo'] = "img/logo/default/shethzor-logo.png";
 				}
 				var displayButton;
 				if (dictLinks[page]['matureContent']){
@@ -604,11 +617,11 @@ function loadEgg(key){
 		switch(getArrayText(combinationArray, i)){
 			//Visual
 			case '<3': 
-				document.getElementById('Background').style.backgroundImage = 'url("../img/background/hearts.gif")';
+				document.getElementById('Background').style.backgroundImage = 'url("img/background/hearts.gif")';
 				document.body.style.fontFamily = '"Love Ya Like A Sister"';
 				break;
 			case '666': 
-				document.getElementById('Background').style.backgroundImage = 'url("../img/background/devil.gif")';
+				document.getElementById('Background').style.backgroundImage = 'url("img/background/devil.gif")';
 				document.body.style.fontFamily = 'Rock Salt';
 				break;
 			case 'invisible': 
@@ -694,7 +707,7 @@ function loadStyles() {
 
 	//Tab
 	if (isEmptyOrNull(favicon)){
-		document.getElementById('favicon').href = '../img/icon/shethzor.png';
+		document.getElementById('favicon').href = 'img/icon/shethzor.png';
 	}else{
 		document.getElementById('favicon').href = favicon;
 	}
