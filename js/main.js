@@ -232,13 +232,26 @@ switch(user){
 	break;
 }
 
+if (isEmptyOrNull(favicon)){
+	document.getElementById('favicon').href = 'img/icon/shethzor.png';
+}
+
 var head = document.querySelectorAll('head').innerHTML;
+//Titles
 head += '<meta name="title" content="' + title + '">';
 head += '<meta property="og:title" content="' + title + '">';
 head += '<meta property="twitter:title" content="' + title + '">';
+
+//Descriptions
 head += '<meta name="description" content="' + description + '">';
 head += '<meta property="og:description" content="' + description + '">';
 head += '<meta property="twitter:description" content="' + description + '">';
+
+//Images
+head += '<meta name="image" content="' + favicon + '">';
+head += '<meta property="og:image" content="' + favicon + '">';
+head += '<meta property="twitter:image" content="' + favicon + '">';
+head += '<link id="favicon" rel="icon" type="image/png" href="' + favicon + '"></link>';
 
 var isRedirect = false;
 for (var redirect in searchKey) {
@@ -706,11 +719,7 @@ function loadStyles() {
 	document.getElementById('Copyright').querySelectorAll('a')[0].style.color = textColor;
 
 	//Tab
-	if (isEmptyOrNull(favicon)){
-		document.getElementById('favicon').href = 'img/icon/shethzor.png';
-	}else{
-		document.getElementById('favicon').href = favicon;
-	}
+	document.getElementById('favicon').href = favicon;
 	document.getElementById('title').innerHTML = title;
 
 
