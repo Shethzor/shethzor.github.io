@@ -17,6 +17,8 @@
             	user = searchKey['id'].toLowerCase();
             }
 
+            var head = document.querySelectorAll('head')[0];
+
 	        head.innerHTML += '<meta name="title" content="' + user + '">';
 	        head.innerHTML += '<meta property="og:title" content="' + user + '">';
 	        head.innerHTML += '<meta property="twitter:title" content="' + user + '">';
