@@ -236,23 +236,6 @@ if (isEmptyOrNull(favicon)){
 	favicon = 'img/icon/shethzor.png';
 }
 
-var head = document.querySelectorAll('head')[0];
-//Tab
-head.innerHTML += '<title id="title">' + title + '</title>';
-head.innerHTML += '<link id="favicon" rel="icon" type="image/png" href="' + favicon + '"></link>';
-//Titles
-head.innerHTML += '<meta name="title" content="' + title + '">';
-head.innerHTML += '<meta property="og:title" content="' + title + '">';
-head.innerHTML += '<meta property="twitter:title" content="' + title + '">';
-//Descriptions
-head.innerHTML += '<meta name="description" content="' + description + '">';
-head.innerHTML += '<meta property="og:description" content="' + description + '">';
-head.innerHTML += '<meta property="twitter:description" content="' + description + '">';
-//Images
-head.innerHTML += '<meta name="image" content="' + favicon + '">';
-head.innerHTML += '<meta property="og:image" content="' + favicon + '">';
-head.innerHTML += '<meta property="twitter:image" content="' + favicon + '">';
-
 var isRedirect = false;
 for (var redirect in searchKey) {
 	redirect = redirect.toLowerCase();

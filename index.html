@@ -3,6 +3,28 @@
 <html>
     <head lang="en">
         <script src="js/main.js"></script>
+        <script>
+            var head = document.querySelectorAll('head')[0];
+            //Tab
+            head.innerHTML += '<title id="title">' + title + '</title>';
+            head.innerHTML += '<link id="favicon" rel="icon" type="image/png" href="' + favicon + '"></link>';
+ 
+            //Titles
+            head.innerHTML += '<meta name="title" content="' + title + '">';
+            head.innerHTML += '<meta property="og:title" content="' + title + '">';
+            head.innerHTML += '<meta property="twitter:title" content="' + title + '">';
+
+            //Descriptions
+            head.innerHTML += '<meta name="description" content="' + description + '">';
+            head.innerHTML += '<meta property="og:description" content="' + description + '">';
+            head.innerHTML += '<meta property="twitter:description" content="' + description + '">';
+
+            //Images
+            head.innerHTML += '<meta name="image" content="' + favicon + '">';
+            head.innerHTML += '<meta property="og:image" content="' + favicon + '">';
+            head.innerHTML += '<meta property="twitter:image" content="' + favicon + '">';
+        </script>
+
         <meta charset="utf-8">
         <meta name="keywords" content="shethzor, thestring, twitch, streamer, stream, vr, oculus, index, valve index, games, videogames, gameplay, youtuber, youtube, videos, video, full body, full body tracking, pc gamer, pc games, desktop games, game keys, game keay, key, gaming key, videogame key, support, donate, donation, github, programming, scripting, paypal, spotify, reddit, instagram, twitter, discord, affiliate, links">
 	    <meta property="og:type" content="website">
