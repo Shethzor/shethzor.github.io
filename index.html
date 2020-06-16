@@ -16,6 +16,8 @@
 		}
 		if (user == 'test'){
 			document.getElementById('MetaTitle').innerHTML = 'Redirect';
+			document.getElementById('OgMetaTitle').innerHTML = 'Redirect';
+			document.getElementById('TwitterMetaTitle').innerHTML = 'Redirect';
 		}
 	</script>
 
@@ -25,7 +27,7 @@
 	<meta name="image" content="LinkList/img/icon/main/shethzor.png">
 
 	<meta property="og:type" content="website">
-	<meta property="og:title" content="Link List">
+	<meta id="OgMetaTitle" property="og:title" content="Link List">
 	<meta property="og:description" content="Need some links? Get them here!">
 	<meta property="og:image" content="LinkList/img/icon/main/shethzor.png">
 	<meta property="og:image:type" content="image/webp">
@@ -35,7 +37,7 @@
 
 	<meta property="twitter:card" content="summary_large_image">
 	<meta property="twitter:url" content="http://shethzor.tv">
-	<meta property="twitter:title" content="Link List">
+	<meta id="TwitterMetaTitle" property="twitter:title" content="Link List">
 	<meta property="twitter:description" content="Need some links? Get them here!">
 	<meta property="twitter:image" content="LinkList/img/icon/main/shethzor.png">
 
