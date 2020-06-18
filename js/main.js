@@ -370,6 +370,33 @@ var dictLanguage = {
 			'clock' : 'Ji ni',
 		},
 	},
+	'sl' : {
+		'label' : {
+			'LinksSocialMedia' : 'Socialna Omrežja',
+			'StreamingOn' : 'STREAMAM NA',
+			'Team' : 'Moja Skupina',
+			'LinksTeamMain' : 'Glavni',
+			'LinksTeamPartner' : 'Partnerji',
+			'LinksOther' : 'Ostalo',
+			'Support' : 'Podpora',
+			'LinksSupportAffiliate' : 'Podružnica',
+			'LinksSupportDonate' : 'Doniraj',
+			'Copyright' : 'Ustvaril Shethzor z 💜 © Vse Pravice Pridržane',
+		},
+		'day' : {
+			'su' : 'Ned',
+			'mo' : 'Pon',
+			'tu' : 'Tor',
+			'we' : 'Sre',
+			'th' : 'Čet',
+			'fr' : 'Pet',
+			'sa' : 'Sob',
+		},
+		'time' : {
+			'at' : 'OB',
+			'clock' : '',
+		},
+	},
 }
 
 for (var pageName in dictLinks) {
