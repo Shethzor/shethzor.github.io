@@ -146,19 +146,17 @@ p {
 .panel-image{
     border-radius: 20px 20px 0 0;
 }
-.panel-twitch-image{
-    background-color: #6441a5;
-}
+
 .panel-content {
     text-align: center;
     border-radius: 0 0 20px 20px;
 }
-.panel-twitch-content{
+.panel-stream-content{
     background-color: #0e0e10;
     height: calc(14vh + 14vw + 40px);
     max-height: 130px;
 }
-.panel-twitch-content #stream-days p{
+.panel-stream-content #stream-days p{
     margin: 8px 8px;
 }
 .panel-youtube-image{
