@@ -170,7 +170,7 @@ function loadButtonAreas() {
 					}else{
 						var displayButton = "d-block";
 					}
-					document.getElementById(dictLinks[pageName]['list']).innerHTML += wrapperStart + '<div id="' + pageName + '-button" class="button-icon-main ' + displayButton + '"><a href="' + dictLinks[pageName]['link'] + '" ' + target + '><img src="' + dictLinks[pageName]['logo'] + '" alt="' + pageName + '"></img></a>' + wrapperEnd + displayName + '</div>';
+					document.getElementById(dictLinks[pageName]['list']).innerHTML += wrapperStart + '<div id="' + pageName + '-button" class="button-icon-main ' + displayButton + '"><a href="' + dictLinks[pageName]['link'] + '" ' + target + '><img src="' + dictLinks[pageName]['logo'] + '" loading="eager" alt="' + pageName + '"></img></a>' + wrapperEnd + displayName + '</div>';
 				}
 		    }
 		}
