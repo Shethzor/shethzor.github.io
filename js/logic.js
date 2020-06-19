@@ -11,7 +11,6 @@ if (searchKey['id']){
 	user = searchKey['id'].toLowerCase();
 }
 
-var language = 'en';
 document.onreadystatechange = () => {
 	if (document.readyState === 'complete'){
         setLanguage();
@@ -33,15 +32,8 @@ function displayPage(){
 
 //Set Language
 function setLanguage(){
-	for (var lang in searchKey) {
-		if (searchKey['l']){
-			if (dictLanguage.hasOwnProperty(searchKey[lang]) && dictLanguage[searchKey[lang]] != null) {
-				language = searchKey[lang];
-				for (var label in dictLanguage['label']){
-					document.getElementById("display-language-" + label).innerHTML = dictLanguage['label'][label];
-				}
-			}
-		}
+	for (var label in dictLanguage['label']){
+		document.getElementById("display-language-" + label).innerHTML = dictLanguage['label'][label];
 	}
 }
 

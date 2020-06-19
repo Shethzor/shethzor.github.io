@@ -1,5 +1,5 @@
 //Language
-switch(language){
+switch(searchKey['l']){
     case 'de' :
         dictLanguage = {
 		    'label' : {
@@ -27,35 +27,6 @@ switch(language){
 		    	'at' : 'UM',
 		    	'clock' : 'Uhr',
 		    },
-        }
-        break;
-    case 'en' :
-        dictLanguage = {
-            'label' : {
-                'LinksSocialMedia' : 'Social Media',
-                'StreamingOn' : 'STREAMING ON',
-                'Team' : 'My Team',
-                'LinksTeamMain' : 'Main',
-                'LinksTeamPartner' : 'Partner',
-                'LinksOther' : 'Other',
-                'Support' : 'Support',
-                'LinksSupportAffiliate' : 'Affiliate',
-                'LinksSupportDonate' : 'Donate',
-                'Copyright' : 'Made with 💜 by Shethzor © All Rights Reserved',
-            },
-            'day' : {
-                'su' : 'Su',
-                'mo' : 'Mo',
-                'tu' : 'Tu',
-                'we' : 'We',
-                'th' : 'Th',
-                'fr' : 'Fr',
-                'sa' : 'Sa',
-            },
-            'time' : {
-                'at' : 'AT',
-                'clock' : 'O\'Clock',
-            },
         }
         break;
     case 'es' :
@@ -171,6 +142,35 @@ switch(language){
             'time' : {
                 'at' : 'OB',
                 'clock' : '',
+            },
+        }
+        break;
+    default:
+        dictLanguage = {
+            'label' : {
+                'LinksSocialMedia' : 'Social Media',
+                'StreamingOn' : 'STREAMING ON',
+                'Team' : 'My Team',
+                'LinksTeamMain' : 'Main',
+                'LinksTeamPartner' : 'Partner',
+                'LinksOther' : 'Other',
+                'Support' : 'Support',
+                'LinksSupportAffiliate' : 'Affiliate',
+                'LinksSupportDonate' : 'Donate',
+                'Copyright' : 'Made with 💜 by Shethzor © All Rights Reserved',
+            },
+            'day' : {
+                'su' : 'Su',
+                'mo' : 'Mo',
+                'tu' : 'Tu',
+                'we' : 'We',
+                'th' : 'Th',
+                'fr' : 'Fr',
+                'sa' : 'Sa',
+            },
+            'time' : {
+                'at' : 'AT',
+                'clock' : 'O\'Clock',
             },
         }
         break;

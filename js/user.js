@@ -156,7 +156,6 @@ switch(user){
 			'streamlabs_donate' : {'active' : true, 'link' : 'https://streamlabs.com/retro__boi/tip'}, 
 		}
 	break;
-	case 'shethzor':
 	default:
 		var title = "Shethzor's links";
 		var favicon = '';
