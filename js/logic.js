@@ -74,7 +74,11 @@ function MatureContentToggle() {
 function loadButtonAreas() {
 	var panel = ['stream_', 'youtube'];
 	var isTeam = ['LinksTeamMain', 'LinksTeamPartner']
-	var link = '';
+    var link = '';
+    var streamPlatform = {
+        'youtube' : {'color': '#cc191e'},
+        'twitch' : {'color' : '#6441a5'},
+    }
 	for (var pageName in dictLinks){
 		var pageNameType = pageName;
 		var cleanPageName = pageName;

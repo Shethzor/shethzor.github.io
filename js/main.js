@@ -1,8 +1,3 @@
-var streamPlatform = {
-	'youtube' : {'color': '#cc191e'},
-	'twitch' : {'color' : '#6441a5'},
-}
-
 var isRedirect = false;
 for (var redirect in searchKey) {
 	redirect = redirect.toLowerCase();
