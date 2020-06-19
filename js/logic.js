@@ -1,3 +1,29 @@
+
+//Lazy
+window.addEventListener('scroll', function() {
+    var elements = document.getElementsByClassName('d-block');
+
+    if (elements.length > 0){
+        for (var element in elements){
+            element = elements[element];
+            
+            if (!isNaN(element)){
+                break;
+            }
+    	    var position = element.getBoundingClientRect();
+
+    	    if(position.top >= 0 && position.bottom <= window.innerHeight) {
+    	    }else if(position.top < window.innerHeight + 100  && position.bottom >= -50) {
+    	    	if(element.classList.contains('invisible')){
+                    element.classList.remove('invisible')
+                }
+    	    }else {
+                    element.classList.add('invisible')
+            }
+        }
+    }
+});
+
 //Get All Search Keys
 var search = window.location.search.substr(1).split('&');
 var searchKey = {};

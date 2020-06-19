@@ -8,7 +8,7 @@ var idList = {
 
 switch(user){
 	case 'dreamvisuals':
-		var title = "DreamVisuals links";
+		var title = "DreamVisual's links";
 		var description = "";
 		var favicon = 'img/icon/dreamvisuals.png';
 		var backgroundImageLink = 'https://cutewallpaper.org/21/hd-gif-wallpapers/Gifart-Lo-Fi-Wallpapers-Top-Free-Gifart-Lo-Fi-Backgrounds-.gif';
@@ -46,7 +46,7 @@ switch(user){
 		}
 	break;
 	case 'flariwyr':
-		var title = "Flariwyrs links";
+		var title = "Flariwyr's links";
 		var favicon = 'img/icon/flariwyr.png';
 		var backgroundImageLink = 'https://i.imgur.com/AV595g2.gif';
 		var backgroundBlur = 2;
@@ -84,7 +84,7 @@ switch(user){
 		}
 	break;
 	case 'hitmarcer':
-		var title = "HitMarcers links";
+		var title = "HitMarcer's links";
 		var favicon = '';
 		var backgroundImageLink = 'https://img5.goodfon.com/wallpaper/nbig/2/7d/battlefield-1-igra-fon.jpg';
 		var backgroundBlur = 3;
@@ -120,7 +120,7 @@ switch(user){
 		}
 	break;
 	case "retro__boi":
-		var title = "Retro__Bois links";
+		var title = "Retro__Boi's links";
 		var favicon = 'img/icon/retro__boi.png';
 		var backgroundImageLink = 'img/background/retro__boi.gif';
 		var backgroundBlur = 0;
@@ -158,7 +158,7 @@ switch(user){
 	break;
 	case 'shethzor':
 	default:
-		var title = "Shethzors links";
+		var title = "Shethzor's links";
 		var favicon = '';
 		var backgroundImageLink = 'https://media1.tenor.com/images/a682025c7ab8f3b60b1e230fe89f1879/tenor.gif';
 		var backgroundBlur = 3;
