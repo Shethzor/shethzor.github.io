@@ -1,13 +1,24 @@
+:root{
+    --height-header: 61px;
+    --height-footer: 150px;
+}
+
 body {
     user-select: none;
     background-color: #000000;
     color: #fbfbfb;
 }
 
-header {
+/* Header */
+main{
+    margin-top: 60px;
+    min-height: calc(100vh - var(--height-header) - var(--height-footer));
+}
+.fixed-top{
     background-color: #111111;
 }
 
+/* Navbar */
 .navbar {
     font-size: 18px;
     padding: 0 16px;
@@ -17,9 +28,10 @@ header {
 }
 .navbar li a.nav-link {
     color: #fbfbfb;
+    border-top: 2px solid #111111;
     border-bottom: 2px solid #111111;
     padding: 15px;
-    transition: 0.2s;
+    transition: ease-out 0.4s;
 }
 
 #navbarButton {
@@ -28,9 +40,17 @@ header {
 
 .navbar li a.nav-link:hover {
     border-bottom: 2px solid #8800ee;
-    box-shadow: 0 2px 0#8800ee;
+}
+
+/* Footer */
+footer{
+    background-color: #111111;
+    height: var(--height-footer);
 }
 
 /* Small screen / tablet / 760px to 991px */
 @media (max-width: 1024px) {
+    .navbar {
+        text-align: center;
+    }
 }
