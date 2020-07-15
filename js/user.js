@@ -184,7 +184,7 @@ switch(user){
 		streamTime = '17';
 		var latestYouTubeVideoListCode = 'UU0uJMyQjKUgLKthvf0E6JpA';
 		var dictLinks = {
-			'stream_twitch' : {'active' : true, 'link' : 'https://www.twitch.tv/TheString#Enjoy_your_time_on_my_Twitch_channel'},
+			'stream_twitch' : {'active' : true, 'link' : 'https://www.twitch.tv/Shethzor#Enjoy_your_time_on_my_Twitch_channel'},
 			'youtube' : {'active' : true, 'link' : 'https://www.youtube.com/channel/UC0uJMyQjKUgLKthvf0E6JpA#Enjoy_your_time_on_my_YouTube_channel'},
 			'discord' : {'active' : true, 'link' : 'https://www.Discord.gg/scdT6Sn#Don\'t_be_shy._We_are_waiting_for_you!'},
 			'tellonym' : {'active' : true, 'link' : 'https://tellonym.me/Shethzor#Ask_me_anything'},
