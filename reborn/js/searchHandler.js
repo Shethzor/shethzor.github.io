@@ -10,6 +10,6 @@ if (!searchKey['id']){
     searchKey['id'] = 'Shethzor'
 }
 
-if (idList.hasOwnProperty(searchKey['id'])){
+if (!idList.includes(searchKey['id'].toLowerCase())){
     $("#content").load('error.html');
 }
