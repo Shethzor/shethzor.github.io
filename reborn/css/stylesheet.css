@@ -11,7 +11,7 @@ body {
 
 /* Header */
 main{
-    margin-top: 60px;
+    margin-top: var(--height-header);
     min-height: calc(100vh - var(--height-header) - var(--height-footer));
 }
 .fixed-top{
