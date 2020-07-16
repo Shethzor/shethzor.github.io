@@ -1,5 +1,6 @@
-$(document).ready(function(){
-    $("#load_home").click(function(){
-        $("#content").load('../content.html');
-    })
-});
+function userIdExist(){
+    if (idList.includes(searchKey['id'].toLowerCase())){
+        return true;
+    }
+    return false;
+}
