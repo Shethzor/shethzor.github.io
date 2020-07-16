@@ -11,5 +11,6 @@ if (!searchKey['id']){
 }
 
 if (!idList.includes(searchKey['id'].toLowerCase())){
+    console.log('ERROR')
     $("#content").load('error.html');
 }
