@@ -199,8 +199,8 @@ switch(user){
 			'youtube_music' : {'active' : true, 'link' : 'https://music.YouTube.com/playlist?list=PLQXedffXBLVweDH3c_iILpeoT1p-YrRIn#This_music_is_so_good._Well_it\'s_mine'},
 			'github' : {'active' : true, 'link' : 'https://www.GitHub.com/Shethzor#There_is_some_code_in_here._Looks_kinda_boring'},
 			'instant-gaming' : {'active' : true, 'link' : 'https://www.Instant-Gaming.com//?igr=shethzor#Yeah,_support_me_by_buying_the_games_cheaper!'},
-			'twitch_subscribe' : {'active' : true, 'link' : 'https://www.twitch.tv/subs/TheString#Wow_never_thought_you_would_show_up_here!'}, 
-			'streamelements_donate' : {'active' : true, 'link' : 'https://StreamElements.com/TheString/tip#Are_you_about_to_donate?_Thanks_a_lot_<3'}, 
+			'twitch_subscribe' : {'active' : true, 'link' : 'https://www.twitch.tv/subs/Shethzor#Wow_never_thought_you_would_show_up_here!'}, 
+			'streamelements_donate' : {'active' : true, 'link' : 'https://streamelements.com/shethzor-2435/tip#Are_you_about_to_donate?_Thanks_a_lot_<3'}, 
 			
 			//OFF
 			'telegram' : {'active' : false, 'link' : ''},
