@@ -45,7 +45,7 @@ switch(user){
 	default:
 		var title = "Shethzor's links";
 		var favicon = '';
-		var backgroundImageLink = 'https://media1.tenor.com/images/a682025c7ab8f3b60b1e230fe89f1879/tenor.gif';
+		var backgroundImageLink = 'http://p.favim.com/orig/2018/08/18/illustration-pixels-future-Favim.com-6195133.gif';
 		var backgroundBlur = 3;
 		var backgroundColor = 'black';
 		var textColor = '';
