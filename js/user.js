@@ -7,7 +7,7 @@ var idList = {
 switch(user){
 	case "cleo_01":
 		var title = "Cleo_01's links";
-		var favicon = '';
+		var favicon = 'img/icon/cleo_01.png';
 		var backgroundImageLink = 'https://64.media.tumblr.com/667aae89736c77b8d7420f874f04a9b8/tumblr_o5bmkjS7LN1tfav9mo1_500.gifv';
 		var backgroundBlur = 3;
 		var backgroundColor = '#AA0033';
