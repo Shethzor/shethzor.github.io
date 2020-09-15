@@ -17,7 +17,7 @@ switch(user){
 		var fontName = '"Oswald"';
 		var fontSize = 20;
 		var h3Size = (fontSize / 3);
-		var pSize = (fontSize / 1.2);
+		var pSize = (fontSize / 1.3);
 		var copyrightSize = (fontSize / 1.2);
 		var banner = ''
 		var bannerWidth = 0;
