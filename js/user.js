@@ -7,9 +7,9 @@ var idList = {
 switch(user){
 	case "cleo_01":
 		var title = "Cleo_01's links";
-		var favicon = 'img/icon/cleo_01.png';
+		var favicon = '';
 		var backgroundImageLink = 'https://64.media.tumblr.com/667aae89736c77b8d7420f874f04a9b8/tumblr_o5bmkjS7LN1tfav9mo1_500.gifv';
-		var backgroundBlur = 3;
+		var backgroundBlur = 0;
 		var backgroundColor = '#AA0033';
 		var textColor = '';
 		var textShadow = '';
@@ -17,8 +17,8 @@ switch(user){
 		var fontName = '"Oswald"';
 		var fontSize = 20;
 		var h3Size = (fontSize / 3);
-		var pSize = (fontSize / 1.2);
-		var copyrightSize = (fontSize / 1.2);
+		var pSize = (fontSize / 1.5);
+		var copyrightSize = (fontSize / 1.5);
 		var banner = ''
 		var bannerWidth = 0;
 		var streamDays = {
@@ -35,6 +35,7 @@ switch(user){
 		var dictLinks = {
 			'stream_twitch' : {'active' : true, 'link' : 'https://www.twitch.tv/cleo_01'},
 			'discord' : {'active' : true, 'link' : 'https://discord.gg/8UDbDSP'},
+			'tellonym' : {'active' : true, 'link' : 'https://tellonym.me/_Cl3o_'},
 			'instagram' : {'active' : true, 'link' : 'https://www.instagram.com/cleo_streamer/'},
 			'steam' : {'active' : true, 'link' : 'https://steamcommunity.com/profiles/76561198424933922/'},
 			'twitter' : {'active' : true, 'link' : 'https://twitter.com/CleoAkaAnna1'},
