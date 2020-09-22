@@ -125,14 +125,14 @@ switch(user){
 			'github' : {'active' : true, 'link' : 'https://www.GitHub.com/Shethzor#There_is_some_code_in_here._Looks_kinda_boring'},
 			'instant-gaming' : {'active' : true, 'link' : 'https://www.Instant-Gaming.com//?igr=shethzor#Yeah,_support_me_by_buying_the_games_cheaper!'},
 			'twitch_subscribe' : {'active' : true, 'link' : 'https://www.twitch.tv/subs/Shethzor#Wow_never_thought_you_would_show_up_here!'}, 
-			'streamelements_donate' : {'active' : true, 'link' : 'https://streamelements.com/shethzor-2435/tip#Are_you_about_to_donate?_Thanks_a_lot_<3'}, 
+			'tipeeestream_donate' : {'active' : true, 'link' : 'https://www.tipeeestream.com/shethzor/donation#Are_you_about_to_donate?_Thanks_a_lot_<3'},
 			
 			//OFF
 			'telegram' : {'active' : false, 'link' : ''},
 			'spotify' : {'active' : false, 'link' : ''},
-			'tipeeestream_donate' : {'active' : false, 'link' : ''}, 
 			'soundcloud' : {'active' : false, 'link' : ''},
-			'streamlabs_donate' : {'active' : false, 'link' : ''}, 
+			'streamlabs_donate' : {'active' : false, 'link' : ''},
+			'streamelements_donate' : {'active' : false, 'link' : ''}, 
 			'patreon_donate' : {'active' : false, 'link' : ''}, 
 		
 		}
