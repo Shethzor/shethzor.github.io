@@ -98,12 +98,12 @@ switch(user){
 		var banner = 'img/banner/shethzor.gif'
 		var bannerWidth;
 		var streamDays = {
-			'su' : false,
-			'mo' : true,
-			'tu' : false,
-			'we' : true,
-			'th' : false,
-			'fr' : true,
+			'su' : true,
+			'mo' : false,
+			'tu' : true,
+			'we' : false,
+			'th' : true,
+			'fr' : false,
 			'sa' : true,
 		}
 		streamTime = '17';
