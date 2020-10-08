@@ -77,6 +77,10 @@ p {
     color: rgba(251, 251, 251, 1);
 }
 
+#Copyright a:hover {
+    text-decoration: none;
+}
+
 .listLinks {
     margin-left: auto;
     margin-right: auto;
