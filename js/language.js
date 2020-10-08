@@ -128,7 +128,7 @@ switch(searchKey['l']){
                 'Support' : 'суппорт',
                 'LinksSupportAffiliate' : 'компаньон',
                 'LinksSupportDonate' : 'Пожертвовать',
-                'Copyright' : 'Сделано с :purple_heart: от Shethzor © Все права защищены',
+                'Copyright' : 'Сделано с 💜 от Shethzor © Все права защищены',
             },
             'day' : {
                 'su' : 'Во',
