@@ -116,6 +116,35 @@ switch(searchKey['l']){
             },
         }
         break;
+    case 'ru':
+        dictLanguage = {
+            'label' : {
+                'LinksSocialMedia' : 'Социальные медиа',
+                'StreamingOn' : 'Онлайн-трансляция по',
+                'Team' : 'Моя команда',
+                'LinksTeamMain' : 'Главный',
+                'LinksTeamPartner' : 'партнер',
+                'LinksOther' : 'остальные',
+                'Support' : 'суппорт',
+                'LinksSupportAffiliate' : 'компаньон',
+                'LinksSupportDonate' : 'Пожертвовать',
+                'Copyright' : 'Сделано с :purple_heart: от Shethzor © Все права защищены',
+            },
+            'day' : {
+                'su' : 'Воскресенье',
+                'mo' : 'понедельник',
+                'tu' : 'вторник',
+                'we' : 'среда',
+                'th' : 'Четверг',
+                'fr' : 'Пятница',
+                'sa' : 'суббота',
+            },
+            'time' : {
+                'at' : 'в',
+                'clock' : 'часов',
+            },
+        }
+        break;
     case 'sl' :
         dictLanguage = {
             'label' : {
