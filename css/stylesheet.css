@@ -75,11 +75,6 @@ p {
 
 #Copyright a {
     color: rgba(251, 251, 251, 1);
-    transition: 0.5s ease-in-out;
-}
-#Copyright a:hover{
-    text-decoration: none;
-    font-size: larger;
 }
 
 .listLinks {
