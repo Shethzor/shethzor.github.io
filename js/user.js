@@ -1,11 +1,10 @@
 var idList = {
-	'hitmarcer' : {'logo' : '', 'link' : 'http://shethzor.tv?id=hitmarcer'},
 	'Retro__Boi' : {'logo' : 'img/logo/profiles/retro__boi.png', 'link' : 'http://shethzor.tv?id=retro__boi'},
 	'Shethzor' : {'logo' : 'img/logo/profiles/shethzor.gif', 'link' : 'http://shethzor.tv?id=shethzor'}
 }
 
 switch(user){
-	case "retro__boi":
+	/*case "retro__boi":
 		var title = "Retro__Boi's links";
 		var favicon = 'img/icon/retro__boi.png';
 		var backgroundImageLink = 'img/background/retro__boi.gif';
@@ -41,7 +40,7 @@ switch(user){
 			'spotify' : {'active' : true, 'link' : 'https://music.YouTube.com/playlist?list=PLQXedffXBLVweDH3c_iILpeoT1p-YrRIn#This_music_is_so_good._Well_it\'s_mine'},
 			'streamlabs_donate' : {'active' : true, 'link' : 'https://streamlabs.com/retro__boi/tip'}, 
 		}
-	break;
+	break;*/
 	default:
 		var title = "Shethzor's links";
 		var favicon = '';
