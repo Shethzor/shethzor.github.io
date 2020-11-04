@@ -58,15 +58,15 @@ switch(user){
 		var banner = 'img/banner/shethzor.gif'
 		var bannerWidth;
 		var streamDays = {
-			'su' : false,
-			'mo' : false,
+			'su' : true,
+			'mo' : true,
 			'tu' : true,
-			'we' : false,
+			'we' : true,
 			'th' : true,
 			'fr' : false,
 			'sa' : true,
 		}
-		streamTime = '17';
+		streamTime = 15;
 		var latestYouTubeVideoListCode = 'UU0uJMyQjKUgLKthvf0E6JpA';
 		var dictLinks = {
 			'stream_twitch' : {'active' : true, 'link' : 'https://www.twitch.tv/Shethzor#Enjoy_your_time_on_my_Twitch_channel'},
