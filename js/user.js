@@ -63,7 +63,7 @@ switch(user){
 			'tu' : true,
 			'we' : true,
 			'th' : true,
-			'fr' : false,
+			'fr' : true,
 			'sa' : true,
 		}
 		streamTime = 15;
