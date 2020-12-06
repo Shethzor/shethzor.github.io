@@ -88,6 +88,10 @@ for (var pageName in dictLinks) {
 			logo = 'img/logo/platform/tellonym.png';
 			dictLinks[pageName]['list'] = 'LinksSocialMedia';
 			break;
+		case 'tiktok':
+			logo = 'img/logo/platform/tiktok.png';
+			dictLinks[pageName]['list'] = 'LinksSocialMedia';
+			break;
 		case 'tipeeestream_donate':
 			logo = 'img/logo/support/tipeeestream.png';
 			dictLinks[pageName]['list'] = 'LinksSupportDonate';
