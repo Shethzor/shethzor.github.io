@@ -77,7 +77,7 @@ switch(user){
 			'instagram' : {'active' : true, 'link' : 'https://www.Instagram.com/Shethzor#Look_at_all_those_pictures_of_mine_:D'},
 			'e-pal' : {'active' : false, 'link' : 'https://www.epal.gg/epal/118368#Yes,_I\'m_selling_my_body_lmao'},
 			'facebook' : {'active' : false, 'link' : 'https://www.facebook.com/shethzor.alfonzo#Feels_kinda_2013'},
-			'tiktok' : {'active' : true, 'link' : 'https://www.Twitter.com/Shethzor#Do_you_hear_that?_Sounds_like_some_tweets!'},
+			'tiktok' : {'active' : true, 'link' : 'https://www.tiktok.com/@Shethzor#Do_you_really_wanna_see_me_dance?_Oh_boi'},
 			'steam' : {'active' : true, 'link' : 'https://steamcommunity.com/id/shethzor#Spin_the_valve'},
 			'pornhub' : {'active' : true, 'link' : 'https://www.pornhub.com/users/Shethzor#What_did_you_expect_to_see_on_this_profile?'},
 			//'team_main_retro__boi' : {'active' : true, 'name' : 'Retro__Boi'},
