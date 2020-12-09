@@ -39,6 +39,10 @@ for (var pageName in dictLinks) {
 			logo = 'img/logo/platform/facebook.png';
 			dictLinks[pageName]['list'] = 'LinksSocialMedia';
 			break;
+		case 'gamivo':
+			logo = 'img/logo/support/gamivo.png';
+			dictLinks[pageName]['list'] = 'LinksSupportAffiliate';
+			break;
 		case 'github':
 			logo = 'img/logo/platform/github.png';
 			dictLinks[pageName]['list'] = 'LinksOther';

@@ -1,46 +1,8 @@
 var idList = {
-	'Retro__Boi' : {'logo' : 'img/logo/profiles/retro__boi.png', 'link' : 'http://shethzor.tv?id=retro__boi'},
 	'Shethzor' : {'logo' : 'img/logo/profiles/shethzor.gif', 'link' : 'http://shethzor.tv?id=shethzor'}
 }
 
 switch(user){
-	/*case "retro__boi":
-		var title = "Retro__Boi's links";
-		var favicon = 'img/icon/retro__boi.png';
-		var backgroundImageLink = 'img/background/retro__boi.gif';
-		var backgroundBlur = 0;
-		var backgroundColor = 'black';
-		var textColor = '';
-		var textShadow = '';
-		var fontLink = 'https://fonts.googleapis.com/css?family=Mali&display=swap';
-		var fontName = '"Mali"';
-		var fontSize = 20;
-		var h3Size = (fontSize / 3);
-		var pSize = (fontSize / 1.5);
-		var copyrightSize = (fontSize / 1.5);
-		var banner = 'img/banner/retro__boi.png'
-		var bannerWidth = 12;
-		var streamDays = {
-			'su' : false,
-			'mo' : false,
-			'tu' : false,
-			'we' : false,
-			'th' : false,
-			'fr' : true,
-			'sa' : true,
-		}
-		streamTime = '17';
-		var latestYouTubeVideoListCode = 'UUwIqmX2N9gkCt4-zASxLA1A';
-		var dictLinks = {
-			'stream_twitch' : {'active' : true, 'link' : 'https://www.twitch.tv/retro__boi'},
-			'youtube' : {'active' : true, 'link' : 'https://www.youtube.com/channel/UCwIqmX2N9gkCt4-zASxLA1A'},
-			'instagram' : {'active' : true, 'link' : 'https://www.instagram.com/sonik.sped/'},
-			'twitter' : {'active' : true, 'link' : 'https://www.twitter.com/eat_the_water'},
-			'team_partner_shethzor' : {'active' : true, 'name' : 'Shethzor'}, 
-			'spotify' : {'active' : true, 'link' : 'https://music.YouTube.com/playlist?list=PLQXedffXBLVweDH3c_iILpeoT1p-YrRIn#This_music_is_so_good._Well_it\'s_mine'},
-			'streamlabs_donate' : {'active' : true, 'link' : 'https://streamlabs.com/retro__boi/tip'}, 
-		}
-	break;*/
 	default:
 		var title = "Shethzor's links";
 		var favicon = '';
@@ -77,13 +39,12 @@ switch(user){
 			'instagram' : {'active' : true, 'link' : 'https://www.Instagram.com/Shethzor#Look_at_all_those_pictures_of_mine_:D'},
 			'e-pal' : {'active' : false, 'link' : 'https://www.epal.gg/epal/118368#Yes,_I\'m_selling_my_body_lmao'},
 			'facebook' : {'active' : false, 'link' : 'https://www.facebook.com/shethzor.alfonzo#Feels_kinda_2013'},
-			'tiktok' : {'active' : true, 'link' : 'https://www.tiktok.com/@Shethzor#Do_you_really_wanna_see_me_dance?_Oh_boi'},
+			'tiktok' : {'active' : true, 'link' : 'https://www.tiktok.com/@Shethzor#Do_you_really_wanna_see_something?_Oh_boi!'},
 			'steam' : {'active' : true, 'link' : 'https://steamcommunity.com/id/shethzor#Spin_the_valve'},
 			'pornhub' : {'active' : true, 'link' : 'https://www.pornhub.com/users/Shethzor#What_did_you_expect_to_see_on_this_profile?'},
-			//'team_main_retro__boi' : {'active' : true, 'name' : 'Retro__Boi'},
 			'youtube_music' : {'active' : true, 'link' : 'https://music.YouTube.com/playlist?list=PLQXedffXBLVweDH3c_iILpeoT1p-YrRIn#This_music_is_so_good._Well_it\'s_mine'},
 			'github' : {'active' : true, 'link' : 'https://www.GitHub.com/Shethzor#There_is_some_code_in_here._Looks_kinda_boring'},
-			'instant-gaming' : {'active' : true, 'link' : 'https://www.Instant-Gaming.com//?igr=shethzor#Yeah,_support_me_by_buying_the_games_cheaper!'},
+			'gamivo' : {'active' : true, 'link' : 'https://www.gamivo.com?glv=27y6f6ma#Yeah,_support_me_by_buying_the_games_cheaper!'},
 			'twitch_subscribe' : {'active' : true, 'link' : 'https://www.twitch.tv/subs/Shethzor#Wow_never_thought_you_would_show_up_here!'}, 
 			'tipeeestream_donate' : {'active' : true, 'link' : 'https://www.tipeeestream.com/shethzor/donation#Are_you_about_to_donate?_Thanks_a_lot_<3'},
 			
