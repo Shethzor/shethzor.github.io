@@ -5,6 +5,183 @@ for (var i = 0; i < search.length; i++){
 	searchKey[search[i].split('=')[0]] = search[i].split('=')[1]
 }
 
+var animation = [
+					[
+						"ʕ_•ᴥ•ʔ",
+						"ʕ_•ᴥ•ʔ",
+						"ʕ_–ᴥ–ʔ",
+						"ʕ_•ᴥ•ʔ",
+						"ʕ_•ᴥ•ʔ",
+						"ʕ_•ᴥ•ʔ",
+						"ʕ_–ᴥ–ʔ",
+						"ʕ_•ᴥ•ʔ",
+						"ʕ_•ᴥ•ʔ",
+						"ʕ_–ᴥ–ʔ",
+						"ʕ_•ᴥ•ʔ",
+						"ʕ_•ᴥ•ʔ",
+						"ʕ_–ᴥ–ʔ",
+						"ʕ_•ᴥ•ʔ",
+						"ʕ_•ᴥ•ʔ",
+						"ʕ_•ᴥ•ʔ",
+						"ʕ_–ᴥ–ʔ",
+						"ʕ_•ᴥ•ʔ",
+						"ʕ_•ᴥ•ʔ",
+						"ʕ_–ᴥ–ʔ",
+					],
+					[
+						"ʕ_•ᴥ•ʔ",
+						"ʕ_ꈍᴥꈍʔ",
+						"ʕꈍᴥꈍ_ʔ",
+						"ʕ_ꈍᴥꈍʔ",
+						"ʕꈍᴥꈍ_ʔ",
+						"ʕ_ꈍᴥꈍʔ",
+						"ʕ_ꈍᴥꈍʔ_Are_you_here_because_of_me?",
+						"ʕ_ꈍᴥꈍʔ_Are_you_here_because_of_me?",
+						"ʕ_ꈍᴥꈍʔ_Are_you_here_because_of_me?",
+						"ʕ_ꈍᴥꈍʔ_Are_you_here_because_of_me?",
+						"ʕ_ꈍᴥꈍʔ",
+						"ʕꈍᴥꈍ_ʔ",
+						"ʕ_ꈍᴥꈍʔ",
+						"ʕꈍᴥꈍ_ʔ",
+						"ʕ_ꈍᴥꈍʔ",
+						"ʕ_ꈍᴥꈍʔ_Hehehe",
+						"ʕ_ꈍᴥꈍʔ_Hehehe",
+						"ʕ_ꈍᴥꈍʔ_Hehehe",
+						"ʕ_ꈍᴥꈍʔ_Hehehe",
+						"ʕ_ꈍᴥꈍʔ",
+						"ʕ_•ᴥ•ʔ",
+					],
+					[
+						"ʕ_•ᴥ•ʔ",
+						"ʕ_•ᴥ•ʔ",
+						"ʕ_–ᴥ–ʔ_┳━┳",
+						"ʕ_•ᴥ•ʔ_┳━┳",
+						"ʕ_•ᴥ•ʔ_┳━┳",
+						"ʕノ•ᴥ•ʔノ︵┻━┻",
+						"ʕノ–ᴥ–ʔノ_____┻━┻",
+						"ʕ_•ᴥ•ʔ__________┻━┻",
+						"ʕ_•ᴥ•ʔ____________┻━┻",
+						"ʕ_–ᴥ–ʔ______________┻━┻",
+						"ʕ_•ᴥ•ʔ________________┻━┻",
+					],
+					[
+						"ʕ_•ᴥ•ʔ",
+						"ʕ•ᴥ•ʔ",
+						"ʕ–ᴥ–ʔ",
+						"ʕ♡ᴥ♡ʔ_Look_at_you!",
+						"ʕ♡ᴥ♡ʔ_Look_at_you!",
+						"ʕ–ᴥ–ʔ_Look_at_you!",
+						"ʕ♡ᴥ♡ʔ_Look_at_you!",
+						"ʕ♡ᴥ♡ʔ",
+						"ʕ–ᴥ–ʔ",
+						"ʕ≧ᴥ≦ʔ",
+						"ʕ≧ᴥ≦ʔ_SO_CUUUUUUUUTE!!!",
+						"ʕ≧ᴥ≦ʔ_SO_CUUUUUUUUTE!!!",
+						"ʕ≧ᴥ≦ʔ_SO_CUUUUUUUUTE!!!",
+						"ʕ≧ᴥ≦ʔ_SO_CUUUUUUUUTE!!!",
+						"ʕ≧ᴥ≦ʔ",
+						"ʕ–ᴥ–ʔ",
+						"ʕ•ᴥ•ʔ",
+						"ʕ•ᴥ•ʔ_Sorry...",
+						"ʕ–ᴥ–ʔ_Sorry...",
+						"ʕ•ᴥ•ʔ_Sorry...",
+						"ʕ•ᴥ•ʔ_Sorry...",
+						"ʕ–ᴥ–ʔ",
+						"ʕ•ᴥ•ʔ",
+						"ʕ•ᴥ•ʔ_I_don't_know_what_just_happened",
+						"ʕ–ᴥ–ʔ_I_don't_know_what_just_happened",
+						"ʕ•ᴥ•ʔ_I_don't_know_what_just_happened",
+						"ʕ•ᴥ•ʔ_I_don't_know_what_just_happened",
+						"ʕ–ᴥ–ʔ",
+						"ʕ•ᴥ•ʔ",
+						"ʕ_•ᴥ•ʔ",
+					],
+					[
+						"ʕ_•ᴥ•ʔ",
+						"┤_•ᴥ•ʔ",
+						"┴┤–ᴥ–ʔ",
+						"┬┴┤ᴥ•ʔ",
+						"┴┬┴┤•ʔ",
+						"┬┴┬┴┤ʔ",
+						"┬┴┬┴┤ʔ_WTF!!!",
+						"┬┴┬┴┤ʔ_WTF!!!",
+						"┬┴┬┴┤ʔ_WTF!!!",
+						"┬┴┬┴┤ʔ_WTF!!!",
+						"┬┴┬┴┤ʔ",
+						"┬┴┬┴┤–ʔ",
+						"┬┴┬┴┤ᴥ•ʔ",
+						"┬┴┬┴┤ᴥ•ʔ_I_am_watching_you!",
+						"┬┴┬┴┤ᴥ–ʔ_I_am_watching_you!",
+						"┬┴┬┴┤ᴥ•ʔ_I_am_watching_you!",
+						"┬┴┬┴┤ᴥ•ʔ_I_am_watching_you!",
+						"┴┬┴┤–ᴥ–ʔ",
+						"┬┴┤_•ᴥ•ʔ",
+						"┴┤ʕ_•ᴥ•ʔ",
+						"┤_ʕ_–ᴥ–ʔ",
+						"__ʕ_•ᴥ•ʔ",
+						"__ʕ•ᴥ•_ʔ",
+						"_ʕ–ᴥ–_ʔ",
+						"ʕ•ᴥ•_ʔ",
+						"ʕ•ᴥ•ʔ",
+						"ʕ_–ᴥ–ʔ",
+						"ʕ_•ᴥ•ʔ",
+					],
+					[
+						"ʕ_•ᴥ•ʔ",
+						"ʕ_•ᴥ•ʔ",
+						"ʕ_–ᴥ–ʔ",
+						"ʕ_•ᴥ•ʔ_Do_you_want_some_love?",
+						"ʕ_•ᴥ•ʔ_Do_you_want_some_love?",
+						"ʕ_–ᴥ–ʔ_Do_you_want_some_love?",
+						"ʕ_•ᴥ•ʔ_Do_you_want_some_love?",
+						"ʕ_•ᴥ•ʔ",
+						"ʕ_–ᴥ–ʔ_Of_course_you_want_some!",
+						"ʕ_•ᴥ•ʔ_Of_course_you_want_some!",
+						"ʕ_•ᴥ•ʔ_Of_course_you_want_some!",
+						"ʕ_–ᴥ–ʔ_Of_course_you_want_some!",
+						"ʕ_•ᴥ•ʔ",
+						"ʕ_•ᴥ•ʔ_Catch_it!",
+						"ʕ_–ᴥ–ʔ_Catch_it!",
+						"ʕ_•ᴥ•ʔ_Catch_it!",
+						"ʕ_•ᴥ•ʔ_Catch_it!",
+						"ʕ_–ᴥ–ʔ",
+						"ʕ_•ᴥ•ʔﾉ",
+						"ʕ_•ᴥ•ʔﾉ♡",
+						"ʕ_–ᴥ–ʔﾉ___♡",
+						"ʕ_•ᴥ•ʔ_______♡",
+						"ʕ_•ᴥ•ʔ__________♡",
+						"ʕ_–ᴥ–ʔ____________♡",
+						"ʕ_•ᴥ•ʔ______________♡",
+						"ʕ_•ᴥ•ʔ",
+						"ʕ_•ᴥ•ʔ",
+					],
+				];
+setInterval(hashAnimation, 700);
+var animCounter = 0;
+var randomAnim = Math.floor(Math.random() * animation.length);
+var animRunning = false;
+var oldRandNum = 0;
+function hashAnimation(){
+	console.log(!animRunning + "&&" + Math.floor(Math.random() * 2) == 1)
+	if (!animRunning && Math.floor(Math.random() * 10) == 1){
+		while (oldRandNum == randomAnim){
+			randomAnim = Math.floor(Math.random() * (animation.length - 1)) + 1;
+		}
+		animRunning = true;
+	}else if (!animRunning){
+		randomAnim = 0;
+		animRunning = true;
+	}
+	if (animCounter == animation[randomAnim].length){
+		animCounter = 0;
+		oldRandNum = randomAnim;
+		animRunning = false;
+	}
+	var cleanLink = window.location.href.replace(window.location.hash, '').replace('#', '');
+	window.location.href = cleanLink + '#' + animation[randomAnim][animCounter];
+	animCounter++;
+}
+
 //User
 var user = 'shethzor'
 if (searchKey['id']){
