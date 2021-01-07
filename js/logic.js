@@ -162,7 +162,6 @@ var randomAnim = Math.floor(Math.random() * animation.length);
 var animRunning = false;
 var oldRandNum = 0;
 function hashAnimation(){
-	console.log(!animRunning + "&&" + Math.floor(Math.random() * 2) == 1)
 	if (!animRunning && Math.floor(Math.random() * 10) == 1){
 		while (oldRandNum == randomAnim){
 			randomAnim = Math.floor(Math.random() * (animation.length - 1)) + 1;
