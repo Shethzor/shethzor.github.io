@@ -3,7 +3,7 @@ var search = window.location.search.substr(1).split('&');
 var searchKey = {};
 for (var i = 0; i < search.length; i++){
 	if(search != ""){
-		searchKey[search[i].split('=')[0].toLowerCase()] = search[i].split('=')[1].toLowerCase();
+		searchKey[search[i].split('=')[0].toLowerCase()] = search[i].split('=')[1];
 	}
 }
 
