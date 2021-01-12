@@ -3,12 +3,12 @@ var search = window.location.search.substr(1).split('&');
 var searchKey = {};
 for (var i = 0; i < search.length; i++){
 	if(search != ""){
-		searchKey[search[i].split('=')[0].toLowerCase()] = search[i].split('=')[1].toLowerCase();
+		searchKey[search[i].split('=')[0].toLowerCase()] = search[i].split('=')[1];
 	}
 }
 
-//Animations
-var animations = [
+//Link Animations
+var linkAnimations = [
 					[
 						"ʕ_•ᴥ•ʔ",
 						"ʕ_•ᴥ•ʔ",
@@ -401,32 +401,34 @@ var animations = [
 				];
 
 //Animate frames
-setInterval(hashAnimation, 400);
-var animCounter = 0;
-var randomAnim = Math.floor(Math.random() * animations.length);
-var animRunning = false;
-var oldRandNum = 0;
-function hashAnimation(){
-	if (!animRunning && Math.floor(Math.random() * 10) == 1){
-		while (oldRandNum == randomAnim){
-			randomAnim = Math.floor(Math.random() * (animations.length - 1)) + 1;
+var linkAnimCounter = 0;
+var linkRandomAnim = Math.floor(Math.random() * linkAnimations.length);
+var linkAnimRunning = false;
+var linkOldRandNum = 0;
+function startLinkAnimation(){
+	setInterval(linkAnimation, 400);
+}
+function linkAnimation(){
+	if (!linkAnimRunning && Math.floor(Math.random() * 10) == 1){
+		while (linkOldRandNum == linkRandomAnim){
+			linkRandomAnim = Math.floor(Math.random() * (linkAnimations.length - 1)) + 1;
 		}
-		animRunning = true;
-	}else if (!animRunning){
-		randomAnim = 0;
-		animRunning = true;
+		linkAnimRunning = true;
+	}else if (!linkAnimRunning){
+		linkRandomAnim = 0;
+		linkAnimRunning = true;
 	}
 	if (searchKey["animation"] != undefined){
-		randomAnim = searchKey["animation"];
+		linkRandomAnim = searchKey["animation"];
 	}
-	if (animCounter == animations[randomAnim].length){
-		animCounter = 0;
-		oldRandNum = randomAnim;
-		animRunning = false;
+	if (linkAnimCounter == linkAnimations[linkRandomAnim].length){
+		linkAnimCounter = 0;
+		linkOldRandNum = linkRandomAnim;
+		linkAnimRunning = false;
 	}
 	var cleanLink = window.location.href.replace(window.location.hash, '').replace('#', '');
-	window.location.href = cleanLink + '#' + animations[randomAnim][animCounter];
-	animCounter++;
+	window.location.href = cleanLink + '#' + linkAnimations[linkRandomAnim][linkAnimCounter];
+	linkAnimCounter++;
 }
 
 //User
@@ -610,7 +612,11 @@ function loadEgg(key){
 	
 	for (var i = 0; i < 20; i++){
 		switch(getArrayText(combinationArray, i)){
-			//Visual
+			//Link
+			case 'oso':
+				startLinkAnimation();
+				break;
+			//Website
 			case '<3': 
 				document.getElementById('Background').style.backgroundImage = 'url("img/background/hearts.gif")';
 				document.body.style.fontFamily = '"Love Ya Like A Sister"';
