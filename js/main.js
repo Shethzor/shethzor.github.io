@@ -64,6 +64,10 @@ for (var pageName in dictLinks) {
 			dictLinks[pageName]['list'] = 'LinksSocialMedia';
 			dictLinks[pageName]['matureContent'] = true;
 			break;
+		case 'reddit':
+			logo = 'img/logo/platform/reddit.png';
+			dictLinks[pageName]['list'] = 'LinksSocialMedia';
+			break;
 		case 'soundcloud':
 			logo = 'img/logo/platform/soundcloud.png';
 			dictLinks[pageName]['list'] = 'LinksSocialMedia';
