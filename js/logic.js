@@ -1,3 +1,5 @@
+var currentSearch = '';
+
 //Get All Search Keys
 var search = window.location.search.substr(1).split('&');
 var searchKey = {};
@@ -5,6 +7,83 @@ for (var i = 0; i < search.length; i++){
 	if(search != ""){
 		searchKey[search[i].split('=')[0].toLowerCase()] = search[i].split('=')[1];
 	}
+}
+
+// Checks if Id exists
+function searchContains(){
+    urlKeyValDict = getUrlSearch()
+
+    var doesNotContain = {};
+
+    if(!urlKeyValDict['id']){
+        doesNotContain['id'] = 'Shethzor';
+    }
+    if(!urlKeyValDict['nav']){
+        doesNotContain['nav'] = 'links';
+    }
+
+    if (!$.isEmptyObject(doesNotContain)){
+        updateSearch(doesNotContain)
+    }
+}
+
+// Creates a dict of window.location.search
+function getUrlSearch(){
+    currentSearch = window.location.search;
+    var urlSearch = currentSearch.substr(1);
+    urlSearch = urlSearch.split('&');
+
+    urlKeyValDict = {};
+
+    var keyVal = {};
+    for(var pos in urlSearch){
+        keyVal = urlSearch[pos].split('=');
+        urlKeyValDict[keyVal[0]] = keyVal[1];
+    }
+    return urlKeyValDict;
+}
+
+// Updates the window.location.search
+function updateSearch(addKeyValDict){
+    var urlKeyValDict = getUrlSearch();
+    
+    for(var key in addKeyValDict){
+        if (urlKeyValDict[key]){
+            replaceSearchValue(key, addKeyValDict[key]);
+        }else{
+            addSearch(key, addKeyValDict[key]);
+        }
+	}
+	var newHref = window.location.origin + window.location.pathname + currentSearch;
+	if (window.location.href != newHref){
+		window.location.href = newHref;
+	}
+}
+
+// Adds KEY and VALUE to window.location.search
+function addSearch(key, value){
+    if (currentSearch){
+        currentSearch += '&' + key + '=' + value;
+    }else{
+        currentSearch += '?' + key + '=' + value;
+	}
+}
+
+// Replaces VALUE of KEY from window.location.search
+function replaceSearchValue(key, value){    
+    var urlKeyValDict = getUrlSearch()
+
+    if (urlKeyValDict[key] != value){
+        
+        urlKeyValDict[key] = value;
+        var replaceOldSearch = '?'
+        
+        for(var key in urlKeyValDict){
+            replaceOldSearch += key + '=' + urlKeyValDict[key] + '&';
+        }
+
+        currentSearch = replaceOldSearch.substr(0, replaceOldSearch.length - 1);
+    }
 }
 
 //Link Animations
@@ -439,13 +518,17 @@ if (searchKey['id']){
 
 document.onreadystatechange = () => {
 	if (document.readyState === 'complete'){
-        setLanguage();
-		loadButtonAreas();
-		setStreamDays();
-		setStreamTime();
+		setLanguage();
+		if (searchKey['strtip']){
+			loadStreamerHelp();
+		}else{
+			loadButtonAreas();
+			setStreamDays();
+			setStreamTime();
+			document.getElementById('MatureContentButton').addEventListener('click', MatureContentToggle)	
+		}
 		loadStyles();
 		displayPage();
-		document.getElementById('MatureContentButton').addEventListener('click', MatureContentToggle)
 	}
 };
 
@@ -675,6 +758,10 @@ function getArrayText(combinationArray, length){
 
 //Load Style
 function loadStyles() {
+	if (!isEmptyOrNull(defaultLanguage)){
+		updateSearch({"l" : defaultLanguage});
+	}
+	
 	if (backgroundImageLink){
 		document.getElementById('Background').style.backgroundImage = 'url("' + backgroundImageLink + '")';
 		document.getElementById('Background').style.filter = 'blur(' + backgroundBlur + 'px)';
@@ -743,6 +830,40 @@ function setStreamTime(){
 		}
 		document.getElementById('streaming-time').innerHTML = dictLanguage['time']['at'] + ' ' + time;
 	}
+}
+
+function loadStreamerHelp(){
+	div = document.getElementById('other-content');
+	div.classList.remove('d-none');
+	div.classList.add('d-block');
+	document.getElementById('other-content').innerHTML += '<div style="margin-bottom: 25px; background-color: rgba(0,0,0,0.9); padding: 25px; border-radius: 5px;">' +
+	'<h1>Info</h1>' +
+	'<b>Profile Banner</b> : 1800x570' + '<br><br>' + 
+	'<b>Video Player Banner (Offline)</b> : 1920x1080' + '<br><br>' + 
+	'<b>Profile Accent Color</b> : You choose' + '<br><br>' + 
+	'<h1>Panels</h1>' +
+	'Make sure to create some panels <b>(for free)</b> at' + '<br>' + 
+	'<a href="https://nerdordie.com/resources/free-resources/customizable-twitch-panels/" target="_blank">NerdOrDie panel maker</a>' +
+	' or ' +
+	'<a href="https://nerdordie.com/apps/ow-panel-maker/app.html" target="_blank">NerdOrDie Overwatch panel maker</a>' + '<br><br>' + 
+	'<h1>Overlays</h1>' +
+	'You can get free overlays at:' + '<br>' + 
+	'<a href="https://nerdordie.com/product-tag/free-resource/?orderby=price" target="_blank">NerdOrDie overlays</a> ("Suggested Price")' +
+	' or ' +
+	'<a href="https://streamelements.com/dashboard/themes" target="_blank">StreamElement overlays</a>' + '<br><br>' + 
+	'<h1>Tips</h1>' +
+	'1. Make sure that at the bottom right of your profile banner you have a static color and pick this color as accent.' + '<br>' + 
+	'You want to combine the banner and the accent color.' + '<br><br>' + 
+	'2. Take one color that you want people to associate with you.' + '<br>' + 
+	'You can take my page as guidiance if you want: <a href="https://www.twitch.tv/shethzor#I_hope_it_helps" target="_blank">Shethzor</a>' + '<br><br>' + 
+	'3. Make sure that people can find you.' + '<br>' + 
+	'Put your social media everywhere you can.' + '<br><br>' +  
+	'4. Make sure to set up your donate button.' + '<br>' + 
+	'As unlikely as it may seem that someone donates, but people like me do that.' + '<br><br>' + 
+	'<h1>Change your design here</h1>' +
+	'<a href="https://dashboard.twitch.tv/settings/channel" target="_blank">Channel Settings</a>' + '<br><br><br><br>' +
+	'Click that button if you want to find me somewhere!' + '<br>' +
+	'<a href="https://Shethzor.tv" style="display: block; max-width: 204px; color: #fff; text-decoration: none; margin-top: 20px; padding: 10px; background-color: #8800ff; border-radius: 5px;">Back to normal Page</a>' + '<br></div>'
 }
 
 //Usefull
