@@ -845,17 +845,21 @@ function loadStreamerHelp(){
 	'Make sure to create some panels <b>(for free)</b> at' + '<br>' + 
 	'<a href="https://nerdordie.com/resources/free-resources/customizable-twitch-panels/" target="_blank">NerdOrDie panel maker</a>' +
 	' or ' +
-	'<a href="https://nerdordie.com/apps/ow-panel-maker/app.html" target="_blank">NerdOrDie Overwatch panel maker</a>' + '<br><br>' + 
+	'<a href="https://nerdordie.com/apps/ow-panel-maker/app.html" target="_blank">NerdOrDie Overwatch panel maker</a>.' + '<br><br>' + 
 	'<h1>Overlays</h1>' +
 	'You can get free overlays at:' + '<br>' + 
 	'<a href="https://nerdordie.com/product-tag/free-resource/?orderby=price" target="_blank">NerdOrDie overlays</a> ("Suggested Price")' +
 	' or ' +
-	'<a href="https://streamelements.com/dashboard/themes" target="_blank">StreamElement overlays</a>' + '<br><br>' + 
+	'<a href="https://streamelements.com/dashboard/themes" target="_blank">StreamElement overlays</a>.' + '<br><br>' + 
+	'<h1>Emotes</h1>' +
+	'Get <b>free</b> extra emotes with <a href="https://betterttv.com" target="_blank">BetterTTV</a> which includes <a href="https://www.frankerfacez.com" target="_blank">FrankerFaceZ</a>.' + '<br>' + 
+	'Make sure you have those extensions activated in yout OBS.' + '<br><br>' + 
 	'<h1>Tips</h1>' +
 	'1. Make sure that at the bottom right of your profile banner you have a static color and pick this color as accent.' + '<br>' + 
 	'You want to combine the banner and the accent color.' + '<br><br>' + 
 	'2. Take one color that you want people to associate with you.' + '<br>' + 
-	'You can take my page as guidiance if you want: <a href="https://www.twitch.tv/shethzor#I_hope_it_helps" target="_blank">Shethzor</a>' + '<br><br>' + 
+	'You can take my page as guidiance if you want: <a href="https://www.twitch.tv/shethzor#I_hope_it_helps" target="_blank">Shethzor</a>.' + '<br>' + 
+	'That does not mean that you can copy paste everything!' + '<br><br>' +
 	'3. Make sure that people can find you.' + '<br>' + 
 	'Put your social media everywhere you can.' + '<br><br>' +  
 	'4. Make sure to set up your donate button.' + '<br>' + 
