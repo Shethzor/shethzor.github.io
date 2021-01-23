@@ -837,23 +837,33 @@ function loadStreamerHelp(){
 	div.classList.remove('d-none');
 	div.classList.add('d-block');
 	document.getElementById('other-content').innerHTML += '<div style="margin-bottom: 25px; background-color: rgba(0,0,0,0.9); padding: 25px; border-radius: 5px;">' +
+	
 	'<h1>Info</h1>' +
+	'You can get everything on that page for <b>FREE</b>' + '<br><br>' + 
+
+
+	'<h1>Banner & Color</h1>' +
 	'<b>Profile Banner</b> : 1800x570' + '<br><br>' + 
 	'<b>Video Player Banner (Offline)</b> : 1920x1080' + '<br><br>' + 
 	'<b>Profile Accent Color</b> : You choose' + '<br><br>' + 
+
 	'<h1>Panels</h1>' +
-	'Make sure to create some panels <b>(for free)</b> at' + '<br>' + 
-	'<a href="https://nerdordie.com/resources/free-resources/customizable-twitch-panels/" target="_blank">NerdOrDie panel maker</a>' +
-	' or ' +
-	'<a href="https://nerdordie.com/apps/ow-panel-maker/app.html" target="_blank">NerdOrDie Overwatch panel maker</a>.' + '<br><br>' + 
+	'Make sure to create some panels:' + '<br>' + 
+	'► <a href="https://nerdordie.com/resources/free-resources/customizable-twitch-panels/" target="_blank">NerdOrDie panel maker</a>' + '<br>' +
+	'► <a href="https://nerdordie.com/apps/ow-panel-maker/app.html" target="_blank">NerdOrDie Overwatch panel maker</a>.' + '<br><br>' + 
+
 	'<h1>Overlays</h1>' +
-	'You can get free overlays at:' + '<br>' + 
-	'<a href="https://nerdordie.com/product-tag/free-resource/?orderby=price" target="_blank">NerdOrDie overlays</a> ("Suggested Price")' +
-	' or ' +
-	'<a href="https://streamelements.com/dashboard/themes" target="_blank">StreamElement overlays</a>.' + '<br><br>' + 
+	'You can get overlays at:' + '<br>' + 
+	'► <a href="https://nerdordie.com/product-tag/free-resource/?orderby=price" target="_blank">NerdOrDie overlays</a> ("Suggested Price")' + '<br>' + 
+	'► <a href="https://streamelements.com/dashboard/themes" target="_blank">StreamElement overlays</a>.' + '<br><br>' + 
+
 	'<h1>Emotes</h1>' +
-	'Get <b>free</b> extra emotes with <a href="https://betterttv.com" target="_blank">BetterTTV</a> which includes <a href="https://www.frankerfacez.com" target="_blank">FrankerFaceZ</a>.' + '<br>' + 
+	'Get extra emotes with <a href="https://betterttv.com" target="_blank">BetterTTV</a> which includes <a href="https://www.frankerfacez.com" target="_blank">FrankerFaceZ</a>.' + '<br>' + 
 	'Make sure you have those extensions activated in yout OBS.' + '<br><br>' + 
+	'If you dont use Google Chrome you need to install this:' + '<br>' +
+	'► <a href="addons.mozilla.org/firefox/addon/cpi/" target="_blank">Firefox</a>' + '<br>' +
+	'► <a href="https://addons.opera.com/extensions/details/install-chrome-extensions/" target="_blank">Opera</a>'  + '<br><br>' +
+
 	'<h1>Tips</h1>' +
 	'1. Make sure that at the bottom right of your profile banner you have a static color and pick this color as accent.' + '<br>' + 
 	'You want to combine the banner and the accent color.' + '<br><br>' + 
@@ -864,8 +874,13 @@ function loadStreamerHelp(){
 	'Put your social media everywhere you can.' + '<br><br>' +  
 	'4. Make sure to set up your donate button.' + '<br>' + 
 	'As unlikely as it may seem that someone donates, but people like me do that.' + '<br><br>' + 
+	'5. Add a BOT with commands and timers to your chat.' + '<br>' + 
+	'► You can find some easily with this <a href="https://www.google.com/search?q=twitch+chat+bots" target="_blank">search</a>.' + '<br><br>' + 
+	'6. Place your cam on the right side, since Twitch shows the "LIVE" and the viewercount on the right. ' + '<br>' + 
+	'► You can see it over <a href="https://www.twitch.tv/directory/game/Just%20Chatting" target="_blank">here</a>.' + '<br><br>' +
+
 	'<h1>Change your design here</h1>' +
-	'<a href="https://dashboard.twitch.tv/settings/channel" target="_blank">Channel Settings</a>' + '<br><br><br><br>' +
+	'<a href="https://dashboard.twitch.tv/settings/channel" target="_blank">Channel Settings</a>' + '<br><br><br>' +
 	'Click that button if you want to find me somewhere!' + '<br>' +
 	'<a href="https://Shethzor.tv" style="display: block; max-width: 204px; color: #fff; text-decoration: none; margin-top: 20px; padding: 10px; background-color: #8800ff; border-radius: 5px;">Back to normal Page</a>' + '<br></div>'
 }
