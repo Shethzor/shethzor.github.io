@@ -1,35 +1,118 @@
+var currentSearch = '';
+
 //Get All Search Keys
 var search = window.location.search.substr(1).split('&');
 var searchKey = {};
 for (var i = 0; i < search.length; i++){
 	if(search != ""){
-		searchKey[search[i].split('=')[0].toLowerCase()] = search[i].split('=')[1].toLowerCase();
+		var keyValSplit = search[i].split('=');
+		searchKey[keyValSplit[0].toLowerCase()] = keyValSplit[1];
+		if (searchKey[keyValSplit[0].toLowerCase()] == undefined){
+			searchKey[keyValSplit[0].toLowerCase()] = '';
+		}
 	}
 }
 
-//Animations
-var animations = [
+// Checks if Id exists
+function searchContains(){
+    urlKeyValDict = getUrlSearch()
+
+    var doesNotContain = {};
+
+    if(!urlKeyValDict['id']){
+        doesNotContain['id'] = 'Shethzor';
+    }
+    if(!urlKeyValDict['nav']){
+        doesNotContain['nav'] = 'links';
+    }
+
+    if (!$.isEmptyObject(doesNotContain)){
+        updateSearch(doesNotContain)
+    }
+}
+
+// Creates a dict of window.location.search
+function getUrlSearch(){
+    currentSearch = window.location.search;
+    var urlSearch = currentSearch.substr(1);
+    urlSearch = urlSearch.split('&');
+
+    urlKeyValDict = {};
+
+    var keyVal = {};
+    for(var pos in urlSearch){
+        keyVal = urlSearch[pos].split('=');
+        urlKeyValDict[keyVal[0]] = keyVal[1];
+    }
+    return urlKeyValDict;
+}
+
+// Updates the window.location.search
+function updateSearch(addKeyValDict){
+    var urlKeyValDict = getUrlSearch();
+    
+    for(var key in addKeyValDict){
+        if (urlKeyValDict[key]){
+            replaceSearchValue(key, addKeyValDict[key]);
+        }else{
+            addSearch(key, addKeyValDict[key]);
+        }
+	}
+	var newHref = window.location.origin + window.location.pathname + currentSearch;
+	if (window.location.href != newHref){
+		window.location.href = newHref;
+	}
+}
+
+// Adds KEY and VALUE to window.location.search
+function addSearch(key, value){
+    if (currentSearch){
+        currentSearch += '&' + key + '=' + value;
+    }else{
+        currentSearch += '?' + key + '=' + value;
+	}
+}
+
+// Replaces VALUE of KEY from window.location.search
+function replaceSearchValue(key, value){    
+    var urlKeyValDict = getUrlSearch()
+
+    if (urlKeyValDict[key] != value){
+        
+        urlKeyValDict[key] = value;
+        var replaceOldSearch = '?'
+        
+        for(var key in urlKeyValDict){
+            replaceOldSearch += key + '=' + urlKeyValDict[key] + '&';
+        }
+
+        currentSearch = replaceOldSearch.substr(0, replaceOldSearch.length - 1);
+    }
+}
+
+//Link Animations
+var linkAnimations = [
 					[
 						"ʕ_•ᴥ•ʔ",
 						"ʕ_•ᴥ•ʔ",
-						"ʕ_–ᴥ–ʔ",
+						"ʕ_-ᴥ-ʔ",
 						"ʕ_•ᴥ•ʔ",
 						"ʕ_•ᴥ•ʔ",
 						"ʕ_•ᴥ•ʔ",
-						"ʕ_–ᴥ–ʔ",
+						"ʕ_-ᴥ-ʔ",
 						"ʕ_•ᴥ•ʔ",
 						"ʕ_•ᴥ•ʔ",
-						"ʕ_–ᴥ–ʔ",
+						"ʕ_-ᴥ-ʔ",
 						"ʕ_•ᴥ•ʔ",
 						"ʕ_•ᴥ•ʔ",
-						"ʕ_–ᴥ–ʔ",
+						"ʕ_-ᴥ-ʔ",
 						"ʕ_•ᴥ•ʔ",
 						"ʕ_•ᴥ•ʔ",
 						"ʕ_•ᴥ•ʔ",
-						"ʕ_–ᴥ–ʔ",
+						"ʕ_-ᴥ-ʔ",
 						"ʕ_•ᴥ•ʔ",
 						"ʕ_•ᴥ•ʔ",
-						"ʕ_–ᴥ–ʔ",
+						"ʕ_-ᴥ-ʔ",
 					],
 					[
 						"ʕ_•ᴥ•ʔ",
@@ -57,52 +140,52 @@ var animations = [
 					[
 						"ʕ_•ᴥ•ʔ",
 						"ʕ_•ᴥ•ʔ",
-						"ʕ_–ᴥ–ʔ_┳━┳",
+						"ʕ_-ᴥ-ʔ_┳━┳",
 						"ʕ_•ᴥ•ʔ_┳━┳",
 						"ʕ_•ᴥ•ʔ_┳━┳",
 						"ʕノ•ᴥ•ʔノ︵┻━┻",
-						"ʕノ–ᴥ–ʔノ_____┻━┻",
+						"ʕノ-ᴥ-ʔノ_____┻━┻",
 						"ʕ_•ᴥ•ʔ__________┻━┻",
 						"ʕ_•ᴥ•ʔ____________┻━┻",
-						"ʕ_–ᴥ–ʔ______________┻━┻",
+						"ʕ_-ᴥ-ʔ______________┻━┻",
 						"ʕ_•ᴥ•ʔ________________┻━┻",
 					],
 					[
 						"ʕ_•ᴥ•ʔ",
 						"ʕ•ᴥ•ʔ",
-						"ʕ–ᴥ–ʔ",
+						"ʕ-ᴥ-ʔ",
 						"ʕ♡ᴥ♡ʔ_Look_at_you!",
 						"ʕ♡ᴥ♡ʔ_Look_at_you!",
-						"ʕ–ᴥ–ʔ_Look_at_you!",
+						"ʕ-ᴥ-ʔ_Look_at_you!",
 						"ʕ♡ᴥ♡ʔ_Look_at_you!",
 						"ʕ♡ᴥ♡ʔ",
-						"ʕ–ᴥ–ʔ",
+						"ʕ-ᴥ-ʔ",
 						"ʕ≧ᴥ≦ʔ",
 						"ʕ≧ᴥ≦ʔ_SO_CUUUUUUUUTE!!!",
 						"ʕ≧ᴥ≦ʔ_SO_CUUUUUUUUTE!!!",
 						"ʕ≧ᴥ≦ʔ_SO_CUUUUUUUUTE!!!",
 						"ʕ≧ᴥ≦ʔ_SO_CUUUUUUUUTE!!!",
 						"ʕ≧ᴥ≦ʔ",
-						"ʕ–ᴥ–ʔ",
+						"ʕ-ᴥ-ʔ",
 						"ʕ•ᴥ•ʔ",
 						"ʕ•ᴥ•ʔ_Sorry...",
-						"ʕ–ᴥ–ʔ_Sorry...",
+						"ʕ-ᴥ-ʔ_Sorry...",
 						"ʕ•ᴥ•ʔ_Sorry...",
 						"ʕ•ᴥ•ʔ_Sorry...",
-						"ʕ–ᴥ–ʔ",
+						"ʕ-ᴥ-ʔ",
 						"ʕ•ᴥ•ʔ",
 						"ʕ•ᴥ•ʔ_I_don't_know_what_just_happened",
-						"ʕ–ᴥ–ʔ_I_don't_know_what_just_happened",
+						"ʕ-ᴥ-ʔ_I_don't_know_what_just_happened",
 						"ʕ•ᴥ•ʔ_I_don't_know_what_just_happened",
 						"ʕ•ᴥ•ʔ_I_don't_know_what_just_happened",
-						"ʕ–ᴥ–ʔ",
+						"ʕ-ᴥ-ʔ",
 						"ʕ•ᴥ•ʔ",
 						"ʕ_•ᴥ•ʔ",
 					],
 					[
 						"ʕ_•ᴥ•ʔ",
 						"┤_•ᴥ•ʔ",
-						"┴┤–ᴥ–ʔ",
+						"┴┤-ᴥ-ʔ",
 						"┬┴┤ᴥ•ʔ",
 						"┴┬┴┤•ʔ",
 						"┬┴┬┴┤ʔ",
@@ -111,51 +194,51 @@ var animations = [
 						"┬┴┬┴┤ʔ_WTF!!!",
 						"┬┴┬┴┤ʔ_WTF!!!",
 						"┬┴┬┴┤ʔ",
-						"┬┴┬┴┤–ʔ",
+						"┬┴┬┴┤-ʔ",
 						"┬┴┬┴┤ᴥ•ʔ",
 						"┬┴┬┴┤ᴥ•ʔ_I_am_watching_you!",
-						"┬┴┬┴┤ᴥ–ʔ_I_am_watching_you!",
+						"┬┴┬┴┤ᴥ-ʔ_I_am_watching_you!",
 						"┬┴┬┴┤ᴥ•ʔ_I_am_watching_you!",
 						"┬┴┬┴┤ᴥ•ʔ_I_am_watching_you!",
-						"┴┬┴┤–ᴥ–ʔ",
+						"┴┬┴┤-ᴥ-ʔ",
 						"┬┴┤_•ᴥ•ʔ",
 						"┴┤ʕ_•ᴥ•ʔ",
-						"┤_ʕ_–ᴥ–ʔ",
+						"┤_ʕ_-ᴥ-ʔ",
 						"__ʕ_•ᴥ•ʔ",
 						"__ʕ•ᴥ•_ʔ",
-						"_ʕ–ᴥ–_ʔ",
+						"_ʕ-ᴥ-_ʔ",
 						"ʕ•ᴥ•_ʔ",
 						"ʕ•ᴥ•ʔ",
-						"ʕ_–ᴥ–ʔ",
+						"ʕ_-ᴥ-ʔ",
 						"ʕ_•ᴥ•ʔ",
 					],
 					[
 						"ʕ_•ᴥ•ʔ",
 						"ʕ_•ᴥ•ʔ",
-						"ʕ_–ᴥ–ʔ",
+						"ʕ_-ᴥ-ʔ",
 						"ʕ_•ᴥ•ʔ_Do_you_want_some_love?",
 						"ʕ_•ᴥ•ʔ_Do_you_want_some_love?",
-						"ʕ_–ᴥ–ʔ_Do_you_want_some_love?",
+						"ʕ_-ᴥ-ʔ_Do_you_want_some_love?",
 						"ʕ_•ᴥ•ʔ_Do_you_want_some_love?",
 						"ʕ_•ᴥ•ʔ",
-						"ʕ_–ᴥ–ʔ_Of_course_you_want_some!",
+						"ʕ_-ᴥ-ʔ_Of_course_you_want_some!",
 						"ʕ_•ᴥ•ʔ_Of_course_you_want_some!",
 						"ʕ_•ᴥ•ʔ_Of_course_you_want_some!",
-						"ʕ_–ᴥ–ʔ_Of_course_you_want_some!",
+						"ʕ_-ᴥ-ʔ_Of_course_you_want_some!",
 						"ʕ_•ᴥ•ʔ",
 						"ʕ_•ᴥ•ʔ_Catch_it!",
-						"ʕ_–ᴥ–ʔ_Catch_it!",
+						"ʕ_-ᴥ-ʔ_Catch_it!",
 						"ʕ_•ᴥ•ʔ_Catch_it!",
 						"ʕ_•ᴥ•ʔ_Catch_it!",
-						"ʕ_–ᴥ–ʔ",
+						"ʕ_-ᴥ-ʔ",
 						"ʕ_•ᴥ•ʔ-",
 						"ʕ_•ᴥ•ʔ/",
 						"ʕ_•ᴥ•ʔﾉ",
 						"ʕ_•ᴥ•ʔ/♡",
-						"ʕ_–ᴥ–ʔ-___♡",
+						"ʕ_-ᴥ-ʔ-___♡",
 						"ʕ_•ᴥ•ʔ_______♡",
 						"ʕ_•ᴥ•ʔ__________♡",
-						"ʕ_–ᴥ–ʔ____________♡",
+						"ʕ_-ᴥ-ʔ____________♡",
 						"ʕ_•ᴥ•ʔ______________♡",
 						"ʕ_•ᴥ•ʔ",
 						"ʕ_•ᴥ•ʔ",
@@ -163,59 +246,59 @@ var animations = [
 					[
 						"ʕ_•ᴥ•ʔ",
 						"ʕ_•ᴥ•ʔ",
-						"ʕ_–ᴥ–ʔ",
+						"ʕ_-ᴥ-ʔ",
 						"ʔ_•ᴥ•ʔ",
-						"–ʔ•ᴥ•ʔ",
-						"ᴥ•ʔᴥ–ʔ",
+						"-ʔ•ᴥ•ʔ",
+						"ᴥ•ʔᴥ-ʔ",
 						"•ᴥ•ʔ•ʔ",
-						"_–ᴥ–ʔʔ",
+						"_-ᴥ-ʔʔ",
 						"ʕ_•ᴥ•ʔ",
 						"ʕ_•ᴥ•ʔ",
 					],
 					[
 						"ʕ_•ᴥ•ʔ",
 						"ʕ_•ᴥ•ʔ",
-						"ʕ_–ᴥ–ʔ",
+						"ʕ_-ᴥ-ʔ",
 						"ʔ_•ᴥ•ʔ",
-						"–ʔ•ᴥ•ʔ",
-						"ᴥ•ʔᴥ–ʔ",
+						"-ʔ•ᴥ•ʔ",
+						"ᴥ•ʔᴥ-ʔ",
 						"•ᴥ•ʔ•ʔ",
-						"_–ᴥ–ʔʔ",
+						"_-ᴥ-ʔʔ",
 						"ʕ_•ᴥ•ʔ",
 						"ʕʕ_•ᴥ•ʔ",
-						"ʕ_ʕ_–ᴥ–ʔ",
+						"ʕ_ʕ_-ᴥ-ʔ",
 						"ʕ_•ʕ_•ᴥ•ʔ",
-						"ʕ_–ᴥʕ_•ᴥ•ʔ",
-						"ʕ_•ᴥ•ʕ_–ᴥ–ʔ",
+						"ʕ_-ᴥʕ_•ᴥ•ʔ",
+						"ʕ_•ᴥ•ʕ_-ᴥ-ʔ",
 						"ʕ_•ᴥ•ʔʕ_•ᴥ•ʔ",
 						"ʕ_•ᴥ•ʔ_ʕ_•ᴥ•ʔ",
-						"ʕ_–ᴥ–ʔ_ʕ–ᴥ–ʔ",
+						"ʕ_-ᴥ-ʔ_ʕ-ᴥ-ʔ",
 						"ʕ_•ᴥ•ʔ_ʕ•ᴥ•_ʔ",
 						"ʕ_♡ᴥ♡ʔʕ♡ᴥ♡_ʔ",
-						"ʕ_♡ᴥ♡ʔʕ–ᴥ–_ʔ",
-						"ʕ_–ᴥ–ʔʕ♡ᴥ♡_ʔ",
+						"ʕ_♡ᴥ♡ʔʕ-ᴥ-_ʔ",
+						"ʕ_-ᴥ-ʔʕ♡ᴥ♡_ʔ",
 						"ʕ_♡ᴥ♡ʔʕ♡ᴥ♡_ʔ",
 						"ʕ_♡ᴥ♡ʔʕ♡ᴥ♡_ʔ",
-						"ʕ_♡ᴥ♡ʕ–ᴥ–_ʔ",
-						"ʕ_–ᴥʕ♡ᴥ♡_ʔ",
+						"ʕ_♡ᴥ♡ʕ-ᴥ-_ʔ",
+						"ʕ_-ᴥʕ♡ᴥ♡_ʔ",
 						"ʕ_♡ᴥʕᴥ♡_ʔ",
 						"ʕ_♡ᴥʕ♡__ʔ",
 						"ʕ_♡ᴥʕ____ʔ",
-						"ʕ_–ᴥʕ____ʔ♡",
-						"ʕ_–ᴥʕ____ʔ_♡",
-						"ʕ_–ᴥʕ____ʔ__♡",
-						"ʕ_–ᴥʕ____ʔ___♡",
-						"ʕ_–ᴥʕ____ʔ____♡",
-						"ʕ_–ᴥʕ____ʔ_____♡",
+						"ʕ_-ᴥʕ____ʔ♡",
+						"ʕ_-ᴥʕ____ʔ_♡",
+						"ʕ_-ᴥʕ____ʔ__♡",
+						"ʕ_-ᴥʕ____ʔ___♡",
+						"ʕ_-ᴥʕ____ʔ____♡",
+						"ʕ_-ᴥʕ____ʔ_____♡",
 						"ʕ_≧ᴥʕ•__ʔ",
-						"ʕ_≧ᴥʕᴥ–_ʔ",
+						"ʕ_≧ᴥʕᴥ-_ʔ",
 						"ʕ_≧ᴥʕ•ᴥ•_ʔ",
 						"ʕ_≧ʕ•ᴥ•_ʔ",
 						"ʕ_ʕ•ᴥ•_ʔ",
-						"ʕʕ–ᴥ–_ʔ",
+						"ʕʕ-ᴥ-_ʔ",
 						"ʕ•ᴥ•_ʔ",
 						"•ᴥ•_ʔʔ",
-						"ᴥ–_ʔꈍʔ",
+						"ᴥ-_ʔꈍʔ",
 						"•_ʔᴥꈍʔ",
 						"_ʔꈍᴥꈍʔ",
 						"ʔ_ꈍᴥꈍʔ",
@@ -225,43 +308,43 @@ var animations = [
 					[
 						"ʕ_•ᴥ•ʔ",
 						"ʕ_•ᴥ•ʔ",
-						"ʕ_–ᴥ–ʔ",
+						"ʕ_-ᴥ-ʔ",
 						"ʔ_•ᴥ•ʔ",
 						"_ʔ•ᴥ•ʔ",
 						"__ʔᴥ•ʔ",
-						"___ʔ–ʔ",
+						"___ʔ-ʔ",
 						"____ʔʔ",
 						"ʕ____ʔ",
 						"ʕʕ____ʔ",
 						"ʕ_ʕ____ʔ",
 						"ʕ_•ʕ____ʔ",
-						"ʕ_–ᴥʕ____ʔ",
+						"ʕ_-ᴥʕ____ʔ",
 						"ʕ_•ᴥ•ʕ____ʔ",
 						"ʕ_•ᴥ•ʔʕ____ʔ",
-						"ʕ_–ᴥ–ʔ_ʕ____ʔ",
+						"ʕ_-ᴥ-ʔ_ʕ____ʔ",
 						"_ʕ_•ᴥʔ__ʕ___ʔ",
 						"_ʕ__•ʔ__ʕ___ʔ",
 						"_ʕ___ʔ__ʕ•__ʔ",
 						"_ʕ___ʔ__ʕᴥ•_ʔ",
-						"_ʕ____ʔʕ–ᴥ–_ʔ",
+						"_ʕ____ʔʕ-ᴥ-_ʔ",
 						"__ʕ____ʔᴥ•_ʔ",
 						"___ʕ____ʔ_ʔ",
 						"___ʕʕ____ʔ",
 						"_ʕ_ಠᴥʕ____ʔ",
 						"ʕ_ಠᴥಠʔ_ʕ____ʔ",
-						"_ʕ_–ᴥʔ__ʕ___ʔ",
+						"_ʕ_-ᴥʔ__ʕ___ʔ",
 						"_ʕ__ಠʔ__ʕ___ʔ",
 						"_ʕ___ʔ__ʕಠ__ʔ_Jotaro",
-						"_ʕ___ʔ__ʕᴥ–_ʔ_JOtaro",
+						"_ʕ___ʔ__ʕᴥ-_ʔ_JOtaro",
 						"_ʕ____ʔʕಠᴥಠ_ʔ_JOTAro",
 						"__ʕ____ʔᴥಠ_ʔ__JOTARO",
 						"___ʕ____ʔ_ʔ",
 						"___ʕʕ____ʔ",
-						"_ʕ_–ᴥʕ____ʔ",
+						"_ʕ_-ᴥʕ____ʔ",
 						"ʕ_ಠᴥಠʔ_ʕ____ʔ",
 						"_ʕ_ಠᴥʔ__ʕ___ʔ",
 						"_ʕ__ಠʔ__ʕ___ʔ",
-						"_ʕ___ʔ__ʕ–__ʔ_dio",
+						"_ʕ___ʔ__ʕ-__ʔ_dio",
 						"_ʕ___ʔ__ʕᴥಠ_ʔ_Dio",
 						"_ʕ____ʔʕಠᴥಠ_ʔ_DIo",
 						"__ʕ____ʔᴥಠ_ʔ__DIO",
@@ -269,18 +352,18 @@ var animations = [
 						"___ʕʕ____ʔ",
 						"_ʕ_ಠᴥʕ____ʔ",
 						"ʕ_ಠᴥಠʔʕ____ʔ",
-						"_–ᴥ–ʔ__ʕ____ʔ",
+						"_-ᴥ-ʔ__ʕ____ʔ",
 						"ಠᴥಠʔ____ʕ___ʔ",
 						"ᴥಠʔ_____ʕ___ʔ",
 						"ಠʔ______ʕ•__ʔ",
 						"ʔ_______ʕᴥ•_ʔ",
-						"_______ʕ•ᴥ•_ʔ",
+						"_______ʕ-ᴥ-_ʔ",
 						"______ʕ•ᴥ•_ʔ",
 						"_____ʕ•ᴥ•_ʔ",
-						"____ʕ•ᴥ•_ʔ",
+						"____ʕ-ᴥ-_ʔ",
 						"__ʕ•ᴥ•_ʔ",
 						"_ʕ•ᴥ•_ʔ",
-						"ʕ•ᴥ•_ʔ",
+						"ʕ-ᴥ-_ʔ",
 						"_ʕ•ᴥ•ʔ",
 						"ʕ_•ᴥ•ʔ",
 					],
@@ -308,60 +391,60 @@ var animations = [
 						"ʕ_•ᴥ•ʔ",
 						"_ʕ_•ᴥ•ʔ",
 						"┏ʕ_•ᴥ•ʔ┛",
-						"┗ʕ_•ᴥ•ʔ┒",
+						"┗ʕ_-ᴥ-ʔ┒",
 						"┏ʕ•ᴥ•_ʔ┛",
 						"┗ʕ•ᴥ•_ʔ┒",
 						"┏ʕ_•ᴥ•ʔ┛",
 						"┗ʕ_•ᴥ•ʔ┒",
+						"┏ʕ-ᴥ-_ʔ┛",
+						"┗ʕ•ᴥ•_ʔ┒",
+						"┏ʕ_•ᴥ•ʔ┛",
+						"┗ʕ_-ᴥ-ʔ┒",
 						"┏ʕ•ᴥ•_ʔ┛",
 						"┗ʕ•ᴥ•_ʔ┒",
 						"┏ʕ_•ᴥ•ʔ┛",
+						"┗ʕ_-ᴥ-ʔ┒",
+						"┏ʕ•ᴥ•_ʔ┛",
+						"┗ʕ•ᴥ•_ʔ┒",
+						"┏ʕ_-ᴥ-ʔ┛",
 						"┗ʕ_•ᴥ•ʔ┒",
 						"┏ʕ•ᴥ•_ʔ┛",
 						"┗ʕ•ᴥ•_ʔ┒",
-						"┏ʕ_•ᴥ•ʔ┛",
-						"┗ʕ_•ᴥ•ʔ┒",
-						"┏ʕ•ᴥ•_ʔ┛",
-						"┗ʕ•ᴥ•_ʔ┒",
-						"┏ʕ_•ᴥ•ʔ┛",
-						"┗ʕ_•ᴥ•ʔ┒",
-						"┏ʕ•ᴥ•_ʔ┛",
-						"┗ʕ•ᴥ•_ʔ┒",
-						"┏ʕ_•ᴥ•ʔ┛",
+						"┏ʕ_-ᴥ-ʔ┛",
 						"┗ʕ_•ᴥ•ʔ┒",
 						"_ʕ_•ᴥ•ʔ",
 						"_ʕ•ᴥ•ʔ",
+						"_ʕ-ᴥ-_ʔ",
+						"_ʕ•ᴥ•ʔ",
+						"ʕ_•ᴥ•ʔ",
+					],
+					[
+						"ʕ_•ᴥ•ʔ",
+						"_ʕ_-ᴥ-ʔ",
+						"┗ʕ_•ᴥ•ʔ┛",
+						"┏ʕ_•ᴥ•ʔ┒",
+						"┗ʕ_•ᴥ•ʔ┛",
+						"┏ʕ-ᴥ-_ʔ┒",
+						"┗ʕ•ᴥ•_ʔ┛",
+						"┏ʕ_•ᴥ•ʔ┒",
+						"┗ʕ_•ᴥ•ʔ┛",
+						"┏ʕ•ᴥ•_ʔ┒",
+						"┗ʕ-ᴥ-_ʔ┛",
+						"┏ʕ_•ᴥ•ʔ┒",
+						"┗ʕ_•ᴥ•ʔ┛",
+						"┏ʕ-ᴥ-_ʔ┒",
+						"┗ʕ•ᴥ•_ʔ┛",
+						"┏ʕ_•ᴥ•ʔ┒",
+						"┗ʕ_-ᴥ-ʔ┛",
+						"┏ʕ•ᴥ•_ʔ┒",
+						"┗ʕ•ᴥ•_ʔ┛",
+						"┏ʕ_•ᴥ•ʔ┒",
+						"┗ʕ_-ᴥ-ʔ┛",
+						"┏ʕ•ᴥ•_ʔ┒",
+						"┗ʕ•ᴥ•_ʔ┛",
 						"_ʕ•ᴥ•_ʔ",
-						"ʕ•ᴥ•ʔ",
-						"ʕ_•ᴥ•ʔ",
-					],
-					[
-						"ʕ_•ᴥ•ʔ",
-						"_ʕ_•ᴥ•ʔ",
-						"┗ʕ_•ᴥ•ʔ┛",
-						"┏ʕ_•ᴥ•ʔ┒",
-						"┗ʕ_•ᴥ•ʔ┛",
-						"┏ʕ•ᴥ•_ʔ┒",
-						"┗ʕ•ᴥ•_ʔ┛",
-						"┏ʕ_•ᴥ•ʔ┒",
-						"┗ʕ_•ᴥ•ʔ┛",
-						"┏ʕ•ᴥ•_ʔ┒",
-						"┗ʕ•ᴥ•_ʔ┛",
-						"┏ʕ_•ᴥ•ʔ┒",
-						"┗ʕ_•ᴥ•ʔ┛",
-						"┏ʕ•ᴥ•_ʔ┒",
-						"┗ʕ•ᴥ•_ʔ┛",
-						"┏ʕ_•ᴥ•ʔ┒",
-						"┗ʕ_•ᴥ•ʔ┛",
-						"┏ʕ•ᴥ•_ʔ┒",
-						"┗ʕ•ᴥ•_ʔ┛",
-						"┏ʕ_•ᴥ•ʔ┒",
-						"┗ʕ_•ᴥ•ʔ┛",
-						"┏ʕ•ᴥ•_ʔ┒",
-						"┗ʕ•ᴥ•_ʔ┛",
-						"_ʕ•ᴥ•_ʔ",
-						"ʕ•ᴥ•_ʔ",
-						"ʕ•ᴥ•ʔ",
+						"ʕ-ᴥ-_ʔ",
+						"_ʕ•ᴥ•ʔ",
 						"ʕ_•ᴥ•ʔ",
 					],
 					[
@@ -379,54 +462,56 @@ var animations = [
 						"ʕ_•ᴥ•ʔ",
 						"ʕ_•ᴥ•ʔ",
 						"ʕ_•ᴥ•ʔ_I'm_a_wizard",
-						"ʕ_–ᴥ–ʔ_I'm_a_wizard",
+						"ʕ_-ᴥ-ʔ_I'm_a_wizard",
 						"ʕ_•ᴥ•ʔ_I'm_a_wizard",
 						"ʕ_•ᴥ•ʔ_I'm_a_wizard",
-						"ʕ_–ᴥ–ʔ",
+						"ʕ_-ᴥ-ʔ",
 						"ʕ_•ᴥ•ʔ⊃━☆",
 						"ʕ_•ᴥ•ʔ⊃━☆ﾟ",
 						"ʕ_•ᴥ•ʔ⊃━☆｡ﾟ",
-						"ʕ_–ᴥ–ʔ⊃━☆･｡ﾟ",
+						"ʕ_-ᴥ-ʔ⊃━☆･｡ﾟ",
 						"ʕ_•ᴥ•ʔ⊃━☆*･｡ﾟ",
 						"ʕ_•ᴥ•ʔ⊃━☆.*･｡ﾟ",
 						"ʕ_•ᴥ•ʔ⊃━☆.*･｡ﾟ",
-						"ʕ_–ᴥ–ʔ⊃━☆_.*･｡",
+						"ʕ_-ᴥ-ʔ⊃━☆_.*･｡",
 						"ʕ_•ᴥ•ʔ⊃━☆__.*･",
 						"ʕ_•ᴥ•ʔ⊃━☆___.*",
-						"ʕ_–ᴥ–ʔ⊃━☆____.",
+						"ʕ_-ᴥ-ʔ⊃━☆____.",
 						"ʕ_•ᴥ•ʔ⊃━☆",
-						"ʕ_–ᴥ–ʔ",
+						"ʕ_-ᴥ-ʔ",
 						"ʕ_•ᴥ•ʔ",
 					],
 				];
 
 //Animate frames
-setInterval(hashAnimation, 400);
-var animCounter = 0;
-var randomAnim = Math.floor(Math.random() * animations.length);
-var animRunning = false;
-var oldRandNum = 0;
-function hashAnimation(){
-	if (!animRunning && Math.floor(Math.random() * 10) == 1){
-		while (oldRandNum == randomAnim){
-			randomAnim = Math.floor(Math.random() * (animations.length - 1)) + 1;
+var linkAnimCounter = 0;
+var linkRandomAnim = Math.floor(Math.random() * linkAnimations.length);
+var linkAnimRunning = false;
+var linkOldRandNum = 0;
+function startLinkAnimation(){
+	setInterval(linkAnimation, 400);
+}
+function linkAnimation(){
+	if (!linkAnimRunning && Math.floor(Math.random() * 10) == 1){
+		while (linkOldRandNum == linkRandomAnim){
+			linkRandomAnim = Math.floor(Math.random() * (linkAnimations.length - 1)) + 1;
 		}
-		animRunning = true;
-	}else if (!animRunning){
-		randomAnim = 0;
-		animRunning = true;
+		linkAnimRunning = true;
+	}else if (!linkAnimRunning){
+		linkRandomAnim = 0;
+		linkAnimRunning = true;
 	}
 	if (searchKey["animation"] != undefined){
-		randomAnim = searchKey["animation"];
+		linkRandomAnim = searchKey["animation"];
 	}
-	if (animCounter == animations[randomAnim].length){
-		animCounter = 0;
-		oldRandNum = randomAnim;
-		animRunning = false;
+	if (linkAnimCounter == linkAnimations[linkRandomAnim].length){
+		linkAnimCounter = 0;
+		linkOldRandNum = linkRandomAnim;
+		linkAnimRunning = false;
 	}
 	var cleanLink = window.location.href.replace(window.location.hash, '').replace('#', '');
-	window.location.href = cleanLink + '#' + animations[randomAnim][animCounter];
-	animCounter++;
+	window.location.href = cleanLink + '#' + linkAnimations[linkRandomAnim][linkAnimCounter];
+	linkAnimCounter++;
 }
 
 //User
@@ -437,13 +522,17 @@ if (searchKey['id']){
 
 document.onreadystatechange = () => {
 	if (document.readyState === 'complete'){
-        setLanguage();
-		loadButtonAreas();
-		setStreamDays();
-		setStreamTime();
+		setLanguage();
+		if (searchKey['strtip'] != undefined){
+			loadStreamerHelp();
+		}else{
+			loadButtonAreas();
+			setStreamDays();
+			setStreamTime();
+			document.getElementById('MatureContentButton').addEventListener('click', MatureContentToggle)	
+		}
 		loadStyles();
 		displayPage();
-		document.getElementById('MatureContentButton').addEventListener('click', MatureContentToggle)
 	}
 };
 
@@ -610,7 +699,11 @@ function loadEgg(key){
 	
 	for (var i = 0; i < 20; i++){
 		switch(getArrayText(combinationArray, i)){
-			//Visual
+			//Link
+			case 'oso':
+				startLinkAnimation();
+				break;
+			//Website
 			case '<3': 
 				document.getElementById('Background').style.backgroundImage = 'url("img/background/hearts.gif")';
 				document.body.style.fontFamily = '"Love Ya Like A Sister"';
@@ -669,6 +762,10 @@ function getArrayText(combinationArray, length){
 
 //Load Style
 function loadStyles() {
+	if (!isEmptyOrNull(defaultLanguage)){
+		updateSearch({"l" : defaultLanguage});
+	}
+	
 	if (backgroundImageLink){
 		document.getElementById('Background').style.backgroundImage = 'url("' + backgroundImageLink + '")';
 		document.getElementById('Background').style.filter = 'blur(' + backgroundBlur + 'px)';
@@ -737,6 +834,64 @@ function setStreamTime(){
 		}
 		document.getElementById('streaming-time').innerHTML = dictLanguage['time']['at'] + ' ' + time;
 	}
+}
+
+function loadStreamerHelp(){
+	div = document.getElementById('other-content');
+	div.classList.remove('d-none');
+	div.classList.add('d-block');
+	document.getElementById('other-content').innerHTML += '<div style="margin-bottom: 25px; background-color: rgba(0,0,0,0.9); padding: 25px; border-radius: 5px;">' +
+	
+	'<h1>Info</h1>' +
+	'You can get everything on that page for <b>FREE</b>' + '<div style="border: white 1px solid; margin: 20px 0"></div>' + 
+
+
+	'<h1>Banner & Color</h1>' +
+	'<b>Profile Banner</b> : 1800x570' + '<br><br>' + 
+	'<b>Video Player Banner (Offline)</b> : 1920x1080' + '<br><br>' + 
+	'<b>Profile Accent Color</b> : You choose' + '<div style="border: white 1px solid; margin: 20px 0"></div>' + 
+
+	'<h1>Panels</h1>' +
+	'Make sure to create some panels:' + '<br>' + 
+	'► <a href="https://nerdordie.com/resources/free-resources/customizable-twitch-panels/" target="_blank">NerdOrDie panel maker</a>' + '<br>' +
+	'► <a href="https://nerdordie.com/apps/ow-panel-maker/app.html" target="_blank">NerdOrDie Overwatch panel maker</a>.' + '<div style="border: white 1px solid; margin: 20px 0"></div>' + 
+
+	'<h1>Overlays</h1>' +
+	'You can get overlays at:' + '<br>' + 
+	'► <a href="https://nerdordie.com/product-tag/free-resource/?orderby=price" target="_blank">NerdOrDie overlays</a> ("Suggested Price")' + '<br>' + 
+	'► <a href="https://streamelements.com/dashboard/themes" target="_blank">StreamElement overlays</a>.' + '<div style="border: white 1px solid; margin: 20px 0"></div>' + 
+
+	'<h1>Emotes</h1>' +
+	'Get extra emotes with <a href="https://betterttv.com" target="_blank">BetterTTV</a> which includes <a href="https://www.frankerfacez.com" target="_blank">FrankerFaceZ</a>.' + '<br>' + 
+	'Make sure you have those extensions activated in yout OBS.' + '<br><br>' + 
+	'If you dont use Google Chrome you need to install this:' + '<br>' +
+	'► <a href="addons.mozilla.org/firefox/addon/cpi/" target="_blank">Firefox</a>' + '<br>' +
+	'► <a href="https://addons.opera.com/extensions/details/install-chrome-extensions/" target="_blank">Opera</a>'  + '<div style="border: white 1px solid; margin: 20px 0"></div>' +
+
+	'<h1>Sound</h1>' +
+	'I recommend an audio mixer like <a href="https://vb-audio.com/Voicemeeter/potato.htm" target="_blank">VoiceMeeter</a>. It will make audio management way easier.' + '<br><br>' + 
+	'If you use <a href="https://vb-audio.com/Cable/index.htm" target="_blank">Virtual Audio Cable</a> on top, you can set music in the background which you can change the volume of seperatly without the stream noticing it.' + '<br><br>' +
+	'Sometimes you just don\'t want to hear music while playing but your stream wants to.' + '<div style="border: white 1px solid; margin: 20px 0"></div>' + 
+
+	'<h1>Tips</h1>' +
+	'1. Make sure that at the bottom right of your profile banner you have a static color and pick this color as accent.' + '<br>' + 
+	'You want to combine the banner and the accent color.' + '<br><br>' + 
+	'2. Take one color that you want people to associate with you.' + '<br>' + 
+	'You can take my page as guidiance if you want: <a href="https://www.twitch.tv/shethzor#I_hope_it_helps" target="_blank">Shethzor</a>.' + '<br>' + 
+	'That does not mean that you can copy paste everything!' + '<br><br>' +
+	'3. Make sure that people can find you.' + '<br>' + 
+	'Put your social media everywhere you can.' + '<br><br>' +  
+	'4. Make sure to set up your donate button.' + '<br>' + 
+	'As unlikely as it may seem that someone donates, but people like me do that.' + '<br><br>' + 
+	'5. Add a BOT with commands and timers to your chat.' + '<br>' + 
+	'► You can find some easily with this <a href="https://www.google.com/search?q=twitch+chat+bots" target="_blank">search</a>.' + '<br><br>' + 
+	'6. Place your cam on the right side, since Twitch shows the "LIVE" and the viewercount on the right. ' + '<br>' + 
+	'► You can see it over <a href="https://www.twitch.tv/directory/game/Just%20Chatting" target="_blank">here</a>.' + '<div style="border: white 1px solid; margin: 20px 0"></div>' +
+
+	'<h1>Channel Settings</h1>' +
+	'► <a href="https://dashboard.twitch.tv/settings/channel" target="_blank">Settings</a>' + '<div style="border: white 1px solid; margin: 20px 0"></div>' +
+	'Click that button if you want to find me somewhere!' + '<br>' +
+	'<a href="https://Shethzor.tv" style="display: block; max-width: 204px; color: #fff; text-decoration: none; margin-top: 20px; padding: 10px; background-color: #8800ff; border-radius: 5px;">Back to normal Page</a>' + '<br></div>'
 }
 
 //Usefull
