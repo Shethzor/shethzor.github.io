@@ -842,7 +842,7 @@ setInterval(checkLiveStatus, 2000);
 var response;
 var isLive = false;
 function checkLiveStatus(){
-	var url = "https://decapi.me/twitch/uptime/haseodanette" //+ user;
+	var url = "https://decapi.me/twitch/uptime/" + user;
 	var xhr = new XMLHttpRequest();
 	xhr.open('GET', url, true);
 	xhr.responseType = 'text';
@@ -874,7 +874,7 @@ function checkLiveStatus(){
 					streamTimes.remove("d-block");
 					streamPlayer.add("d-block");
 					streamPlayer.remove("d-none");
-					document.getElementById("stream-embed").src = "https://player.twitch.tv/?channel=haseodanette&parent=shethzor.tv";
+					document.getElementById("stream-embed").src = "https://player.twitch.tv/?channel=" + user + "&parent=shethzor.tv";
 					isLive = true;
 				}
 		}
