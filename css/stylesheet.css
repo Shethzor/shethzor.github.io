@@ -33,6 +33,10 @@ p {
     margin: 0;
 }
 
+iframe {
+    border: 0px;
+}
+
 #Background {
     background-repeat: no-repeat;
     background-size: cover;
@@ -79,6 +83,10 @@ p {
 
 #Copyright a:hover {
     text-decoration: none;
+}
+
+#Player{
+    border-radius: 20px;
 }
 
 .listLinks {
@@ -158,6 +166,16 @@ p {
 .panel-stream-content #stream-days p{
     margin: 8px 8px;
 }
+
+.panel-stream-content iframe{
+    background-color: #0e0e10;
+    height: calc(14vh + 14vw + 40px);
+    max-height: 130px;
+    border-radius: 0 0 20px 20px;
+    width: calc(14vh + 14vw + 40px);
+    max-width: 220px;
+}
+
 .panel-youtube-image{
     background-color: #cc191e;
 }
