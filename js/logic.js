@@ -5,7 +5,11 @@ var search = window.location.search.substr(1).split('&');
 var searchKey = {};
 for (var i = 0; i < search.length; i++){
 	if(search != ""){
-		searchKey[search[i].split('=')[0].toLowerCase()] = search[i].split('=')[1];
+		var keyValSplit = search[i].split('=');
+		searchKey[keyValSplit[0].toLowerCase()] = keyValSplit[1];
+		if (searchKey[keyValSplit[0].toLowerCase()] == undefined){
+			searchKey[keyValSplit[0].toLowerCase()] = '';
+		}
 	}
 }
 
@@ -519,7 +523,7 @@ if (searchKey['id']){
 document.onreadystatechange = () => {
 	if (document.readyState === 'complete'){
 		setLanguage();
-		if (searchKey['strtip']){
+		if (searchKey['strtip'] != undefined){
 			loadStreamerHelp();
 		}else{
 			loadButtonAreas();
@@ -812,6 +816,7 @@ function loadStyles() {
 	}
 }
 
+
 //Twitch Stream Days
 function setStreamDays(){
 	for (var day in streamDays){
@@ -832,6 +837,46 @@ function setStreamTime(){
 	}
 }
 
+//Twitch Player
+setInterval(checkLiveStatus, 2000);
+var response;
+function checkLiveStatus(){
+	var url = "https://decapi.me/twitch/uptime/haseodanette" //+ user;
+	var xhr = new XMLHttpRequest();
+	xhr.open('GET', url, true);
+	xhr.responseType = 'text';
+	xhr.onload = function () {
+    	if (xhr.readyState === xhr.DONE) {
+       		if (xhr.status === 200) {
+				test(xhr.responseText);
+        	}
+    	}
+	}
+	xhr.send(null);
+	if(response != undefined){
+		response = response.replace(user + " is ", "");
+		var streamPlayer = document.getElementById("streaming-player").classList;
+		var streamTimes = document.getElementById("streaming-times").classList;
+		switch(response){
+			case "offline":
+				streamTimes.add("d-block");
+				streamTimes.remove("d-none");
+				streamPlayer.add("d-none");
+				streamPlayer.remove("d-block");
+				break;
+			default:
+				streamTimes.add("d-none");
+				streamTimes.remove("d-block");
+				streamPlayer.add("d-block");
+				streamPlayer.remove("d-none");
+		}
+		console.log(response);
+	}
+}
+function test(responseText){
+	response = responseText;
+}
+
 function loadStreamerHelp(){
 	div = document.getElementById('other-content');
 	div.classList.remove('d-none');
@@ -839,30 +884,35 @@ function loadStreamerHelp(){
 	document.getElementById('other-content').innerHTML += '<div style="margin-bottom: 25px; background-color: rgba(0,0,0,0.9); padding: 25px; border-radius: 5px;">' +
 	
 	'<h1>Info</h1>' +
-	'You can get everything on that page for <b>FREE</b>' + '<br><br>' + 
+	'You can get everything on that page for <b>FREE</b>' + '<div style="border: white 1px solid; margin: 20px 0"></div>' + 
 
 
 	'<h1>Banner & Color</h1>' +
 	'<b>Profile Banner</b> : 1800x570' + '<br><br>' + 
 	'<b>Video Player Banner (Offline)</b> : 1920x1080' + '<br><br>' + 
-	'<b>Profile Accent Color</b> : You choose' + '<br><br>' + 
+	'<b>Profile Accent Color</b> : You choose' + '<div style="border: white 1px solid; margin: 20px 0"></div>' + 
 
 	'<h1>Panels</h1>' +
 	'Make sure to create some panels:' + '<br>' + 
 	'► <a href="https://nerdordie.com/resources/free-resources/customizable-twitch-panels/" target="_blank">NerdOrDie panel maker</a>' + '<br>' +
-	'► <a href="https://nerdordie.com/apps/ow-panel-maker/app.html" target="_blank">NerdOrDie Overwatch panel maker</a>.' + '<br><br>' + 
+	'► <a href="https://nerdordie.com/apps/ow-panel-maker/app.html" target="_blank">NerdOrDie Overwatch panel maker</a>.' + '<div style="border: white 1px solid; margin: 20px 0"></div>' + 
 
 	'<h1>Overlays</h1>' +
 	'You can get overlays at:' + '<br>' + 
 	'► <a href="https://nerdordie.com/product-tag/free-resource/?orderby=price" target="_blank">NerdOrDie overlays</a> ("Suggested Price")' + '<br>' + 
-	'► <a href="https://streamelements.com/dashboard/themes" target="_blank">StreamElement overlays</a>.' + '<br><br>' + 
+	'► <a href="https://streamelements.com/dashboard/themes" target="_blank">StreamElement overlays</a>.' + '<div style="border: white 1px solid; margin: 20px 0"></div>' + 
 
 	'<h1>Emotes</h1>' +
 	'Get extra emotes with <a href="https://betterttv.com" target="_blank">BetterTTV</a> which includes <a href="https://www.frankerfacez.com" target="_blank">FrankerFaceZ</a>.' + '<br>' + 
 	'Make sure you have those extensions activated in yout OBS.' + '<br><br>' + 
 	'If you dont use Google Chrome you need to install this:' + '<br>' +
 	'► <a href="addons.mozilla.org/firefox/addon/cpi/" target="_blank">Firefox</a>' + '<br>' +
-	'► <a href="https://addons.opera.com/extensions/details/install-chrome-extensions/" target="_blank">Opera</a>'  + '<br><br>' +
+	'► <a href="https://addons.opera.com/extensions/details/install-chrome-extensions/" target="_blank">Opera</a>'  + '<div style="border: white 1px solid; margin: 20px 0"></div>' +
+
+	'<h1>Sound</h1>' +
+	'I recommend an audio mixer like <a href="https://vb-audio.com/Voicemeeter/potato.htm" target="_blank">VoiceMeeter</a>. It will make audio management way easier.' + '<br><br>' + 
+	'If you use <a href="https://vb-audio.com/Cable/index.htm" target="_blank">Virtual Audio Cable</a> on top, you can set music in the background which you can change the volume of seperatly without the stream noticing it.' + '<br><br>' +
+	'Sometimes you just don\'t want to hear music while playing but your stream wants to.' + '<div style="border: white 1px solid; margin: 20px 0"></div>' + 
 
 	'<h1>Tips</h1>' +
 	'1. Make sure that at the bottom right of your profile banner you have a static color and pick this color as accent.' + '<br>' + 
@@ -877,10 +927,10 @@ function loadStreamerHelp(){
 	'5. Add a BOT with commands and timers to your chat.' + '<br>' + 
 	'► You can find some easily with this <a href="https://www.google.com/search?q=twitch+chat+bots" target="_blank">search</a>.' + '<br><br>' + 
 	'6. Place your cam on the right side, since Twitch shows the "LIVE" and the viewercount on the right. ' + '<br>' + 
-	'► You can see it over <a href="https://www.twitch.tv/directory/game/Just%20Chatting" target="_blank">here</a>.' + '<br><br>' +
+	'► You can see it over <a href="https://www.twitch.tv/directory/game/Just%20Chatting" target="_blank">here</a>.' + '<div style="border: white 1px solid; margin: 20px 0"></div>' +
 
-	'<h1>Change your design here</h1>' +
-	'<a href="https://dashboard.twitch.tv/settings/channel" target="_blank">Channel Settings</a>' + '<br><br><br>' +
+	'<h1>Channel Settings</h1>' +
+	'► <a href="https://dashboard.twitch.tv/settings/channel" target="_blank">Settings</a>' + '<div style="border: white 1px solid; margin: 20px 0"></div>' +
 	'Click that button if you want to find me somewhere!' + '<br>' +
 	'<a href="https://Shethzor.tv" style="display: block; max-width: 204px; color: #fff; text-decoration: none; margin-top: 20px; padding: 10px; background-color: #8800ff; border-radius: 5px;">Back to normal Page</a>' + '<br></div>'
 }
