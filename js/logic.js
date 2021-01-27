@@ -869,6 +869,7 @@ function checkLiveStatus(){
 				streamTimes.remove("d-block");
 				streamPlayer.add("d-block");
 				streamPlayer.remove("d-none");
+				document.getElementById("stream-embed").src = "https://player.twitch.tv/?channel=haseodanette&amp;parent=shethzor.tv";
 		}
 		console.log(response);
 	}
