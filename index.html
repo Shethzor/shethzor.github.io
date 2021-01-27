@@ -38,7 +38,6 @@
         <link href="https://fonts.googleapis.com/css?family=Love+Ya+Like+A+Sister&display=swap" rel="stylesheet">
 	</head>
     <body>
-
         <div id="Display" class="d-none">
 
             <div id="Background"></div>
@@ -68,17 +67,22 @@
                                     <div class="d-flex flex-wrap bd-highlight flex-row justify-content-center align-items-center panel-content panel-stream-content">
                                         <div class="align-middle">
                                             <div class="max-width-220">
-                                                <p id="display-language-StreamingOn">STREAMING ON</p>
-                                                <div id="stream-days" class="d-flex flex-wrap bd-highlight flex-row justify-content-center">
-                                                    <p id="streaming-su" class="streaming-false">Su</p>
-                                                    <p id="streaming-mo" class="streaming-true">Mo</p>
-                                                    <p id="streaming-tu" class="streaming-false">Tu</p>
-                                                    <p id="streaming-we" class="streaming-true">We</p>
-                                                    <p id="streaming-th" class="streaming-false">Th</p>
-                                                    <p id="streaming-fr" class="streaming-true">Fr</p>
-                                                    <p id="streaming-sa" class="streaming-true">Sa</p>
+                                                <div id="streaming-times" class="d-block">
+                                                    <p id="display-language-StreamingOn">STREAMING ON</p>
+                                                    <div id="stream-days" class="d-flex flex-wrap bd-highlight flex-row justify-content-center">
+                                                        <p id="streaming-su" class="streaming-false">Su</p>
+                                                        <p id="streaming-mo" class="streaming-true">Mo</p>
+                                                        <p id="streaming-tu" class="streaming-false">Tu</p>
+                                                        <p id="streaming-we" class="streaming-true">We</p>
+                                                        <p id="streaming-th" class="streaming-false">Th</p>
+                                                        <p id="streaming-fr" class="streaming-true">Fr</p>
+                                                        <p id="streaming-sa" class="streaming-true">Sa</p>
+                                                    </div>
+                                                    <p id="streaming-time"></p>
                                                 </div>
-                                                <p id="streaming-time"></p>
+                                                <div id="streaming-player" class="d-none">
+                                                    <iframe src="https://player.twitch.tv/?channel=ablazednugget&amp;parent=shethzor.tv" height="130" width="220" allowfullscreen="true"></iframe>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
