@@ -89,6 +89,17 @@ iframe {
     border-radius: 20px;
 }
 
+#Contact {
+    position: absolute;
+    bottom: 0;
+    text-align: left;
+    display: inline-block;
+}
+
+#Container{
+    padding-bottom: 30px !important;
+}
+
 .listLinks {
     margin-left: auto;
     margin-right: auto;
@@ -217,7 +228,7 @@ iframe {
 @media (min-width: 600px) and (max-width: 768px){
 	#TitleImage {
 		width: 70vw;
-	}
+    }
 	.listLinks {
 		width: 70vw;
     }
@@ -232,6 +243,10 @@ iframe {
 	#TitleImage {
 		width: 70vw;
 	}
+    #Contact {
+        position: relative;
+        margin-top: 30px;
+    }
 	.listLinks {
 		width: 70vw;
     }
