@@ -68,6 +68,10 @@ for (var pageName in dictLinks) {
 			logo = 'img/logo/platform/reddit.png';
 			dictLinks[pageName]['list'] = 'LinksSocialMedia';
 			break;
+		case 'snapchat':
+			logo = 'img/logo/platform/snapchat.png';
+			dictLinks[pageName]['list'] = 'LinksSocialMedia';
+			break;
 		case 'soundcloud':
 			logo = 'img/logo/platform/soundcloud.png';
 			dictLinks[pageName]['list'] = 'LinksSocialMedia';
