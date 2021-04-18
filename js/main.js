@@ -55,6 +55,9 @@ for (var pageName in dictLinks) {
 			logo = 'img/logo/support/instant-gaming.png';
 			dictLinks[pageName]['list'] = 'LinksSupportAffiliate';
 			break;
+		case 'onlyfans':
+			logo = 'img/logo/support/onlyfans.png';
+			dictLinks[pageName]['list'] = 'LinksSupportDonate';
 		case 'patreon_donate':
 			logo = 'img/logo/support/patreon.png';
 			dictLinks[pageName]['list'] = 'LinksSupportDonate';
