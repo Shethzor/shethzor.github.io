@@ -102,7 +102,7 @@ switch(user){
 			'gamivo' : {'active' : true, 'link' : 'https://www.gamivo.com?glv=27y6f6ma#Yeah,_support_me_by_buying_the_games_cheaper!'},
 			'twitch_subscribe' : {'active' : true, 'link' : 'https://www.twitch.tv/subs/Shethzor#Wow_never_thought_you_would_show_up_here!'}, 
 			'tipeeestream_donate' : {'active' : true, 'link' : 'https://www.tipeeestream.com/shethzor/donation#Are_you_about_to_donate?_Thanks_a_lot_<3'},
-			'onlyfans' : {'active' : true, 'link' : 'https://onlyfans.com/shethzor#You_going_to_horny_jail!'},
+			'onlyfans' : {'active' : true, 'link' : 'https://onlyfans.com/shethzor#You_are_going_to_horny_jail!'},
 			
 			//OFF
 			'e-pal' : {'active' : false, 'link' : '#Yes,_I\'m_selling_my_body_lmao'},
