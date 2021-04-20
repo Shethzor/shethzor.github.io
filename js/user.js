@@ -85,7 +85,7 @@ switch(user){
 			'fr' : true,
 			'sa' : true,
 		}
-		streamTime = 15;
+		streamTime = 14;
 		var latestYouTubeVideoListCode = 'UU0uJMyQjKUgLKthvf0E6JpA';
 		var dictLinks = {
 			'stream_twitch' : {'active' : true, 'link' : 'https://www.twitch.tv/Shethzor#Enjoy_your_time_on_my_Twitch_channel'},
