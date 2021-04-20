@@ -878,7 +878,6 @@ function checkLiveStatus(){
 					isLive = true;
 				}
 		}
-		console.log(response);
 	}
 }
 function test(responseText){
