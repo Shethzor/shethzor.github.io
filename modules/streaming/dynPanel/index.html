@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+		<style>
+			body {
+				background-color: #3a393a;
+				margin: 0;
+				color: #e1e0e1;
+				font-family: Arial, Helvetica, sans-serif;
+				font-size: 12px;
+				margin-top: 4px;
+			}
+			
+			div {
+				text-align: center;
+			}
+			ul {
+				padding: 0;
+			}
+			li {
+				padding: 3px 0;
+				background-color: #464546;
+			}
+			
+			a {
+				color: #e1e0e1;
+				text-decoration: none;
+				display: block;
+				margin: 2px 8px;
+				background-color: #4c4c4c;
+				border-radius: 3px;
+				padding: 3px 0;
+				cursor: pointer;
+			}
+			a:hover {
+				background-color: #7a797a;
+			}
+			a:active {
+				background-color: #1f1e1f;
+			}
+			
+			#PanelPrefix {
+				list-style-type: none;
+				margin: 15px 8px;
+			}
+			
+			.button-green {
+				font-weight: 900;
+				background-color: #29826a;    
+			}
+			.button-green:hover {
+				background-color: #46dcb3;
+				color: black;
+			}
+			.button-green:active {
+				background-color: #7ae6c8;
+				color: black;
+			}
+		</style>
+		<link rel="stylesheet" href="css/stylesheet.css">
+    </head>
+    <body>
+        <div id="SelectUser">
+            <a class="button-green" href="https://www.twitch.tv/login" target="blank">Login</a>
+        </div>
+        <div>
+            <ul id="PanelPrefix">
+                <li><b><u>How to</u></b>
+					<br><br>
+					?users=User1,User2,User3
+					<br><br>
+					&panel=PanelName
+				</li>
+				<br>
+				<li>
+					<b><u>Panels</u></b>
+					<br><br>
+					active-mods<br>
+					activity-feed<br>
+					automod-queue<br>
+					chat<br>
+					edit-stream-info<br>
+					moderation-actions<br>
+					reward-queue<br>
+					stream-health<br>
+					stream-preview<br>
+					quick-actions<br>
+				</li>
+				<br>
+				<li>
+				 Something went wrong? Restart the application!
+				</li>
+            </ul>
+        </div>
+		<div>
+			<a class="" href="?users=User1,User2,User3&PanelName">Example</a>
+		</div>
+        <script>
+			var searchList = window.location.search.substr(1).split('&');
+			var panel;
+			var users;
+			for (var search in searchList){
+				if (searchList[search].startsWith('panel')){
+					panel = searchList[search].split('=')[1];
+				}
+				if (searchList[search].startsWith('users')){
+					users = searchList[search].split('=')[1].split(',');
+				}
+			}
+			
+			for(var user in users){
+				document.getElementById('SelectUser').innerHTML += '<a onclick="openLink(\''+ users[user] + '\')">' + users[user] + '</a>';
+			}
+			
+			function openLink(user){
+				if(panel != 'undefined'){
+					window.open("https://dashboard.twitch.tv/popout/u/" + user.toLowerCase() + "/stream-manager/" + panel, "_self")
+				}
+			}
+		</script>
+    </body>
+</html>
