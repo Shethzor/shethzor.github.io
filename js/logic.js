@@ -762,10 +762,6 @@ function getArrayText(combinationArray, length){
 
 //Load Style
 function loadStyles() {
-	if (!isEmptyOrNull(defaultLanguage)){
-		updateSearch({"l" : defaultLanguage});
-	}
-	
 	if (backgroundImageLink){
 		document.getElementById('Background').style.backgroundImage = 'url("' + backgroundImageLink + '")';
 		document.getElementById('Background').style.filter = 'blur(' + backgroundBlur + 'px)';
