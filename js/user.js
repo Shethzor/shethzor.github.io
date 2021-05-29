@@ -20,6 +20,7 @@ switch(user){
 		var copyrightSize = 15;
 		var banner = 'img/banner/shethzor.gif'
 		var bannerWidth;
+		var defaultLanguage = 'en';
 		var streamDays = {
 			'su' : true,
 			'mo' : true,
