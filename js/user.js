@@ -22,11 +22,11 @@ switch(user){
 		var bannerWidth;
 		var defaultLanguage = 'en';
 		var streamDays = {
-			'su' : true,
-			'mo' : true,
-			'tu' : true,
+			'su' : false,
+			'mo' : false,
+			'tu' : false,
 			'we' : true,
-			'th' : true,
+			'th' : false,
 			'fr' : true,
 			'sa' : true,
 		}
