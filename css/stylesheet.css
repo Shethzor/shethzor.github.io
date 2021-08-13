@@ -243,17 +243,22 @@ iframe {
 
 }
 
-/* Mobile */
+/* Tablet */
 @media (min-width: 1px) and (max-width: 992px){
-	#TitleImage {
-		width: 70vw;
-	}
+    #TitleImage {
+        width: 70vw;
+    }
     #ContactWrapper {
         margin-top: 30px;
         justify-content: center;
     }
-	.listLinks {
-		width: 70vw;
+}
+
+
+/* Mobile */
+@media (min-width: 1px) and (max-width: 720px){
+    .listLinks {
+        width: 70vw;
     }
     .support{
         width: 70vw;
