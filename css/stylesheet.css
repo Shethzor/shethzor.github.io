@@ -75,6 +75,7 @@ iframe {
 
 #Copyright {
     font-size: calc(0.1vh + 0.1vw + 5px);
+    text-align: center;
 }
 
 #Copyright a {
