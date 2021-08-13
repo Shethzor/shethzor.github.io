@@ -89,11 +89,16 @@ iframe {
     border-radius: 20px;
 }
 
+#ContactWrapper {
+    text-align: center;
+    height: 100%;
+    display: flex;
+    align-items: end;
+    justify-content: end;
+}
+
 #Contact {
-    position: absolute;
-    bottom: 0;
     text-align: left;
-    display: inline-block;
 }
 
 #Container{
@@ -243,9 +248,9 @@ iframe {
 	#TitleImage {
 		width: 70vw;
 	}
-    #Contact {
-        position: relative;
+    #ContactWrapper {
         margin-top: 30px;
+        justify-content: center;
     }
 	.listLinks {
 		width: 70vw;
