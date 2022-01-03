@@ -898,8 +898,8 @@ function loadStreamerHelp(){
 	'<h1>Panels</h1>' +
 	'Make sure to create some panels:' + '<br>' + 
 	'► <a href="https://nerdordie.com/resources/free-resources/customizable-twitch-panels/" target="_blank">NerdOrDie panel maker</a>' + '<br>' +
-	'► <a href="https://nerdordie.com/apps/ow-panel-maker/app.html" target="_blank">NerdOrDie Overwatch panel maker</a>.' + '<div style="border: white 1px solid; margin: 20px 0"></div>' + '<br>' + 
-	'► <a href="https://gamingvisuals.com/free-twitch-panels" target="_blank">Gamingvisuals panel maker</a>' +
+	'► <a href="https://nerdordie.com/apps/ow-panel-maker/app.html" target="_blank">NerdOrDie Overwatch panel maker</a>.' + '<br>' + 
+	'► <a href="https://gamingvisuals.com/free-twitch-panels" target="_blank">Gamingvisuals panel maker</a>' + '<div style="border: white 1px solid; margin: 20px 0"></div>' +
 
 	'<h1>Overlays</h1>' +
 	'You can get overlays at:' + '<br>' + 
