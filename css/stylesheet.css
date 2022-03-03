@@ -258,4 +258,7 @@ iframe {
     .support{
         width: 70vw;
     }
+    .panel-stream-content #stream-days p{
+        margin: 2px 6px;
+    }
 }
