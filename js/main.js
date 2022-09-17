@@ -14,6 +14,8 @@ for (var redirect in searchKey) {
 	}else if (redirect == 'youtube-latest'){
 		window.location.replace('https://www.youtube.com/embed/videoseries?list=' + latestYouTubeVideoListCode);
 		isRedirect = true;
+	}else if (redirect == 'tts'){
+		window.location.replace('https://www.twitch.tv/popout/shethzor/chat?popout=')
 	}
 }
 
