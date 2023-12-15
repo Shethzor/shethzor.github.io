@@ -930,7 +930,7 @@ function loadStreamerHelp(){
 	'As unlikely as it may seem that someone donates, but people like me do that.' + '<br><br>' + 
 	'5. Add a BOT with commands and timers to your chat.' + '<br>' + 
 	'► You can find some easily with this <a href="https://www.google.com/search?q=twitch+chat+bots" target="_blank">search</a>.' + '<br><br>' + 
-	'6. Place your cam on the right side, since Twitch shows the "LIVE" and the viewercount on the right. ' + '<br>' + 
+	'6. Place your cam on the right side, since Twitch shows the "LIVE" and the viewercount on the left. ' + '<br>' + 
 	'► You can see it over <a href="https://www.twitch.tv/directory/game/Just%20Chatting" target="_blank">here</a>.' + '<div style="border: white 1px solid; margin: 20px 0"></div>' +
 
 	'<h1>Channel Settings</h1>' +
